@@ -1,0 +1,191 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\controllers\\atencionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:controllers\\atencionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\dtos\\atenciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:dtos\\atenciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\models\\atencion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:models\\atencion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\controllers\\duenoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:controllers\\duenoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\dtos\\duenodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:dtos\\duenodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\models\\dueno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:models\\dueno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\controllers\\animalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:controllers\\animalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\dtos\\animaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:dtos\\animaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AtencionesController.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Controllers\\AtencionesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AtencionesController.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Controllers\\AtencionesController.cs",
+              "RelativeToolTip": "Controllers\\AtencionesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:51:35.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AtencionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\DTOs\\AtencionDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\AtencionDTO.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\DTOs\\AtencionDTO.cs",
+              "RelativeToolTip": "DTOs\\AtencionDTO.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:50:36.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Atencion.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Models\\Atencion.cs",
+              "RelativeDocumentMoniker": "Models\\Atencion.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Models\\Atencion.cs",
+              "RelativeToolTip": "Models\\Atencion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:50:00.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DuenosController.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Controllers\\DuenosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DuenosController.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Controllers\\DuenosController.cs",
+              "RelativeToolTip": "Controllers\\DuenosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:43:06.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DuenoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\DTOs\\DuenoDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\DuenoDTO.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\DTOs\\DuenoDTO.cs",
+              "RelativeToolTip": "DTOs\\DuenoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:42:30.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dueno.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Models\\Dueno.cs",
+              "RelativeDocumentMoniker": "Models\\Dueno.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Models\\Dueno.cs",
+              "RelativeToolTip": "Models\\Dueno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:42:02.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AnimalDTO.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\DTOs\\AnimalDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\AnimalDTO.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\DTOs\\AnimalDTO.cs",
+              "RelativeToolTip": "DTOs\\AnimalDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:32:14.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AnimalesController.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Controllers\\AnimalesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AnimalesController.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Controllers\\AnimalesController.cs",
+              "RelativeToolTip": "Controllers\\AnimalesController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAFAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:27:51.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Models\\Animal.cs",
+              "RelativeDocumentMoniker": "Models\\Animal.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Models\\Animal.cs",
+              "RelativeToolTip": "Models\\Animal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:26:37.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1128,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
