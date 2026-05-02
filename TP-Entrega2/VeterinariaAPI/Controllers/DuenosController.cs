@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using VeterinariaAPI.Models;
-using VeterinariaAPI.DTOs;
 using System.Linq;
+using VeterinariaAPI.Data;
+using VeterinariaAPI.DTOs;
+using VeterinariaAPI.Models;
 
 namespace VeterinariaAPI.Controllers
 {
@@ -9,18 +10,25 @@ namespace VeterinariaAPI.Controllers
     [Route("[controller]")]
     public class DuenosController : ControllerBase
     {
-        static List<Dueno> duenos = new List<Dueno>();
+        private readonly AppDbContext _context;
 
+        public DuenosController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        
         [HttpGet]
         public List<Dueno> Get()
         {
-            return duenos;
+            return _context.Duenos.ToList();
         }
 
+        
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var dueno = duenos.FirstOrDefault(d => d.Id == id);
+            var dueno = _context.Duenos.FirstOrDefault(d => d.Id == id);
 
             if (dueno == null)
                 return NotFound();
@@ -28,26 +36,28 @@ namespace VeterinariaAPI.Controllers
             return Ok(dueno);
         }
 
+        
         [HttpPost]
         public IActionResult Post(DuenoDTO dto)
         {
             Dueno dueno = new Dueno
             {
-                Id = duenos.Count + 1,
                 Dni = dto.Dni,
                 Nombre = dto.Nombre,
                 Apellido = dto.Apellido
             };
 
-            duenos.Add(dueno);
+            _context.Duenos.Add(dueno);
+            _context.SaveChanges();
 
-            return StatusCode(201, new { mensaje = "Dueño creado" });
+            return StatusCode(201, new { mensaje = "Dueño creado", id = dueno.Id });
         }
 
+       
         [HttpPut("{id}")]
         public IActionResult Put(int id, DuenoDTO dto)
         {
-            var dueno = duenos.FirstOrDefault(d => d.Id == id);
+            var dueno = _context.Duenos.FirstOrDefault(d => d.Id == id);
 
             if (dueno == null)
                 return NotFound();
@@ -56,18 +66,22 @@ namespace VeterinariaAPI.Controllers
             dueno.Nombre = dto.Nombre;
             dueno.Apellido = dto.Apellido;
 
+            _context.SaveChanges();
+
             return Ok(new { mensaje = "Dueño actualizado correctamente" });
         }
 
+      
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var dueno = duenos.FirstOrDefault(d => d.Id == id);
+            var dueno = _context.Duenos.FirstOrDefault(d => d.Id == id);
 
             if (dueno == null)
                 return NotFound();
 
-            duenos.Remove(dueno);
+            _context.Duenos.Remove(dueno);
+            _context.SaveChanges();
 
             return NoContent();
         }

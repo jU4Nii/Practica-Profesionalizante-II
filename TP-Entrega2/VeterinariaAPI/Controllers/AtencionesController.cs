@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using VeterinariaAPI.Models;
-using VeterinariaAPI.DTOs;
-using System.Linq;
 using System;
+using System.Linq;
+using VeterinariaAPI.Data;
+using VeterinariaAPI.DTOs;
+using VeterinariaAPI.Models;
 
 namespace VeterinariaAPI.Controllers
 {
@@ -10,18 +11,23 @@ namespace VeterinariaAPI.Controllers
     [Route("[controller]")]
     public class AtencionesController : ControllerBase
     {
-        static List<Atencion> atenciones = new List<Atencion>();
+        private readonly AppDbContext _context;
+
+        public AtencionesController(AppDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
         public List<Atencion> Get()
         {
-            return atenciones;
+            return _context.Atenciones.OrderByDescending(a => a.Fecha).ToList();
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var atencion = atenciones.FirstOrDefault(a => a.Id == id);
+            var atencion = _context.Atenciones.FirstOrDefault(a => a.Id == id);
 
             if (atencion == null)
                 return NotFound();
@@ -32,13 +38,12 @@ namespace VeterinariaAPI.Controllers
         [HttpPost]
         public IActionResult Post(AtencionDTO dto)
         {
-           
+            
             if (dto.Fecha > DateTime.Now || dto.Fecha < DateTime.Now.AddDays(-30))
                 return BadRequest(new { mensaje = "Fecha inválida" });
 
             Atencion atencion = new Atencion
             {
-                Id = atenciones.Count + 1,
                 AnimalId = dto.AnimalId,
                 Motivo = dto.Motivo,
                 TratamientoId = dto.TratamientoId,
@@ -46,20 +51,21 @@ namespace VeterinariaAPI.Controllers
                 Fecha = dto.Fecha
             };
 
-            atenciones.Add(atencion);
+            _context.Atenciones.Add(atencion);
+            _context.SaveChanges();
 
-            return StatusCode(201, new { mensaje = "Atención creada" });
+            return StatusCode(201, new { mensaje = "Atención creada", id = atencion.Id });
         }
 
         [HttpPut("{id}")]
         public IActionResult Put(int id, AtencionDTO dto)
         {
-            var atencion = atenciones.FirstOrDefault(a => a.Id == id);
+            var atencion = _context.Atenciones.FirstOrDefault(a => a.Id == id);
 
             if (atencion == null)
                 return NotFound();
 
-          
+            
             if (dto.Fecha > DateTime.Now || dto.Fecha < DateTime.Now.AddDays(-30))
                 return BadRequest(new { mensaje = "Fecha inválida" });
 
@@ -69,18 +75,21 @@ namespace VeterinariaAPI.Controllers
             atencion.MedicamentosIds = dto.MedicamentosIds;
             atencion.Fecha = dto.Fecha;
 
+            _context.SaveChanges();
+
             return Ok(new { mensaje = "Atención actualizada correctamente" });
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var atencion = atenciones.FirstOrDefault(a => a.Id == id);
+            var atencion = _context.Atenciones.FirstOrDefault(a => a.Id == id);
 
             if (atencion == null)
                 return NotFound();
 
-            atenciones.Remove(atencion);
+            _context.Atenciones.Remove(atencion);
+            _context.SaveChanges();
 
             return NoContent();
         }

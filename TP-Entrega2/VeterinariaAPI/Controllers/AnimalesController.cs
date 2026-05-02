@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using VeterinariaAPI.Data;
 using VeterinariaAPI.DTOs;
 using VeterinariaAPI.Models;
-using System.Linq;
+
 
 namespace VeterinariaAPI.Controllers
 {
@@ -10,12 +12,17 @@ namespace VeterinariaAPI.Controllers
     [Route("[controller]")]
     public class AnimalesController : ControllerBase
     {
-        static List<Animal> animales = new List<Animal>();
+        private readonly AppDbContext _context;
+
+        public AnimalesController(AppDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
         public List<Animal> Get()
         {
-            return animales;
+            return _context.Animales.ToList();
         }
 
         [HttpPost]
@@ -23,7 +30,6 @@ namespace VeterinariaAPI.Controllers
         {
             Animal animal = new Animal
             {
-                Id = animales.Count + 1,
                 Nombre = dto.Nombre,
                 Edad = dto.Edad,
                 Sexo = dto.Sexo,
@@ -31,7 +37,8 @@ namespace VeterinariaAPI.Controllers
                 DuenoId = dto.DuenoId
             };
 
-            animales.Add(animal);
+            _context.Animales.Add(animal);
+            _context.SaveChanges();
 
             return StatusCode(201, new { mensaje = "Animal creado" });
         }
@@ -39,7 +46,7 @@ namespace VeterinariaAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var animal = animales.FirstOrDefault(a => a.Id == id);
+            var animal = _context.Animales.FirstOrDefault(a => a.Id == id);
 
             if (animal == null)
                 return NotFound();
@@ -50,7 +57,7 @@ namespace VeterinariaAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id, AnimalDTO dto)
         {
-            var animal = animales.FirstOrDefault(a => a.Id == id);
+            var animal = _context.Animales.FirstOrDefault(a => a.Id == id);
 
             if (animal == null)
                 return NotFound();
@@ -61,18 +68,21 @@ namespace VeterinariaAPI.Controllers
             animal.RazaId = dto.RazaId;
             animal.DuenoId = dto.DuenoId;
 
+            _context.SaveChanges();
+
             return Ok(new { mensaje = "Animal actualizado correctamente" });
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var animal = animales.FirstOrDefault(a => a.Id == id);
+            var animal = _context.Animales.FirstOrDefault(a => a.Id == id);
 
             if (animal == null)
                 return NotFound();
 
-            animales.Remove(animal);
+            _context.Animales.Remove(animal);
+            _context.SaveChanges();
 
             return NoContent();
         }
