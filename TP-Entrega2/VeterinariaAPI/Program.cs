@@ -28,6 +28,21 @@ namespace VeterinariaAPI
             builder.Services.AddScoped<IAtencionRepository, AtencionRepository>();
             builder.Services.AddScoped<IAtencionLogica, AtencionLogica>();
 
+            builder.Services.AddScoped<IRazaRepository, RazaRepository>();
+            builder.Services.AddScoped<IRazaLogica, RazaLogica>();
+
+            builder.Services.AddScoped<IMedicamentoRepository, MedicamentoRepository>();
+            builder.Services.AddScoped<IMedicamentoLogica, MedicamentoLogica>();
+
+            builder.Services.AddScoped<ITratamientoRepository, TratamientoRepository>();
+            builder.Services.AddScoped<ITratamientoLogica, TratamientoLogica>();
+
+            builder.Services.AddScoped<IMedicamentoRepository, MedicamentoRepository>();
+            builder.Services.AddScoped<IMedicamentoLogica, MedicamentoLogica>();
+
+            builder.Services.AddScoped<ITratamientoRepository, TratamientoRepository>();
+            builder.Services.AddScoped<ITratamientoLogica, TratamientoLogica>();
+
             var app = builder.Build();
 
             
@@ -48,6 +63,12 @@ namespace VeterinariaAPI
             app.MapDuenoEndpoints();
 
             app.MapAtencionEndpoints();
+
+            app.MapRazaEndpoints();
+
+            app.MapMedicamentoEndpoints();
+
+            app.MapTratamientoEndpoints();
 
             app.Run();
         }
