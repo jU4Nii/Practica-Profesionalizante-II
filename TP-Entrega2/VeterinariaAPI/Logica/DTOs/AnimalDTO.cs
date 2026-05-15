@@ -1,4 +1,4 @@
-﻿namespace VeterinariaAPI.DTOs
+﻿namespace VeterinariaAPI.Logica.DTOs
 {
     public class AnimalDTO
     {

@@ -1,7 +1,8 @@
-﻿namespace VeterinariaAPI.DTOs
+﻿namespace VeterinariaAPI.Entidades
 {
-    public class AtencionDTO
+    public class Atencion
     {
+        public int Id { get; set; }
         public int AnimalId { get; set; }
         public string Motivo { get; set; }
         public int TratamientoId { get; set; }

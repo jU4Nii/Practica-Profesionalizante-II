@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using VeterinariaAPI.Data;
+using VeterinariaAPI.Datos;
 
 #nullable disable
 
@@ -22,7 +22,7 @@ namespace VeterinariaAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("VeterinariaAPI.Models.Animal", b =>
+            modelBuilder.Entity("VeterinariaAPI.Entidades.Animal", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -52,7 +52,7 @@ namespace VeterinariaAPI.Migrations
                     b.ToTable("Animales");
                 });
 
-            modelBuilder.Entity("VeterinariaAPI.Models.Atencion", b =>
+            modelBuilder.Entity("VeterinariaAPI.Entidades.Atencion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -82,7 +82,7 @@ namespace VeterinariaAPI.Migrations
                     b.ToTable("Atenciones");
                 });
 
-            modelBuilder.Entity("VeterinariaAPI.Models.Dueno", b =>
+            modelBuilder.Entity("VeterinariaAPI.Entidades.Dueno", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,4 +1,4 @@
-﻿namespace VeterinariaAPI.Models
+﻿namespace VeterinariaAPI.Entidades
 {
     public class Dueno
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VeterinariaAPI.Models;
+using VeterinariaAPI.Entidades;
 
-namespace VeterinariaAPI.Data
+namespace VeterinariaAPI.Datos
 {
     public class AppDbContext : DbContext
     {

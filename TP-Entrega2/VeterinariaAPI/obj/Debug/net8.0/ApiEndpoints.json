@@ -1,46 +1,48 @@
 [
   {
-    "ContainingType": "VeterinariaAPI.Controllers.AnimalesController",
-    "Method": "Get",
-    "RelativePath": "Animales",
+    "ContainingType": "VeterinariaAPI.Endpoints.AnimalEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAnimalEndpoints\u003Eb__0_0",
+    "RelativePath": "animales",
     "HttpMethod": "GET",
-    "IsController": true,
+    "IsController": false,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[VeterinariaAPI.Models.Animal, VeterinariaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]
   },
   {
-    "ContainingType": "VeterinariaAPI.Controllers.AnimalesController",
-    "Method": "Post",
-    "RelativePath": "Animales",
+    "ContainingType": "VeterinariaAPI.Endpoints.AnimalEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAnimalEndpoints\u003Eb__0_2",
+    "RelativePath": "animales",
     "HttpMethod": "POST",
-    "IsController": true,
+    "IsController": false,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "VeterinariaAPI.DTOs.AnimalDTO",
+        "Type": "VeterinariaAPI.Logica.DTOs.AnimalDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "VeterinariaAPI.Controllers.AnimalesController",
-    "Method": "GetById",
-    "RelativePath": "Animales/{id}",
+    "ContainingType": "VeterinariaAPI.Endpoints.AnimalEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAnimalEndpoints\u003Eb__0_1",
+    "RelativePath": "animales/{id}",
     "HttpMethod": "GET",
-    "IsController": true,
+    "IsController": false,
     "Order": 0,
     "Parameters": [
       {
@@ -49,14 +51,20 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "VeterinariaAPI.Controllers.AnimalesController",
-    "Method": "Put",
-    "RelativePath": "Animales/{id}",
+    "ContainingType": "VeterinariaAPI.Endpoints.AnimalEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAnimalEndpoints\u003Eb__0_3",
+    "RelativePath": "animales/{id}",
     "HttpMethod": "PUT",
-    "IsController": true,
+    "IsController": false,
     "Order": 0,
     "Parameters": [
       {
@@ -66,70 +74,24 @@
       },
       {
         "Name": "dto",
-        "Type": "VeterinariaAPI.DTOs.AnimalDTO",
+        "Type": "VeterinariaAPI.Logica.DTOs.AnimalDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeterinariaAPI.Controllers.AnimalesController",
-    "Method": "Delete",
-    "RelativePath": "Animales/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeterinariaAPI.Controllers.AtencionesController",
-    "Method": "Get",
-    "RelativePath": "Atenciones",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[VeterinariaAPI.Models.Atencion, VeterinariaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]
   },
   {
-    "ContainingType": "VeterinariaAPI.Controllers.AtencionesController",
-    "Method": "Post",
-    "RelativePath": "Atenciones",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "VeterinariaAPI.DTOs.AtencionDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeterinariaAPI.Controllers.AtencionesController",
-    "Method": "GetById",
-    "RelativePath": "Atenciones/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
+    "ContainingType": "VeterinariaAPI.Endpoints.AnimalEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAnimalEndpoints\u003Eb__0_4",
+    "RelativePath": "animales/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
     "Order": 0,
     "Parameters": [
       {
@@ -138,14 +100,80 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "VeterinariaAPI.Controllers.AtencionesController",
-    "Method": "Put",
-    "RelativePath": "Atenciones/{id}",
+    "ContainingType": "VeterinariaAPI.Endpoints.AtencionEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAtencionEndpoints\u003Eb__0_0",
+    "RelativePath": "atenciones",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeterinariaAPI.Endpoints.AtencionEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAtencionEndpoints\u003Eb__0_2",
+    "RelativePath": "atenciones",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VeterinariaAPI.Logica.DTOs.AtencionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeterinariaAPI.Endpoints.AtencionEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAtencionEndpoints\u003Eb__0_1",
+    "RelativePath": "atenciones/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeterinariaAPI.Endpoints.AtencionEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAtencionEndpoints\u003Eb__0_3",
+    "RelativePath": "atenciones/{id}",
     "HttpMethod": "PUT",
-    "IsController": true,
+    "IsController": false,
     "Order": 0,
     "Parameters": [
       {
@@ -155,70 +183,24 @@
       },
       {
         "Name": "dto",
-        "Type": "VeterinariaAPI.DTOs.AtencionDTO",
+        "Type": "VeterinariaAPI.Logica.DTOs.AtencionDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeterinariaAPI.Controllers.AtencionesController",
-    "Method": "Delete",
-    "RelativePath": "Atenciones/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeterinariaAPI.Controllers.DuenosController",
-    "Method": "Get",
-    "RelativePath": "Duenos",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[VeterinariaAPI.Models.Dueno, VeterinariaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]
   },
   {
-    "ContainingType": "VeterinariaAPI.Controllers.DuenosController",
-    "Method": "Post",
-    "RelativePath": "Duenos",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "VeterinariaAPI.DTOs.DuenoDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeterinariaAPI.Controllers.DuenosController",
-    "Method": "GetById",
-    "RelativePath": "Duenos/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
+    "ContainingType": "VeterinariaAPI.Endpoints.AtencionEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAtencionEndpoints\u003Eb__0_4",
+    "RelativePath": "atenciones/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
     "Order": 0,
     "Parameters": [
       {
@@ -227,14 +209,80 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "VeterinariaAPI.Controllers.DuenosController",
-    "Method": "Put",
-    "RelativePath": "Duenos/{id}",
+    "ContainingType": "VeterinariaAPI.Endpoints.DuenoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDuenoEndpoints\u003Eb__0_0",
+    "RelativePath": "duenos",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeterinariaAPI.Endpoints.DuenoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDuenoEndpoints\u003Eb__0_2",
+    "RelativePath": "duenos",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VeterinariaAPI.Logica.DTOs.DuenoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeterinariaAPI.Endpoints.DuenoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDuenoEndpoints\u003Eb__0_1",
+    "RelativePath": "duenos/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeterinariaAPI.Endpoints.DuenoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDuenoEndpoints\u003Eb__0_3",
+    "RelativePath": "duenos/{id}",
     "HttpMethod": "PUT",
-    "IsController": true,
+    "IsController": false,
     "Order": 0,
     "Parameters": [
       {
@@ -244,18 +292,24 @@
       },
       {
         "Name": "dto",
-        "Type": "VeterinariaAPI.DTOs.DuenoDTO",
+        "Type": "VeterinariaAPI.Logica.DTOs.DuenoDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "VeterinariaAPI.Controllers.DuenosController",
-    "Method": "Delete",
-    "RelativePath": "Duenos/{id}",
+    "ContainingType": "VeterinariaAPI.Endpoints.DuenoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDuenoEndpoints\u003Eb__0_4",
+    "RelativePath": "duenos/{id}",
     "HttpMethod": "DELETE",
-    "IsController": true,
+    "IsController": false,
     "Order": 0,
     "Parameters": [
       {
@@ -264,6 +318,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

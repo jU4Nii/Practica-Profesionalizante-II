@@ -5,46 +5,20 @@
     "version": "1.0"
   },
   "paths": {
-    "/Animales": {
+    "/animales": {
       "get": {
         "tags": [
-          "Animales"
+          "VeterinariaAPI"
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Animal"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Animal"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Animal"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
       "post": {
         "tags": [
-          "Animales"
+          "VeterinariaAPI"
         ],
         "requestBody": {
           "content": {
@@ -52,18 +26,9 @@
               "schema": {
                 "$ref": "#/components/schemas/AnimalDTO"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnimalDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnimalDTO"
-              }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -72,10 +37,10 @@
         }
       }
     },
-    "/Animales/{id}": {
+    "/animales/{id}": {
       "get": {
         "tags": [
-          "Animales"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -96,7 +61,7 @@
       },
       "put": {
         "tags": [
-          "Animales"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -115,18 +80,9 @@
               "schema": {
                 "$ref": "#/components/schemas/AnimalDTO"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnimalDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnimalDTO"
-              }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -136,7 +92,7 @@
       },
       "delete": {
         "tags": [
-          "Animales"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -156,65 +112,30 @@
         }
       }
     },
-    "/Atenciones": {
+    "/duenos": {
       "get": {
         "tags": [
-          "Atenciones"
+          "VeterinariaAPI"
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Atencion"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Atencion"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Atencion"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
       "post": {
         "tags": [
-          "Atenciones"
+          "VeterinariaAPI"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AtencionDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtencionDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtencionDTO"
+                "$ref": "#/components/schemas/DuenoDTO"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -223,10 +144,10 @@
         }
       }
     },
-    "/Atenciones/{id}": {
+    "/duenos/{id}": {
       "get": {
         "tags": [
-          "Atenciones"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -247,7 +168,7 @@
       },
       "put": {
         "tags": [
-          "Atenciones"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -264,20 +185,11 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AtencionDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtencionDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtencionDTO"
+                "$ref": "#/components/schemas/DuenoDTO"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -287,7 +199,7 @@
       },
       "delete": {
         "tags": [
-          "Atenciones"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -307,65 +219,30 @@
         }
       }
     },
-    "/Duenos": {
+    "/atenciones": {
       "get": {
         "tags": [
-          "Duenos"
+          "VeterinariaAPI"
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Dueno"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Dueno"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Dueno"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
       "post": {
         "tags": [
-          "Duenos"
+          "VeterinariaAPI"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DuenoDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DuenoDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/DuenoDTO"
+                "$ref": "#/components/schemas/AtencionDTO"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -374,10 +251,10 @@
         }
       }
     },
-    "/Duenos/{id}": {
+    "/atenciones/{id}": {
       "get": {
         "tags": [
-          "Duenos"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -398,7 +275,7 @@
       },
       "put": {
         "tags": [
-          "Duenos"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -415,20 +292,11 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DuenoDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DuenoDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/DuenoDTO"
+                "$ref": "#/components/schemas/AtencionDTO"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -438,7 +306,7 @@
       },
       "delete": {
         "tags": [
-          "Duenos"
+          "VeterinariaAPI"
         ],
         "parameters": [
           {
@@ -461,37 +329,6 @@
   },
   "components": {
     "schemas": {
-      "Animal": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "edad": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "sexo": {
-            "type": "string",
-            "nullable": true
-          },
-          "razaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "duenoId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "AnimalDTO": {
         "type": "object",
         "properties": {
@@ -515,40 +352,6 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Atencion": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "animalId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "motivo": {
-            "type": "string",
-            "nullable": true
-          },
-          "tratamientoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "medicamentosIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "fecha": {
-            "type": "string",
-            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -579,28 +382,6 @@
           "fecha": {
             "type": "string",
             "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Dueno": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "dni": {
-            "type": "string",
-            "nullable": true
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "apellido": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
