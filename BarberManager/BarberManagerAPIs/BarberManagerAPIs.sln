@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36603.0 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeterinariaAPI", "VeterinariaAPI.csproj", "{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberManagerAPIs", "BarberManagerAPIs.csproj", "{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

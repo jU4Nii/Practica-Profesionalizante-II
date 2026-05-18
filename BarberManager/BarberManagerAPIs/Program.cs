@@ -1,9 +1,9 @@
-using VeterinariaAPI.Datos;
-using VeterinariaAPI.Logica;
-using VeterinariaAPI.Repositorios;
+using BarberManagerAPIs.Datos;
+using BarberManagerAPIs.Logica;
+using BarberManagerAPIs.Repositorios;
 using Microsoft.EntityFrameworkCore;
-using VeterinariaAPI.Endpoints;
-namespace VeterinariaAPI
+using BarberManagerAPIs.Endpoints;
+namespace BarberManagerAPIs
 {
     public class Program
     {

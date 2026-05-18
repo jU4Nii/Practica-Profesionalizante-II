@@ -4445,9 +4445,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\VeterinariaAPI.csproj",
-      "projectName": "VeterinariaAPI",
-      "projectPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\VeterinariaAPI.csproj",
+      "projectUniqueName": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj",
+      "projectName": "BarberManagerAPIs",
+      "projectPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj",
       "packagesPath": "C:\\Users\\juani\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\obj\\",
       "projectStyle": "PackageReference",
