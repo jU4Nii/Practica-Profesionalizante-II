@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\VeterinariaAPI.csproj": {}
+    "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\VeterinariaAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\VeterinariaAPI.csproj": {
+    "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\VeterinariaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\VeterinariaAPI.csproj",
+        "projectUniqueName": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\VeterinariaAPI.csproj",
         "projectName": "VeterinariaAPI",
-        "projectPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\VeterinariaAPI.csproj",
+        "projectPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\VeterinariaAPI.csproj",
         "packagesPath": "C:\\Users\\juani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\obj\\",
+        "outputPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

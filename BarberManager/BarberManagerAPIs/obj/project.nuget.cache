@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PVx+eKff+ZE=",
+  "dgSpecHash": "51VXBL1UKdE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\VeterinariaAPI.csproj",
+  "projectFilePath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\VeterinariaAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juani\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\juani\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
