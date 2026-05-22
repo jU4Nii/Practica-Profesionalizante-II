@@ -1,0 +1,15 @@
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\bin\Debug\net8.0\VeterinariaConsola.exe
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\bin\Debug\net8.0\VeterinariaConsola.deps.json
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\bin\Debug\net8.0\VeterinariaConsola.runtimeconfig.json
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\bin\Debug\net8.0\VeterinariaConsola.dll
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\bin\Debug\net8.0\VeterinariaConsola.pdb
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\VeterinariaConsola.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\VeterinariaConsola.AssemblyInfoInputs.cache
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\VeterinariaConsola.AssemblyInfo.cs
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\VeterinariaConsola.csproj.CoreCompileInputs.cache
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\VeterinariaConsola.sourcelink.json
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\VeterinariaConsola.dll
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\refint\VeterinariaConsola.dll
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\VeterinariaConsola.pdb
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\VeterinariaConsola.genruntimeconfig.cache
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\TP-Entrega2\VeterinariaConsola\obj\Debug\net8.0\ref\VeterinariaConsola.dll

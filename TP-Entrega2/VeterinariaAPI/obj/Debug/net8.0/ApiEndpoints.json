@@ -351,8 +351,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nombre",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "VeterinariaAPI.Logica.DTOs.MedicamentoDTO",
         "IsRequired": true
       }
     ],
@@ -400,8 +400,8 @@
         "IsRequired": true
       },
       {
-        "Name": "nombre",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "VeterinariaAPI.Logica.DTOs.MedicamentoDTO",
         "IsRequired": true
       }
     ],
@@ -460,8 +460,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nombre",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "VeterinariaAPI.Logica.DTOs.RazaDTO",
         "IsRequired": true
       }
     ],
@@ -509,8 +509,8 @@
         "IsRequired": true
       },
       {
-        "Name": "nombre",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "VeterinariaAPI.Logica.DTOs.RazaDTO",
         "IsRequired": true
       }
     ],
@@ -569,8 +569,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "descripcion",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "VeterinariaAPI.Logica.DTOs.TratamientoDTO",
         "IsRequired": true
       }
     ],
@@ -618,8 +618,8 @@
         "IsRequired": true
       },
       {
-        "Name": "descripcion",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "VeterinariaAPI.Logica.DTOs.TratamientoDTO",
         "IsRequired": true
       }
     ],

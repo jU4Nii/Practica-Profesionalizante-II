@@ -341,16 +341,16 @@
         "tags": [
           "VeterinariaAPI"
         ],
-        "parameters": [
-          {
-            "name": "nombre",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RazaDTO"
+              }
             }
-          }
-        ],
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -393,16 +393,18 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "name": "nombre",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RazaDTO"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -446,16 +448,16 @@
         "tags": [
           "VeterinariaAPI"
         ],
-        "parameters": [
-          {
-            "name": "nombre",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedicamentoDTO"
+              }
             }
-          }
-        ],
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -498,16 +500,18 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "name": "nombre",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedicamentoDTO"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -551,16 +555,16 @@
         "tags": [
           "VeterinariaAPI"
         ],
-        "parameters": [
-          {
-            "name": "descripcion",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TratamientoDTO"
+              }
             }
-          }
-        ],
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -603,16 +607,18 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "name": "descripcion",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TratamientoDTO"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -713,6 +719,36 @@
             "nullable": true
           },
           "apellido": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MedicamentoDTO": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RazaDTO": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TratamientoDTO": {
+        "type": "object",
+        "properties": {
+          "descripcion": {
             "type": "string",
             "nullable": true
           }

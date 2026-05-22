@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EDA412DC-64D2-4FF9-82D8-C2F39A4BA77F}|..\\VeterinariaConsola\\VeterinariaConsola.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaconsola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\endpoints\\animalendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:endpoints\\animalendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,10 +52,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\entidades\\tratamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:entidades\\tratamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Migrations\\20260515014611_F-Entrega2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260515014611_F-Entrega2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -165,6 +164,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\migrations\\20260515011523_entrega2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:migrations\\20260515011523_entrega2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\tp-entrega2\\veterinariaapi\\migrations\\20260515014611_f-entrega2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|VeterinariaAPI.csproj|solutionrelative:migrations\\20260515014611_f-entrega2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -174,28 +177,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TratamientoEndpoints.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\TratamientoEndpoints.cs",
-              "RelativeDocumentMoniker": "Endpoints\\TratamientoEndpoints.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\TratamientoEndpoints.cs",
-              "RelativeToolTip": "Endpoints\\TratamientoEndpoints.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaConsola\\Program.cs",
+              "RelativeDocumentMoniker": "..\\VeterinariaConsola\\Program.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaConsola\\Program.cs",
+              "RelativeToolTip": "..\\VeterinariaConsola\\Program.cs",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAIwPMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:40:00.378Z",
+              "WhenOpened": "2026-05-22T19:51:31.168Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Medicamento.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Entidades\\Medicamento.cs",
               "RelativeDocumentMoniker": "Entidades\\Medicamento.cs",
@@ -203,12 +202,11 @@
               "RelativeToolTip": "Entidades\\Medicamento.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:31:42.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:31:42.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Atencion.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Entidades\\Atencion.cs",
               "RelativeDocumentMoniker": "Entidades\\Atencion.cs",
@@ -216,64 +214,11 @@
               "RelativeToolTip": "Entidades\\Atencion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T16:50:00.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MedicamentoEndpoints.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\MedicamentoEndpoints.cs",
-              "RelativeDocumentMoniker": "Endpoints\\MedicamentoEndpoints.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\MedicamentoEndpoints.cs",
-              "RelativeToolTip": "Endpoints\\MedicamentoEndpoints.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:38:16.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RazaEndpoints.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\RazaEndpoints.cs",
-              "RelativeDocumentMoniker": "Endpoints\\RazaEndpoints.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\RazaEndpoints.cs",
-              "RelativeToolTip": "Endpoints\\RazaEndpoints.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:26:30.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Raza.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Entidades\\Raza.cs",
-              "RelativeDocumentMoniker": "Entidades\\Raza.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Entidades\\Raza.cs",
-              "RelativeToolTip": "Entidades\\Raza.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:29:14.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T16:50:00.839Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AnimalDTO.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Logica\\DTOs\\AnimalDTO.cs",
-              "RelativeDocumentMoniker": "Logica\\DTOs\\AnimalDTO.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Logica\\DTOs\\AnimalDTO.cs",
-              "RelativeToolTip": "Logica\\DTOs\\AnimalDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T16:32:14.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AnimalEndpoints.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\AnimalEndpoints.cs",
               "RelativeDocumentMoniker": "Endpoints\\AnimalEndpoints.cs",
@@ -286,7 +231,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TratamientoEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\TratamientoEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\TratamientoEndpoints.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\TratamientoEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\TratamientoEndpoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T01:40:00.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MedicamentoEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\MedicamentoEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\MedicamentoEndpoints.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\MedicamentoEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\MedicamentoEndpoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T01:38:16.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RazaEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\RazaEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\RazaEndpoints.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Endpoints\\RazaEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\RazaEndpoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T01:26:30.292Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Raza.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Entidades\\Raza.cs",
+              "RelativeDocumentMoniker": "Entidades\\Raza.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Entidades\\Raza.cs",
+              "RelativeToolTip": "Entidades\\Raza.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T01:29:14.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AnimalDTO.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Logica\\DTOs\\AnimalDTO.cs",
+              "RelativeDocumentMoniker": "Logica\\DTOs\\AnimalDTO.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Logica\\DTOs\\AnimalDTO.cs",
+              "RelativeToolTip": "Logica\\DTOs\\AnimalDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:32:14.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "TratamientoDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Logica\\DTOs\\TratamientoDTO.cs",
               "RelativeDocumentMoniker": "Logica\\DTOs\\TratamientoDTO.cs",
@@ -294,12 +299,11 @@
               "RelativeToolTip": "Logica\\DTOs\\TratamientoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:51:57.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:51:57.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MedicamentoDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Logica\\DTOs\\MedicamentoDTO.cs",
               "RelativeDocumentMoniker": "Logica\\DTOs\\MedicamentoDTO.cs",
@@ -307,12 +311,11 @@
               "RelativeToolTip": "Logica\\DTOs\\MedicamentoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:51:32.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:51:32.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "RazaDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Logica\\DTOs\\RazaDTO.cs",
               "RelativeDocumentMoniker": "Logica\\DTOs\\RazaDTO.cs",
@@ -320,12 +323,11 @@
               "RelativeToolTip": "Logica\\DTOs\\RazaDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:51:06.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:51:06.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 41,
               "Title": "20260515014611_F-Entrega2.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Migrations\\20260515014611_F-Entrega2.cs",
               "RelativeDocumentMoniker": "Migrations\\20260515014611_F-Entrega2.cs",
@@ -333,12 +335,11 @@
               "RelativeToolTip": "Migrations\\20260515014611_F-Entrega2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:46:11.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:46:11.617Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Tratamiento.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\TP-Entrega2\\VeterinariaAPI\\Entidades\\Tratamiento.cs",
               "RelativeDocumentMoniker": "Entidades\\Tratamiento.cs",
@@ -346,12 +347,7 @@
               "RelativeToolTip": "Entidades\\Tratamiento.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:32:31.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+              "WhenOpened": "2026-05-15T01:32:31.995Z"
             },
             {
               "$type": "Document",
@@ -363,8 +359,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T20:03:22.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T20:03:22.736Z"
             },
             {
               "$type": "Document",
@@ -376,8 +371,7 @@
               "RelativeToolTip": "Repositorios\\TratamientoRepository.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAowCwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:34:19.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:34:19.301Z"
             },
             {
               "$type": "Document",
@@ -389,8 +383,7 @@
               "RelativeToolTip": "Logica\\TratamientoLogica.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA7wDQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:35:18.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:35:18.1Z"
             },
             {
               "$type": "Document",
@@ -402,8 +395,7 @@
               "RelativeToolTip": "Repositorios\\MedicamentoRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:33:39.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:33:39.223Z"
             },
             {
               "$type": "Document",
@@ -415,8 +407,7 @@
               "RelativeToolTip": "Logica\\MedicamentoLogica.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA7wDQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:34:55.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:34:55.38Z"
             },
             {
               "$type": "Document",
@@ -428,8 +419,7 @@
               "RelativeToolTip": "Repositorios\\RazaRepository.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAowBYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:25:28.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:25:28.587Z"
             },
             {
               "$type": "Document",
@@ -441,8 +431,7 @@
               "RelativeToolTip": "Datos\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T20:02:59.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T20:02:59.233Z"
             },
             {
               "$type": "Document",
@@ -454,8 +443,7 @@
               "RelativeToolTip": "Logica\\RazaLogica.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:26:03.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:26:03.248Z"
             },
             {
               "$type": "Document",
@@ -467,8 +455,7 @@
               "RelativeToolTip": "Migrations\\20260515011619_Finalizacion_Entrega2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T01:16:19.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:16:19.354Z"
             },
             {
               "$type": "Document",
@@ -697,16 +684,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-24T20:10:56.64Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1128,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
