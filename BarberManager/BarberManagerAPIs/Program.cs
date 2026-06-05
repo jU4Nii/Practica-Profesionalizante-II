@@ -19,29 +19,13 @@ namespace BarberManagerAPIs
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
-            builder.Services.AddScoped<IAnimalLogica, AnimalLogica>();
+            builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
-            builder.Services.AddScoped<IDuenoRepository, DuenoRepository>();
-            builder.Services.AddScoped<IDuenoLogica, DuenoLogica>();
+            builder.Services.AddScoped<IClienteLogica, ClienteLogica>();
 
-            builder.Services.AddScoped<IAtencionRepository, AtencionRepository>();
-            builder.Services.AddScoped<IAtencionLogica, AtencionLogica>();
+            builder.Services.AddScoped<IServicioRepository, ServicioRepository>();
 
-            builder.Services.AddScoped<IRazaRepository, RazaRepository>();
-            builder.Services.AddScoped<IRazaLogica, RazaLogica>();
-
-            builder.Services.AddScoped<IMedicamentoRepository, MedicamentoRepository>();
-            builder.Services.AddScoped<IMedicamentoLogica, MedicamentoLogica>();
-
-            builder.Services.AddScoped<ITratamientoRepository, TratamientoRepository>();
-            builder.Services.AddScoped<ITratamientoLogica, TratamientoLogica>();
-
-            builder.Services.AddScoped<IMedicamentoRepository, MedicamentoRepository>();
-            builder.Services.AddScoped<IMedicamentoLogica, MedicamentoLogica>();
-
-            builder.Services.AddScoped<ITratamientoRepository, TratamientoRepository>();
-            builder.Services.AddScoped<ITratamientoLogica, TratamientoLogica>();
+            builder.Services.AddScoped<IServicioLogica, ServicioLogica>();
 
             var app = builder.Build();
 
@@ -54,21 +38,9 @@ namespace BarberManagerAPIs
 
             app.UseHttpsRedirection();
 
-            
+            app.MapClienteEndpoints();
 
-            
-
-            app.MapAnimalEndpoints();
-
-            app.MapDuenoEndpoints();
-
-            app.MapAtencionEndpoints();
-
-            app.MapRazaEndpoints();
-
-            app.MapMedicamentoEndpoints();
-
-            app.MapTratamientoEndpoints();
+            app.MapServicioEndpoints();
 
             app.Run();
         }
