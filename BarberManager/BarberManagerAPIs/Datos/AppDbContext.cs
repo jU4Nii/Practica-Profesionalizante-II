@@ -10,6 +10,8 @@ namespace BarberManagerAPIs.Datos
 
         public DbSet<Servicio> Servicios { get; set; }
 
+        public DbSet<Producto> Productos { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         

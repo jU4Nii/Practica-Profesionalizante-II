@@ -1,8 +1,9 @@
 using BarberManagerAPIs.Datos;
+using BarberManagerAPIs.Endpoints;
 using BarberManagerAPIs.Logica;
 using BarberManagerAPIs.Repositorios;
 using Microsoft.EntityFrameworkCore;
-using BarberManagerAPIs.Endpoints;
+using Microsoft.EntityFrameworkCore.Migrations;
 namespace BarberManagerAPIs
 {
     public class Program
@@ -27,6 +28,10 @@ namespace BarberManagerAPIs
 
             builder.Services.AddScoped<IServicioLogica, ServicioLogica>();
 
+            builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+
+            builder.Services.AddScoped<IProductoLogica, ProductoLogica>();
+
             var app = builder.Build();
 
             
@@ -41,6 +46,8 @@ namespace BarberManagerAPIs
             app.MapClienteEndpoints();
 
             app.MapServicioEndpoints();
+
+            
 
             app.Run();
         }
