@@ -60,6 +60,126 @@
     ]
   },
   {
+    "ContainingType": "BarberManagerAPIs.Endpoints.PeluqueroEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPeluqueroEndpoints\u003Eb__0_0",
+    "RelativePath": "peluqueros",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BarberManagerAPIs.Endpoints.PeluqueroEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPeluqueroEndpoints\u003Eb__0_2",
+    "RelativePath": "peluqueros",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BarberManagerAPIs.Logica.DTOs.PeluqueroDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BarberManagerAPIs.Endpoints.PeluqueroEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPeluqueroEndpoints\u003Eb__0_1",
+    "RelativePath": "peluqueros/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BarberManagerAPIs.Endpoints.ProductoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProductoEndpoints\u003Eb__0_0",
+    "RelativePath": "productos",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BarberManagerAPIs.Endpoints.ProductoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProductoEndpoints\u003Eb__0_2",
+    "RelativePath": "productos",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BarberManagerAPIs.Logica.DTOs.ProductoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BarberManagerAPIs.Endpoints.ProductoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProductoEndpoints\u003Eb__0_1",
+    "RelativePath": "productos/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "BarberManagerAPIs.Endpoints.ServicioEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapServicioEndpoints\u003Eb__0_0",
     "RelativePath": "servicios",

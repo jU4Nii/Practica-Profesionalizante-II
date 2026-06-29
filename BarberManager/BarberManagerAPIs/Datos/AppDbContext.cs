@@ -12,6 +12,8 @@ namespace BarberManagerAPIs.Datos
 
         public DbSet<Producto> Productos { get; set; }
 
+        public DbSet<Peluquero> Peluqueros { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         
