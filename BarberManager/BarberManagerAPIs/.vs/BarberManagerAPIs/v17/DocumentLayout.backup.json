@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629022747_AgregarPeluqueros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260629022747_AgregarPeluqueros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629152128_AgregarEstadisticas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260629152128_AgregarEstadisticas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\endpoints\\estadisticaendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:endpoints\\estadisticaendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\logica\\estadisticalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\estadisticalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\repositorios\\estadisticarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:repositorios\\estadisticarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\datos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:datos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\entidades\\estadistica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:entidades\\estadistica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\logica\\dtos\\estadisticadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\dtos\\estadisticadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\migrations\\20260629022747_agregarpeluqueros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:migrations\\20260629022747_agregarpeluqueros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\endpoints\\peluqueroendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\repositorios\\peluquerorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:repositorios\\peluquerorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\datos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:datos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\juani\\onedrive\\documentos\\github\\practica profesionalizante ii\\barbermanager\\barbermanagerapis\\logica\\dtos\\peluquerodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,92 +155,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20260629022747_AgregarPeluqueros.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629022747_AgregarPeluqueros.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260629022747_AgregarPeluqueros.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629022747_AgregarPeluqueros.cs",
-              "RelativeToolTip": "Migrations\\20260629022747_AgregarPeluqueros.cs",
+              "Title": "20260629152128_AgregarEstadisticas.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629152128_AgregarEstadisticas.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260629152128_AgregarEstadisticas.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629152128_AgregarEstadisticas.cs",
+              "RelativeToolTip": "Migrations\\20260629152128_AgregarEstadisticas.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T02:27:47.263Z",
+              "WhenOpened": "2026-06-29T15:21:28.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PeluqueroEndpoints.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\PeluqueroEndpoints.cs",
-              "RelativeDocumentMoniker": "Endpoints\\PeluqueroEndpoints.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\PeluqueroEndpoints.cs",
-              "RelativeToolTip": "Endpoints\\PeluqueroEndpoints.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Title": "EstadisticaEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\EstadisticaEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\EstadisticaEndpoints.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\EstadisticaEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\EstadisticaEndpoints.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T02:25:45.224Z",
+              "WhenOpened": "2026-06-29T15:20:24.511Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PeluqueroLogica.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\PeluqueroLogica.cs",
-              "RelativeDocumentMoniker": "Logica\\PeluqueroLogica.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\PeluqueroLogica.cs",
-              "RelativeToolTip": "Logica\\PeluqueroLogica.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Title": "EstadisticaLogica.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\EstadisticaLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\EstadisticaLogica.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\EstadisticaLogica.cs",
+              "RelativeToolTip": "Logica\\EstadisticaLogica.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T02:24:53.656Z",
+              "WhenOpened": "2026-06-29T15:18:35.246Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PeluqueroRepository.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\PeluqueroRepository.cs",
-              "RelativeDocumentMoniker": "Repositorios\\PeluqueroRepository.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\PeluqueroRepository.cs",
-              "RelativeToolTip": "Repositorios\\PeluqueroRepository.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwCYAAAABAAAAAAAAAA==",
+              "Title": "EstadisticaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\EstadisticaRepository.cs",
+              "RelativeDocumentMoniker": "Repositorios\\EstadisticaRepository.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\EstadisticaRepository.cs",
+              "RelativeToolTip": "Repositorios\\EstadisticaRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwAkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T02:24:13.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PeluqueroDTO.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\PeluqueroDTO.cs",
-              "RelativeDocumentMoniker": "Logica\\DTOs\\PeluqueroDTO.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\PeluqueroDTO.cs",
-              "RelativeToolTip": "Logica\\DTOs\\PeluqueroDTO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwAYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T02:23:15.139Z",
+              "WhenOpened": "2026-06-29T15:18:08.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Peluquero.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Peluquero.cs",
-              "RelativeDocumentMoniker": "Entidades\\Peluquero.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Peluquero.cs",
-              "RelativeToolTip": "Entidades\\Peluquero.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA5wAwAAAABAAAAAAAAAA==",
+              "Title": "EstadisticaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\EstadisticaDTO.cs",
+              "RelativeDocumentMoniker": "Logica\\DTOs\\EstadisticaDTO.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\EstadisticaDTO.cs",
+              "RelativeToolTip": "Logica\\DTOs\\EstadisticaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T02:22:32.942Z",
+              "WhenOpened": "2026-06-29T15:16:58.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Estadistica.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Estadistica.cs",
+              "RelativeDocumentMoniker": "Entidades\\Estadistica.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Estadistica.cs",
+              "RelativeToolTip": "Entidades\\Estadistica.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T15:16:33.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "20260629021423_AgregarProductos.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629021423_AgregarProductos.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260629021423_AgregarProductos.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629021423_AgregarProductos.cs",
-              "RelativeToolTip": "Migrations\\20260629021423_AgregarProductos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Title": "20260629022747_AgregarPeluqueros.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629022747_AgregarPeluqueros.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260629022747_AgregarPeluqueros.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629022747_AgregarPeluqueros.cs",
+              "RelativeToolTip": "Migrations\\20260629022747_AgregarPeluqueros.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T02:14:24.946Z",
+              "WhenOpened": "2026-06-29T02:27:47.263Z",
               "EditorCaption": ""
             },
             {
@@ -227,7 +251,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAmwCwAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwD0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-05T01:38:57.729Z",
               "EditorCaption": ""
@@ -235,41 +259,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ProductoEndpoints.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\ProductoEndpoints.cs",
-              "RelativeDocumentMoniker": "Endpoints\\ProductoEndpoints.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\ProductoEndpoints.cs",
-              "RelativeToolTip": "Endpoints\\ProductoEndpoints.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwCoAAAABAAAAAAAAAA==",
+              "Title": "PeluqueroLogica.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\PeluqueroLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\PeluqueroLogica.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\PeluqueroLogica.cs",
+              "RelativeToolTip": "Logica\\PeluqueroLogica.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T23:02:41.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-29T02:24:53.656Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "ProductoLogica.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\ProductoLogica.cs",
-              "RelativeDocumentMoniker": "Logica\\ProductoLogica.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\ProductoLogica.cs",
-              "RelativeToolTip": "Logica\\ProductoLogica.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAADwvzoAAAABAAAAAAAAAA==",
+              "Title": "PeluqueroRepository.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\PeluqueroRepository.cs",
+              "RelativeDocumentMoniker": "Repositorios\\PeluqueroRepository.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\PeluqueroRepository.cs",
+              "RelativeToolTip": "Repositorios\\PeluqueroRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAqwCYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T23:01:54.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-29T02:24:13.329Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ProductoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\ProductoRepository.cs",
-              "RelativeDocumentMoniker": "Repositorios\\ProductoRepository.cs",
-              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\ProductoRepository.cs",
-              "RelativeToolTip": "Repositorios\\ProductoRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAsAAAAAAAAAAAAAAA==",
+              "Title": "PeluqueroDTO.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\PeluqueroDTO.cs",
+              "RelativeDocumentMoniker": "Logica\\DTOs\\PeluqueroDTO.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\PeluqueroDTO.cs",
+              "RelativeToolTip": "Logica\\DTOs\\PeluqueroDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T23:01:16.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-29T02:23:15.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Peluquero.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Peluquero.cs",
+              "RelativeDocumentMoniker": "Entidades\\Peluquero.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Peluquero.cs",
+              "RelativeToolTip": "Entidades\\Peluquero.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA5wAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:22:32.942Z"
             },
             {
               "$type": "Document",
@@ -279,14 +312,74 @@
               "RelativeDocumentMoniker": "Datos\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Datos\\AppDbContext.cs",
               "RelativeToolTip": "Datos\\AppDbContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBAAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T22:32:00.372Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
+              "Title": "PeluqueroEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\PeluqueroEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\PeluqueroEndpoints.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\PeluqueroEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\PeluqueroEndpoints.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:25:45.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20260629021423_AgregarProductos.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629021423_AgregarProductos.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260629021423_AgregarProductos.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260629021423_AgregarProductos.cs",
+              "RelativeToolTip": "Migrations\\20260629021423_AgregarProductos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:14:24.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductoEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\ProductoEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\ProductoEndpoints.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\ProductoEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\ProductoEndpoints.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwCoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T23:02:41.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductoLogica.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\ProductoLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\ProductoLogica.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\ProductoLogica.cs",
+              "RelativeToolTip": "Logica\\ProductoLogica.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAADwvzoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T23:01:54.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\ProductoRepository.cs",
+              "RelativeDocumentMoniker": "Repositorios\\ProductoRepository.cs",
+              "ToolTip": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\ProductoRepository.cs",
+              "RelativeToolTip": "Repositorios\\ProductoRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T23:01:16.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ProductoDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\ProductoDTO.cs",
               "RelativeDocumentMoniker": "Logica\\DTOs\\ProductoDTO.cs",
@@ -294,12 +387,11 @@
               "RelativeToolTip": "Logica\\DTOs\\ProductoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T22:57:11.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-08T22:57:11.859Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Producto.cs",
               "RelativeDocumentMoniker": "Entidades\\Producto.cs",
@@ -307,12 +399,11 @@
               "RelativeToolTip": "Entidades\\Producto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T22:56:04.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-08T22:56:04.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -320,12 +411,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-05T01:33:59.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T01:33:59.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Cliente.cs",
               "RelativeDocumentMoniker": "Entidades\\Cliente.cs",
@@ -337,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "20260605020210_TerceraMigracion.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260605020210_TerceraMigracion.cs",
               "RelativeDocumentMoniker": "Migrations\\20260605020210_TerceraMigracion.cs",
@@ -349,7 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "20260605020032_AgregarServicios.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260605020032_AgregarServicios.cs",
               "RelativeDocumentMoniker": "Migrations\\20260605020032_AgregarServicios.cs",
@@ -361,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "ServicioEndpoints.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\ServicioEndpoints.cs",
               "RelativeDocumentMoniker": "Endpoints\\ServicioEndpoints.cs",
@@ -373,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "ServicioLogica.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\ServicioLogica.cs",
               "RelativeDocumentMoniker": "Logica\\ServicioLogica.cs",
@@ -385,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "ServicioRepository.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\ServicioRepository.cs",
               "RelativeDocumentMoniker": "Repositorios\\ServicioRepository.cs",
@@ -397,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "ClienteEndpoints.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Endpoints\\ClienteEndpoints.cs",
               "RelativeDocumentMoniker": "Endpoints\\ClienteEndpoints.cs",
@@ -409,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "ServicioDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\ServicioDTO.cs",
               "RelativeDocumentMoniker": "Logica\\DTOs\\ServicioDTO.cs",
@@ -421,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "Servicio.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Entidades\\Servicio.cs",
               "RelativeDocumentMoniker": "Entidades\\Servicio.cs",
@@ -433,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "20260605013956_PrimeraMigracion.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Migrations\\20260605013956_PrimeraMigracion.cs",
               "RelativeDocumentMoniker": "Migrations\\20260605013956_PrimeraMigracion.cs",
@@ -445,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "ClienteLogica.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\ClienteLogica.cs",
               "RelativeDocumentMoniker": "Logica\\ClienteLogica.cs",
@@ -457,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "ClienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Repositorios\\ClienteRepository.cs",
               "RelativeDocumentMoniker": "Repositorios\\ClienteRepository.cs",
@@ -469,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "ClienteDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\ClienteDTO.cs",
               "RelativeDocumentMoniker": "Logica\\DTOs\\ClienteDTO.cs",

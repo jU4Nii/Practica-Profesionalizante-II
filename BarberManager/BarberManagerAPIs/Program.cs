@@ -36,6 +36,10 @@ namespace BarberManagerAPIs
 
             builder.Services.AddScoped<IPeluqueroLogica, PeluqueroLogica>();
 
+            builder.Services.AddScoped<IEstadisticaRepository, EstadisticaRepository>();
+
+            builder.Services.AddScoped<IEstadisticaLogica, EstadisticaLogica>();
+
             var app = builder.Build();
 
             
@@ -54,6 +58,8 @@ namespace BarberManagerAPIs
             app.MapProductoEndpoints();
 
             app.MapPeluqueroEndpoints();
+
+            app.MapEstadisticaEndpoints();
 
             app.Run();
         }
