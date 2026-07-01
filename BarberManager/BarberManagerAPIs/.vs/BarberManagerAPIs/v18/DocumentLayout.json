@@ -1,0 +1,470 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\cajalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\cajalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\dtos\\cajadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\dtos\\cajadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\entidades\\caja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:entidades\\caja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\repositorios\\cajarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:repositorios\\cajarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\datos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:datos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\endpoints\\turnoservicioproductoendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:endpoints\\turnoservicioproductoendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\repositorios\\turnoservicioproductorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:repositorios\\turnoservicioproductorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\dtos\\turnoservicioproductodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\dtos\\turnoservicioproductodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\turnoservicioproductologica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\turnoservicioproductologica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\entidades\\turnoservicioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:entidades\\turnoservicioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\repositorios\\trurnorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:repositorios\\trurnorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\turnologica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\turnologica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\endpoints\\turnoendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:endpoints\\turnoendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\dtos\\turnodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\dtos\\turnodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\entidades\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:entidades\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\repositorios\\promocionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:repositorios\\promocionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\estadisticalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\estadisticalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\endpoints\\promocionendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:endpoints\\promocionendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\promocionlogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\promocionlogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\logica\\dtos\\promociondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:logica\\dtos\\promociondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\entidades\\promocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:entidades\\promocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\endpoints\\cajaendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:endpoints\\cajaendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\endpoints\\estadisticaendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:endpoints\\estadisticaendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\endpoints\\peluqueroendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:endpoints\\peluqueroendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|c:\\users\\maria\\programacion\\c#\\practica-profesionalizante-ii\\barbermanager\\barbermanagerapis\\endpoints\\clienteendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D8D7CE-1B26-4C80-B663-EBA9B509BF18}|BarberManagerAPIs.csproj|solutionrelative:endpoints\\clienteendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TurnoServicioProductoEndPoints.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\TurnoServicioProductoEndPoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\TurnoServicioProductoEndPoints.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\TurnoServicioProductoEndPoints.cs",
+              "RelativeToolTip": "Endpoints\\TurnoServicioProductoEndPoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:36:08.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TurnoServicioProductoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Repositorios\\TurnoServicioProductoRepository.cs",
+              "RelativeDocumentMoniker": "Repositorios\\TurnoServicioProductoRepository.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Repositorios\\TurnoServicioProductoRepository.cs",
+              "RelativeToolTip": "Repositorios\\TurnoServicioProductoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:35:52.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TurnoServicioProductoLogica.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\TurnoServicioProductoLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\TurnoServicioProductoLogica.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\TurnoServicioProductoLogica.cs",
+              "RelativeToolTip": "Logica\\TurnoServicioProductoLogica.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA2wC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:35:20.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TurnoServicioProductoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\TurnoServicioProductoDTO.cs",
+              "RelativeDocumentMoniker": "Logica\\DTOs\\TurnoServicioProductoDTO.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\TurnoServicioProductoDTO.cs",
+              "RelativeToolTip": "Logica\\DTOs\\TurnoServicioProductoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:35:02.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Datos\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Datos\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Datos\\AppDbContext.cs",
+              "RelativeToolTip": "Datos\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:18:09.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAiwCgAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:17:29.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CajaLogica.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\CajaLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\CajaLogica.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\CajaLogica.cs",
+              "RelativeToolTip": "Logica\\CajaLogica.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:12:11.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Caja.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\Caja.cs",
+              "RelativeDocumentMoniker": "Entidades\\Caja.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\Caja.cs",
+              "RelativeToolTip": "Entidades\\Caja.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:13:36.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CajaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\CajaDTO.cs",
+              "RelativeDocumentMoniker": "Logica\\DTOs\\CajaDTO.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\CajaDTO.cs",
+              "RelativeToolTip": "Logica\\DTOs\\CajaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:13:58.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CajaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Repositorios\\CajaRepository.cs",
+              "RelativeDocumentMoniker": "Repositorios\\CajaRepository.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Repositorios\\CajaRepository.cs",
+              "RelativeToolTip": "Repositorios\\CajaRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA9wBMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:38:00.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TurnoServicioProducto.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\TurnoServicioProducto.cs",
+              "RelativeDocumentMoniker": "Entidades\\TurnoServicioProducto.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\TurnoServicioProducto.cs",
+              "RelativeToolTip": "Entidades\\TurnoServicioProducto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:34:30.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TrurnoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Repositorios\\TrurnoRepository.cs",
+              "RelativeDocumentMoniker": "Repositorios\\TrurnoRepository.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Repositorios\\TrurnoRepository.cs",
+              "RelativeToolTip": "Repositorios\\TrurnoRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwEIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:31:55.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TurnoEndPoints.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\TurnoEndPoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\TurnoEndPoints.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\TurnoEndPoints.cs",
+              "RelativeToolTip": "Endpoints\\TurnoEndPoints.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAiwEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:32:46.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TurnoLogica.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\TurnoLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\TurnoLogica.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\TurnoLogica.cs",
+              "RelativeToolTip": "Logica\\TurnoLogica.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAiwFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:31:40.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TurnoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\TurnoDTO.cs",
+              "RelativeDocumentMoniker": "Logica\\DTOs\\TurnoDTO.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\TurnoDTO.cs",
+              "RelativeToolTip": "Logica\\DTOs\\TurnoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:31:29.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Turno.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\Turno.cs",
+              "RelativeDocumentMoniker": "Entidades\\Turno.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\Turno.cs",
+              "RelativeToolTip": "Entidades\\Turno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:31:18.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PromocionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Repositorios\\PromocionRepository.cs",
+              "RelativeDocumentMoniker": "Repositorios\\PromocionRepository.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Repositorios\\PromocionRepository.cs",
+              "RelativeToolTip": "Repositorios\\PromocionRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:16:45.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EstadisticaLogica.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\EstadisticaLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\EstadisticaLogica.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\EstadisticaLogica.cs",
+              "RelativeToolTip": "Logica\\EstadisticaLogica.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:16:12.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PromocionEndPoints.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\PromocionEndPoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\PromocionEndPoints.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\PromocionEndPoints.cs",
+              "RelativeToolTip": "Endpoints\\PromocionEndPoints.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:16:07.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PromocionLogica.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\PromocionLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\PromocionLogica.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\PromocionLogica.cs",
+              "RelativeToolTip": "Logica\\PromocionLogica.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwGkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:15:50.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PromocionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\PromocionDTO.cs",
+              "RelativeDocumentMoniker": "Logica\\DTOs\\PromocionDTO.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Logica\\DTOs\\PromocionDTO.cs",
+              "RelativeToolTip": "Logica\\DTOs\\PromocionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:15:32.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Promocion.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\Promocion.cs",
+              "RelativeDocumentMoniker": "Entidades\\Promocion.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\Promocion.cs",
+              "RelativeToolTip": "Entidades\\Promocion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:15:01.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\Cliente.cs",
+              "RelativeDocumentMoniker": "Entidades\\Cliente.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Entidades\\Cliente.cs",
+              "RelativeToolTip": "Entidades\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:13:14.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CajaEndPoints.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\CajaEndPoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\CajaEndPoints.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\CajaEndPoints.cs",
+              "RelativeToolTip": "Endpoints\\CajaEndPoints.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:10:08.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PeluqueroEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\PeluqueroEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\PeluqueroEndpoints.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\PeluqueroEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\PeluqueroEndpoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:06:05.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EstadisticaEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\EstadisticaEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\EstadisticaEndpoints.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\EstadisticaEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\EstadisticaEndpoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:06:04.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ClienteEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\ClienteEndpoints.cs",
+              "RelativeDocumentMoniker": "Endpoints\\ClienteEndpoints.cs",
+              "ToolTip": "C:\\Users\\maria\\Programacion\\C#\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\Endpoints\\ClienteEndpoints.cs",
+              "RelativeToolTip": "Endpoints\\ClienteEndpoints.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T23:05:55.542Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1128,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

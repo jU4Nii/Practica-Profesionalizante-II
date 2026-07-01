@@ -146,3 +146,15 @@ C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberMa
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.pdb
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.genruntimeconfig.cache
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\ref\BarberManagerAPIs.dll
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.csproj.AssemblyReference.cache
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.AssemblyInfoInputs.cache
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.AssemblyInfo.cs
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.csproj.CoreCompileInputs.cache
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.sourcelink.json
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.dll
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\refint\BarberManagerAPIs.dll
+C:\Users\maria\Programacion\C#\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\obj\Debug\net8.0\BarberManagerAPIs.pdb

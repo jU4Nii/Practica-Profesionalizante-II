@@ -40,6 +40,22 @@ namespace BarberManagerAPIs
 
             builder.Services.AddScoped<IEstadisticaLogica, EstadisticaLogica>();
 
+            builder.Services.AddScoped<ICajaRepository, CajaRepository>();
+
+            builder.Services.AddScoped<ICajaLogica, CajaLogica>();
+
+            builder.Services.AddScoped<IPromocionRepository, PromocionRepository>();
+
+            builder.Services.AddScoped<IPromocionLogica, PromocionLogica>();
+
+            builder.Services.AddScoped<ITurnoServicioProductoRepository, TurnoServicioProductoRepository>();
+
+            builder.Services.AddScoped<ITurnoServicioProductoLogica, TurnoServicioProductoLogica>();
+
+            builder.Services.AddScoped<ICajaLogica, CajaLogica>();
+
+            builder.Services.AddScoped<ICajaRepository, CajaRepository>();
+
             var app = builder.Build();
 
             
@@ -60,6 +76,14 @@ namespace BarberManagerAPIs
             app.MapPeluqueroEndpoints();
 
             app.MapEstadisticaEndpoints();
+
+            app.MapCajaEndpoints();
+
+            app.MapPromocionEndpoints();
+
+            app.MapTurnoServicioProductoEndpoints();
+
+            app.MapCajaEndpoints();
 
             app.Run();
         }

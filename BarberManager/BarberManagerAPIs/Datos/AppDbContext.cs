@@ -16,9 +16,18 @@ namespace BarberManagerAPIs.Datos
 
         public DbSet<Estadistica> Estadisticas { get; set; }
 
+        public DbSet<Promocion> Promociones { get; set; }
+
+        public DbSet<Caja> Cajas { get; set; }
+
+        public DbSet<Turno> Turnos { get; set; }
+
+        public DbSet<TurnoServicioProducto> TurnoServicioProductos { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        
+
+
 
 
     }
