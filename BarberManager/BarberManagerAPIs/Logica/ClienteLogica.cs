@@ -34,14 +34,16 @@ public class ClienteLogica : IClienteLogica
 
     public async Task<bool> Agregar(ClienteDTO dto)
     {
-        if (string.IsNullOrWhiteSpace(dto.Nombre))
+        if (string.IsNullOrWhiteSpace(dto.Nombre) ||
+    string.IsNullOrWhiteSpace(dto.Telefono))
             return false;
 
         Cliente cliente = new Cliente
         {
             Nombre = dto.Nombre,
             Telefono = dto.Telefono,
-            Correo = dto.Correo
+            Correo = dto.Correo,
+            Notas = dto.Notas
         };
 
         await _repository.Agregar(cliente);

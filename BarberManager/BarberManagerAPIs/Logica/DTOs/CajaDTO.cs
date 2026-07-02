@@ -2,9 +2,14 @@
 {
     public class CajaDTO
     {
-        public DateTime FechaInicio { get; set; }
-        public DateTime? FechaCierre { get; set; }
-        public decimal Ingresos { get; set; }
-        public decimal Egresos { get; set; }
+        public DateTime Fecha { get; set; }
+
+        public decimal Monto { get; set; }
+
+        public string Concepto { get; set; }
+
+        public string MetodoPago { get; set; }
+
+        public bool EsIngreso { get; set; }
     }
 }

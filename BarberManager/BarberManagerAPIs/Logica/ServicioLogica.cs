@@ -11,6 +11,9 @@ public interface IServicioLogica
     Task<Servicio?> ObtenerPorId(int id);
 
     Task<bool> Agregar(ServicioDTO dto);
+
+    Task<bool> Editar(int id, ServicioDTO dto);
+    Task<bool> Eliminar(int id);
 }
 
 public class ServicioLogica : IServicioLogica
@@ -50,4 +53,32 @@ public class ServicioLogica : IServicioLogica
 
         return true;
     }
+
+    public async Task<bool> Editar(int id, ServicioDTO dto)
+    {
+        var servicio = await _repository.ObtenerPorId(id);
+
+        if (servicio == null)
+            return false;
+
+        servicio.Nombre = dto.Nombre;
+        servicio.Precio = dto.Precio;
+
+        await _repository.Guardar();
+
+        return true;
+    }
+
+    public async Task<bool> Eliminar(int id)
+    {
+        var servicio = await _repository.ObtenerPorId(id);
+
+        if (servicio == null)
+            return false;
+
+        await _repository.Eliminar(servicio);
+
+        return true;
+    }
+
 }

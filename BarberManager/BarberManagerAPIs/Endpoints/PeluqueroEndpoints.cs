@@ -32,5 +32,32 @@ public static class PeluqueroEndpoints
                 mensaje = "Peluquero creado correctamente"
             });
         });
+
+        app.MapPut("/peluqueros/{id}", async (int id, PeluqueroDTO dto, IPeluqueroLogica logica) =>
+        {
+            var editado = await logica.Editar(id, dto);
+
+            if (!editado)
+                return Results.NotFound();
+
+            return Results.Ok(new
+            {
+                mensaje = "Peluquero actualizado correctamente"
+            });
+        });
+
+        app.MapDelete("/peluqueros/{id}", async (int id, IPeluqueroLogica logica) =>
+        {
+            var eliminado = await logica.Eliminar(id);
+
+            if (!eliminado)
+                return Results.NotFound();
+
+            return Results.Ok(new
+            {
+                mensaje = "Peluquero eliminado correctamente"
+            });
+        });
+
     }
 }

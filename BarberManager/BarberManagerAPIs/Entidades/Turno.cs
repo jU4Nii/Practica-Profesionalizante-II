@@ -13,5 +13,7 @@
         public string Hora { get; set; }
 
         public int? IdPromocion { get; set; }
+
+        public bool Cancelado { get; set; } = false;
     }
 }

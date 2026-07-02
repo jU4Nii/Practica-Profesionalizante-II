@@ -11,6 +11,10 @@ public interface IProductoRepository
     Task<Producto?> ObtenerPorId(int id);
 
     Task Agregar(Producto producto);
+
+    Task Guardar();
+    Task Eliminar(Producto producto);
+
 }
 
 public class ProductoRepository : IProductoRepository
@@ -39,4 +43,17 @@ public class ProductoRepository : IProductoRepository
 
         await _context.SaveChangesAsync();
     }
+
+    public async Task Guardar()
+    {
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Eliminar(Producto producto)
+    {
+        _context.Productos.Remove(producto);
+
+        await _context.SaveChangesAsync();
+    }
+
 }

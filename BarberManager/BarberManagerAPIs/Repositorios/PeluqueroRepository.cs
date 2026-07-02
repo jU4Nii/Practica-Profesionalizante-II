@@ -9,6 +9,10 @@ public interface IPeluqueroRepository
     Task<List<Peluquero>> ObtenerTodos();
     Task<Peluquero?> ObtenerPorId(int id);
     Task Agregar(Peluquero peluquero);
+
+    Task Guardar();
+    Task Eliminar(Peluquero peluquero);
+
 }
 
 public class PeluqueroRepository : IPeluqueroRepository
@@ -36,4 +40,17 @@ public class PeluqueroRepository : IPeluqueroRepository
         _context.Peluqueros.Add(peluquero);
         await _context.SaveChangesAsync();
     }
+
+    public async Task Guardar()
+    {
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Eliminar(Peluquero peluquero)
+    {
+        _context.Peluqueros.Remove(peluquero);
+
+        await _context.SaveChangesAsync();
+    }
+
 }

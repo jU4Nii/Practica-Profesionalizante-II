@@ -39,5 +39,32 @@ public static class ProductoEndpoints
                 mensaje = "Producto creado correctamente"
             });
         });
+
+        app.MapPut("/productos/{id}", async (int id, ProductoDTO dto, IProductoLogica logica) =>
+        {
+            var editado = await logica.Editar(id, dto);
+
+            if (!editado)
+                return Results.NotFound();
+
+            return Results.Ok(new
+            {
+                mensaje = "Producto actualizado correctamente"
+            });
+        });
+
+        app.MapDelete("/productos/{id}", async (int id, IProductoLogica logica) =>
+        {
+            var eliminado = await logica.Eliminar(id);
+
+            if (!eliminado)
+                return Results.NotFound();
+
+            return Results.Ok(new
+            {
+                mensaje = "Producto eliminado correctamente"
+            });
+        });
+
     }
 }

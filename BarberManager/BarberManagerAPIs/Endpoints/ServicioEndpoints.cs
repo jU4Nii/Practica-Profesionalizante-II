@@ -39,5 +39,32 @@ public static class ServicioEndpoints
                 mensaje = "Servicio creado correctamente"
             });
         });
+
+        app.MapPut("/servicios/{id}", async (int id, ServicioDTO dto, IServicioLogica logica) =>
+        {
+            var editado = await logica.Editar(id, dto);
+
+            if (!editado)
+                return Results.NotFound();
+
+            return Results.Ok(new
+            {
+                mensaje = "Servicio actualizado correctamente"
+            });
+        });
+
+        app.MapDelete("/servicios/{id}", async (int id, IServicioLogica logica) =>
+        {
+            var eliminado = await logica.Eliminar(id);
+
+            if (!eliminado)
+                return Results.NotFound();
+
+            return Results.Ok(new
+            {
+                mensaje = "Servicio eliminado correctamente"
+            });
+        });
+
     }
 }

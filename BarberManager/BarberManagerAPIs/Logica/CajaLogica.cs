@@ -35,10 +35,11 @@ public class CajaLogica : ICajaLogica
     {
         Caja caja = new Caja
         {
-            FechaInicio = dto.FechaInicio,
-            FechaCierre = dto.FechaCierre,
-            Ingresos = dto.Ingresos,
-            Egresos = dto.Egresos
+            Fecha = dto.Fecha,
+            Monto = dto.Monto,
+            Concepto = dto.Concepto,
+            MetodoPago = dto.MetodoPago,
+            EsIngreso = dto.EsIngreso
         };
 
         await _repository.Agregar(caja);
@@ -51,10 +52,11 @@ public class CajaLogica : ICajaLogica
         if (caja == null)
             return false;
 
-        caja.FechaInicio = dto.FechaInicio;
-        caja.FechaCierre = dto.FechaCierre;
-        caja.Ingresos = dto.Ingresos;
-        caja.Egresos = dto.Egresos;
+        caja.Fecha = dto.Fecha;
+        caja.Monto = dto.Monto;
+        caja.Concepto = dto.Concepto;
+        caja.MetodoPago = dto.MetodoPago;
+        caja.EsIngreso = dto.EsIngreso;
 
         await _repository.Guardar();
 

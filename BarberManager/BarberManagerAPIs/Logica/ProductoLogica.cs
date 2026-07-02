@@ -11,6 +11,10 @@ public interface IProductoLogica
     Task<Producto?> ObtenerPorId(int id);
 
     Task<bool> Agregar(ProductoDTO dto);
+
+    Task<bool> Editar(int id, ProductoDTO dto);
+    Task<bool> Eliminar(int id);
+
 }
 
 public class ProductoLogica : IProductoLogica
@@ -56,4 +60,35 @@ public class ProductoLogica : IProductoLogica
 
         return true;
     }
+
+    public async Task<bool> Editar(int id, ProductoDTO dto)
+    {
+        var producto = await _repository.ObtenerPorId(id);
+
+        if (producto == null)
+            return false;
+
+        producto.Nombre = dto.Nombre;
+        producto.Descripcion = dto.Descripcion;
+        producto.Cantidad = dto.Cantidad;
+        producto.UsoInterno = dto.UsoInterno;
+        producto.Precio = dto.Precio;
+
+        await _repository.Guardar();
+
+        return true;
+    }
+
+    public async Task<bool> Eliminar(int id)
+    {
+        var producto = await _repository.ObtenerPorId(id);
+
+        if (producto == null)
+            return false;
+
+        await _repository.Eliminar(producto);
+
+        return true;
+    }
+
 }

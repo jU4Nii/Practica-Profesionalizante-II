@@ -9,6 +9,10 @@ public interface IPeluqueroLogica
     Task<List<Peluquero>> ObtenerTodos();
     Task<Peluquero?> ObtenerPorId(int id);
     Task<bool> Agregar(PeluqueroDTO dto);
+
+    Task<bool> Editar(int id, PeluqueroDTO dto);
+    Task<bool> Eliminar(int id);
+
 }
 
 public class PeluqueroLogica : IPeluqueroLogica
@@ -46,4 +50,36 @@ public class PeluqueroLogica : IPeluqueroLogica
 
         return true;
     }
+
+    public async Task<bool> Editar(int id, PeluqueroDTO dto)
+    {
+        var peluquero = await _repository.ObtenerPorId(id);
+
+        if (peluquero == null)
+            return false;
+
+        peluquero.Nombre = dto.Nombre;
+        peluquero.Correo = dto.Correo;
+        peluquero.Telefono = dto.Telefono;
+        peluquero.Contrasena = dto.Contrasena;
+        peluquero.EsAdmin = dto.EsAdmin;
+        peluquero.EstaActivo = dto.EstaActivo;
+
+        await _repository.Guardar();
+
+        return true;
+    }
+
+    public async Task<bool> Eliminar(int id)
+    {
+        var peluquero = await _repository.ObtenerPorId(id);
+
+        if (peluquero == null)
+            return false;
+
+        await _repository.Eliminar(peluquero);
+
+        return true;
+    }
+
 }

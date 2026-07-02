@@ -4,6 +4,7 @@ using BarberManagerAPIs.Datos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BarberManagerAPIs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260701223632_AgregarCanceladoTurno")]
+    partial class AgregarCanceladoTurno
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,21 +33,16 @@ namespace BarberManagerAPIs.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Concepto")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Egresos")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<bool>("EsIngreso")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("Fecha")
+                    b.Property<DateTime?>("FechaCierre")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("MetodoPago")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("FechaInicio")
+                        .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Monto")
+                    b.Property<decimal>("Ingresos")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");

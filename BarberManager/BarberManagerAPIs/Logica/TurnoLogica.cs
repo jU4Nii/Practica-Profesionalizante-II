@@ -10,7 +10,7 @@ public interface ITurnoLogica
     Task<Turno?> ObtenerPorId(int id);
     Task<List<Turno>> ObtenerPorFecha(DateTime fecha);
     Task<List<Turno>> ObtenerPorPeluquero(int idPeluquero);
-    Task Agregar(TurnoDTO dto);
+    Task<bool> Agregar(TurnoDTO dto);
     Task<bool> Editar(int id, TurnoDTO dto);
     Task<bool> Eliminar(int id);
 }
@@ -18,10 +18,17 @@ public interface ITurnoLogica
 public class TurnoLogica : ITurnoLogica
 {
     private readonly ITurnoRepository _repository;
+    private readonly IClienteRepository _clienteRepository;
+    private readonly IPeluqueroRepository _peluqueroRepository;
 
-    public TurnoLogica(ITurnoRepository repository)
+    public TurnoLogica(
+        ITurnoRepository repository,
+        IClienteRepository clienteRepository,
+        IPeluqueroRepository peluqueroRepository)
     {
         _repository = repository;
+        _clienteRepository = clienteRepository;
+        _peluqueroRepository = peluqueroRepository;
     }
 
     public async Task<List<Turno>> ObtenerTodos()
@@ -44,8 +51,29 @@ public class TurnoLogica : ITurnoLogica
         return await _repository.ObtenerPorPeluquero(idPeluquero);
     }
 
-    public async Task Agregar(TurnoDTO dto)
+    public async Task<bool> Agregar(TurnoDTO dto)
     {
+        var cliente = await _clienteRepository.ObtenerPorId(dto.IdCliente);
+
+        if (cliente == null)
+            return false;
+
+        var peluquero = await _peluqueroRepository.ObtenerPorId(dto.IdPeluquero);
+
+        if (peluquero == null)
+            return false;
+
+        var turnos = await _repository.ObtenerTodos();
+
+        bool ocupado = turnos.Any(t =>
+            t.IdPeluquero == dto.IdPeluquero &&
+            t.Fecha.Date == dto.Fecha.Date &&
+            t.Hora == dto.Hora &&
+            !t.Cancelado);
+
+        if (ocupado)
+            return false;
+
         Turno turno = new Turno
         {
             IdCliente = dto.IdCliente,
@@ -56,6 +84,8 @@ public class TurnoLogica : ITurnoLogica
         };
 
         await _repository.Agregar(turno);
+
+        return true;
     }
 
     public async Task<bool> Editar(int id, TurnoDTO dto)
@@ -63,6 +93,28 @@ public class TurnoLogica : ITurnoLogica
         var turno = await _repository.ObtenerPorId(id);
 
         if (turno == null)
+            return false;
+
+        var cliente = await _clienteRepository.ObtenerPorId(dto.IdCliente);
+
+        if (cliente == null)
+            return false;
+
+        var peluquero = await _peluqueroRepository.ObtenerPorId(dto.IdPeluquero);
+
+        if (peluquero == null)
+            return false;
+
+        var turnos = await _repository.ObtenerTodos();
+
+        bool ocupado = turnos.Any(t =>
+            t.Id != id &&
+            t.IdPeluquero == dto.IdPeluquero &&
+            t.Fecha.Date == dto.Fecha.Date &&
+            t.Hora == dto.Hora &&
+            !t.Cancelado);
+
+        if (ocupado)
             return false;
 
         turno.IdCliente = dto.IdCliente;
@@ -83,7 +135,9 @@ public class TurnoLogica : ITurnoLogica
         if (turno == null)
             return false;
 
-        await _repository.Eliminar(turno);
+        turno.Cancelado = true;
+
+        await _repository.Guardar();
 
         return true;
     }

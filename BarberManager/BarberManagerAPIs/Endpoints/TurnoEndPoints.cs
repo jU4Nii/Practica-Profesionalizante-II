@@ -25,7 +25,13 @@ public static class TurnoEndpoints
 
         app.MapPost("/turnos", async (TurnoDTO dto, ITurnoLogica logica) =>
         {
-            await logica.Agregar(dto);
+            var creado = await logica.Agregar(dto);
+
+            if (!creado)
+                return Results.Conflict(new
+                {
+                    mensaje = "El peluquero ya tiene un turno en ese horario."
+                });
 
             return Results.Created("/turnos", new
             {
@@ -35,14 +41,17 @@ public static class TurnoEndpoints
 
         app.MapPut("/turnos/{id}", async (int id, TurnoDTO dto, ITurnoLogica logica) =>
         {
-            var actualizado = await logica.Editar(id, dto);
+            var editado = await logica.Editar(id, dto);
 
-            if (!actualizado)
-                return Results.NotFound();
+            if (!editado)
+                return Results.Conflict(new
+                {
+                    mensaje = "No se pudo reprogramar el turno porque el peluquero ya tiene otro turno en ese horario."
+                });
 
             return Results.Ok(new
             {
-                mensaje = "Turno actualizado correctamente"
+                mensaje = "Turno reprogramado correctamente"
             });
         });
 
@@ -55,7 +64,7 @@ public static class TurnoEndpoints
 
             return Results.Ok(new
             {
-                mensaje = "Turno eliminado correctamente"
+                mensaje = "Turno cancelado correctamente"
             });
         });
 

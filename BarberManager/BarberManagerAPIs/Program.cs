@@ -28,6 +28,9 @@ namespace BarberManagerAPIs
 
             builder.Services.AddScoped<IServicioLogica, ServicioLogica>();
 
+            builder.Services.AddScoped<ITurnoRepository, TurnoRepository>();
+            builder.Services.AddScoped<ITurnoLogica, TurnoLogica>();
+
             builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 
             builder.Services.AddScoped<IProductoLogica, ProductoLogica>();
@@ -71,6 +74,8 @@ namespace BarberManagerAPIs
 
             app.MapServicioEndpoints();
 
+            app.MapTurnoEndpoints();
+
             app.MapProductoEndpoints();
 
             app.MapPeluqueroEndpoints();
@@ -83,7 +88,7 @@ namespace BarberManagerAPIs
 
             app.MapTurnoServicioProductoEndpoints();
 
-            app.MapCajaEndpoints();
+         
 
             app.Run();
         }

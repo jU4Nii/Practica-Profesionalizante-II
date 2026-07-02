@@ -11,6 +11,9 @@ public interface IServicioRepository
     Task<Servicio?> ObtenerPorId(int id);
 
     Task Agregar(Servicio servicio);
+
+    Task Guardar();
+    Task Eliminar(Servicio servicio);
 }
 
 public class ServicioRepository : IServicioRepository
@@ -39,4 +42,16 @@ public class ServicioRepository : IServicioRepository
 
         await _context.SaveChangesAsync();
     }
+
+    public async Task Guardar()
+    {
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Eliminar(Servicio servicio)
+    {
+        _context.Servicios.Remove(servicio);
+        await _context.SaveChangesAsync();
+    }
+
 }

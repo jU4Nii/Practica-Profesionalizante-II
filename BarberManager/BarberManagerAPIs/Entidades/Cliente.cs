@@ -9,5 +9,7 @@
         public string Telefono { get; set; }
 
         public string? Correo { get; set; }
+
+        public string? Notas { get; set; }
     }
 }
