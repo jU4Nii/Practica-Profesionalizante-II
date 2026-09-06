@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BarberManagerAPIs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd203331a214c0a81e40b29e4bb1fe3a2077047d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac85ff339b5d05bf8fbbd2fc01657f920e8478ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("BarberManagerAPIs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BarberManagerAPIs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
