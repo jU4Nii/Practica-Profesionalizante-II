@@ -11,8 +11,26 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Login()
+    {
+        return View();
+    }
+
+    // Por ahora el login es solamente visual. La API todavía no tiene autenticación.
+    [HttpPost]
+    public IActionResult Login(string? correo, string? contrasena)
+    {
+        return RedirectToAction(nameof(Index));
+    }
+
     public IActionResult Privacy()
     {
+        return View();
+    }
+
+    public IActionResult EnConstruccion(string nombre)
+    {
+        ViewData["NombreSeccion"] = nombre;
         return View();
     }
 

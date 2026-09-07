@@ -1,0 +1,5 @@
+@{
+    var nombre = ViewData["NombreSeccion"]?.ToString() ?? "Esta sección";
+    ViewData["Title"] = nombre;
+}
+<section class="simple-page text-center"><h1>@nombre</h1><p>Esta vista se va a conectar con su API en el próximo paso.</p><a class="btn btn-dark" asp-action="Index">Volver al menú</a></section>

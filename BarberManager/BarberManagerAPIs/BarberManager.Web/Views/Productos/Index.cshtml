@@ -1,0 +1,7 @@
+@model List<BarberManager.Web.Models.ProductoViewModel>
+@{ ViewData["Title"] = "Productos"; }
+<div class="d-flex justify-content-between align-items-center mb-4"><h1 class="h2 mb-0">Productos</h1><a class="btn btn-dark" asp-action="Create">Nuevo producto</a></div>
+@if (TempData["Mensaje"] is string mensaje) { <div class="alert alert-info">@mensaje</div> }
+@if (ViewBag.ErrorApi is string errorApi) { <div class="alert alert-warning">@errorApi</div> }
+<div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Producto</th><th>Descripción</th><th>Cantidad</th><th>Uso</th><th>Precio</th><th></th></tr></thead><tbody>@foreach (var producto in Model) { <tr><td>@producto.Nombre</td><td>@producto.Descripcion</td><td>@producto.Cantidad</td><td>@(producto.UsoInterno ? "Interno" : "Venta")</td><td>@producto.Precio.ToString("C")</td><td class="text-end"><a class="btn btn-sm btn-outline-dark" asp-action="Edit" asp-route-id="@producto.Id">Editar</a><form class="d-inline" asp-action="Delete" asp-route-id="@producto.Id" method="post"><button class="btn btn-sm btn-outline-danger" type="submit">Eliminar</button></form></td></tr> }</tbody></table></div></div>
+@if (!Model.Any()) { <p class="text-muted mt-3">Todavía no hay productos cargados.</p> }

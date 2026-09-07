@@ -16,4 +16,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <!-- El proyecto MVC vive dentro de esta carpeta, pero se compila por separado. -->
+  <ItemGroup>
+    <Compile Remove="BarberManager.Web\**\*.cs" />
+    <Content Remove="BarberManager.Web\**\*" />
+    <EmbeddedResource Remove="BarberManager.Web\**\*" />
+    <None Remove="BarberManager.Web\**\*" />
+  </ItemGroup>
+
 </Project>

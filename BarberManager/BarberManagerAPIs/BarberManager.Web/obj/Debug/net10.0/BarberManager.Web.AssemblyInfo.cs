@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BarberManager.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac85ff339b5d05bf8fbbd2fc01657f920e8478ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b2fc5285013430fb075a9c101be8dd473d7572f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BarberManager.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BarberManager.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

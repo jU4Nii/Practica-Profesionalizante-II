@@ -1,0 +1,5 @@
+@model BarberManager.Web.Models.ClienteViewModel
+@{ ViewData["Title"] = "Nuevo cliente"; }
+<h1 class="h2 mb-4">Nuevo cliente</h1>
+<div class="card form-card"><div class="card-body"><form method="post"><div asp-validation-summary="ModelOnly" class="text-danger"></div><div class="mb-3"><label asp-for="Nombre" class="form-label"></label><input asp-for="Nombre" class="form-control" /><span asp-validation-for="Nombre" class="text-danger"></span></div><div class="mb-3"><label asp-for="Telefono" class="form-label"></label><input asp-for="Telefono" class="form-control" /><span asp-validation-for="Telefono" class="text-danger"></span></div><div class="mb-3"><label asp-for="Correo" class="form-label"></label><input asp-for="Correo" class="form-control" /></div><div class="mb-4"><label asp-for="Notas" class="form-label"></label><textarea asp-for="Notas" class="form-control"></textarea></div><button class="btn btn-dark" type="submit">Guardar</button><a class="btn btn-outline-secondary ms-2" asp-action="Index">Cancelar</a></form></div></div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

@@ -1,0 +1,7 @@
+@model List<BarberManager.Web.Models.TurnoListadoViewModel>
+@{ ViewData["Title"] = "Turnos"; }
+<div class="d-flex justify-content-between align-items-center mb-4"><h1 class="h2 mb-0">Turnos</h1><a class="btn btn-dark" asp-action="Create">Nuevo turno</a></div>
+@if (TempData["Mensaje"] is string mensaje) { <div class="alert alert-info">@mensaje</div> }
+@if (ViewBag.ErrorApi is string errorApi) { <div class="alert alert-warning">@errorApi</div> }
+<div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Fecha</th><th>Hora</th><th>Cliente</th><th>Peluquero</th><th>Estado</th><th></th></tr></thead><tbody>@foreach (var turno in Model) { <tr><td>@turno.Fecha.ToString("dd/MM/yyyy")</td><td>@turno.Hora</td><td>@turno.NombreCliente</td><td>@turno.NombrePeluquero</td><td>@(turno.Cancelado ? "Cancelado" : "Activo")</td><td class="text-end">@if (!turno.Cancelado) { <form asp-action="Cancelar" asp-route-id="@turno.Id" method="post"><button class="btn btn-sm btn-outline-danger" type="submit">Cancelar</button></form> }</td></tr> }</tbody></table></div></div>
+@if (!Model.Any()) { <p class="text-muted mt-3">Todavía no hay turnos registrados.</p> }

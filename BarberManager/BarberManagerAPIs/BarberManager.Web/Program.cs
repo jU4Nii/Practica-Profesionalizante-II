@@ -5,7 +5,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient("BarberApi", client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7073/");
+    client.BaseAddress = new Uri(builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5034/");
 });
 
 var app = builder.Build();

@@ -1,8 +1,16 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Menú principal";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="main-menu">
+    <h1>BARBER MANAGER</h1>
+    <h2>Menú principal</h2>
+    <nav class="main-menu-options" aria-label="Menú principal">
+        <a asp-controller="Turnos" asp-action="Index">Turnos</a>
+        <a asp-controller="Clientes" asp-action="Index">Clientes</a>
+        <a asp-controller="Productos" asp-action="Index">Productos</a>
+        <a asp-controller="Home" asp-action="EnConstruccion" asp-route-nombre="Ingresos y egresos">Ingresos / egresos</a>
+        <a asp-controller="Home" asp-action="EnConstruccion" asp-route-nombre="Estadísticas">Estadísticas</a>
+        <a asp-controller="Home" asp-action="EnConstruccion" asp-route-nombre="Peluqueros">Peluqueros</a>
+    </nav>
+</section>
