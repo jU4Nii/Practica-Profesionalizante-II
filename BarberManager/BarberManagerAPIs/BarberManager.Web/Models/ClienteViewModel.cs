@@ -12,7 +12,6 @@ public class ClienteViewModel
     [Required(ErrorMessage = "Ingresá el teléfono.")]
     public string Telefono { get; set; } = string.Empty;
 
-    [EmailAddress(ErrorMessage = "Ingresá un correo válido.")]
     public string? Correo { get; set; }
 
     public string? Notas { get; set; }

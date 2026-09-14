@@ -1,0 +1,9 @@
+@model BarberManager.Web.Models.EstadisticasPaginaViewModel
+@{ ViewData["Title"] = "Estadísticas"; }
+<h1 class="h2 mb-4">Estadísticas</h1>
+@if (ViewBag.ErrorApi is string errorApi) { <div class="alert alert-warning">@errorApi</div> }
+<div class="row g-3 mb-4"><div class="col-sm-6"><div class="card summary-card"><div class="card-body"><span class="text-muted">Turnos registrados</span><p class="summary-number">@Model.TotalServicios</p></div></div></div><div class="col-sm-6"><div class="card summary-card"><div class="card-body"><span class="text-muted">Ventas de productos</span><p class="summary-number">@Model.TotalVentas</p></div></div></div></div>
+<h2 class="h4">Promedio por día</h2><p class="text-muted">Sirve para identificar los días con más movimiento y planificar promociones.</p>
+<div class="card mb-4"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Día</th><th>Promedio de turnos</th><th>Promedio de ventas</th></tr></thead><tbody>@foreach (var promedio in Model.Promedios) { <tr><td>@promedio.Dia</td><td>@promedio.PromedioServicios</td><td>@promedio.PromedioVentas</td></tr> }</tbody></table></div></div>
+<h2 class="h4">Historial diario</h2><div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Fecha</th><th>Día</th><th>Turnos</th><th>Ventas</th></tr></thead><tbody>@foreach (var estadistica in Model.Historial) { <tr><td>@estadistica.Fecha.ToString("dd/MM/yyyy")</td><td>@estadistica.NombreDia</td><td>@estadistica.CantServicios</td><td>@estadistica.CantVentas</td></tr> }</tbody></table></div></div>
+@if (!Model.Historial.Any()) { <p class="text-muted mt-3">Todavía no hay estadísticas. Se generan al crear turnos y al registrar ventas de productos.</p> }

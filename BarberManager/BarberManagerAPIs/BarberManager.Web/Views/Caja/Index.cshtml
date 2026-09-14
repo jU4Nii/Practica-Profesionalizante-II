@@ -1,0 +1,21 @@
+@model List<BarberManager.Web.Models.CajaViewModel>
+@{
+    ViewData["Title"] = "Ingresos y egresos";
+    var ingresos = Model.Where(m => m.EsIngreso).Sum(m => m.Monto);
+    var egresos = Model.Where(m => !m.EsIngreso).Sum(m => m.Monto);
+}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h2 mb-0">Ingresos / egresos</h1>
+    <a class="btn btn-dark" asp-action="Create">Nuevo movimiento</a>
+</div>
+@if (TempData["Mensaje"] is string mensaje) { <div class="alert alert-info">@mensaje</div> }
+@if (ViewBag.ErrorApi is string errorApi) { <div class="alert alert-warning">@errorApi</div> }
+<div class="row g-3 mb-4">
+    <div class="col-sm-4"><div class="card summary-card"><div class="card-body"><span class="text-muted">Ingresos</span><p class="summary-number text-success">@ingresos.ToString("C")</p></div></div></div>
+    <div class="col-sm-4"><div class="card summary-card"><div class="card-body"><span class="text-muted">Egresos</span><p class="summary-number text-danger">@egresos.ToString("C")</p></div></div></div>
+    <div class="col-sm-4"><div class="card summary-card"><div class="card-body"><span class="text-muted">Balance</span><p class="summary-number">@((ingresos - egresos).ToString("C"))</p></div></div></div>
+</div>
+<div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Fecha</th><th>Concepto</th><th>Método de pago</th><th>Tipo</th><th>Monto</th><th></th></tr></thead><tbody>
+@foreach (var movimiento in Model) { <tr><td>@movimiento.Fecha.ToString("dd/MM/yyyy")</td><td>@movimiento.Concepto</td><td>@movimiento.MetodoPago</td><td>@(movimiento.EsIngreso ? "Ingreso" : "Egreso")</td><td class="@(movimiento.EsIngreso ? "text-success" : "text-danger")">@movimiento.Monto.ToString("C")</td><td></td></tr> }
+</tbody></table></div></div>
+@if (!Model.Any()) { <p class="text-muted mt-3">Todavía no hay movimientos registrados.</p> }

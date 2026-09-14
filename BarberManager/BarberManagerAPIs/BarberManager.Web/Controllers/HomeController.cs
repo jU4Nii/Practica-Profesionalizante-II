@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Net.Http.Json;
 using Microsoft.AspNetCore.Mvc;
 using BarberManager.Web.Models;
 
@@ -6,21 +7,66 @@ namespace BarberManager.Web.Controllers;
 
 public class HomeController : Controller
 {
+    private readonly IHttpClientFactory _httpClientFactory;
+
+    public HomeController(IHttpClientFactory httpClientFactory) => _httpClientFactory = httpClientFactory;
+
     public IActionResult Index()
     {
+        if (HttpContext.Session.GetString("UsuarioId") == null)
+            return RedirectToAction(nameof(Login));
+
         return View();
     }
 
     public IActionResult Login()
     {
-        return View();
+        return HttpContext.Session.GetString("UsuarioId") != null
+            ? RedirectToAction(nameof(Index))
+            : View(new LoginViewModel());
     }
 
-    // Por ahora el login es solamente visual. La API todavía no tiene autenticación.
     [HttpPost]
-    public IActionResult Login(string? correo, string? contrasena)
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(LoginViewModel login)
     {
+        if (!ModelState.IsValid) return View(login);
+
+        try
+        {
+            var respuesta = await _httpClientFactory.CreateClient("BarberApi").PostAsJsonAsync("auth/login", login);
+            if (!respuesta.IsSuccessStatusCode)
+            {
+                ModelState.AddModelError(string.Empty, "Correo o contraseña incorrectos, o la cuenta está inactiva.");
+                return View(login);
+            }
+
+            var usuario = await respuesta.Content.ReadFromJsonAsync<UsuarioAutenticadoViewModel>();
+            if (usuario == null)
+            {
+                ModelState.AddModelError(string.Empty, "No se pudo iniciar sesión.");
+                return View(login);
+            }
+
+            HttpContext.Session.SetString("UsuarioId", usuario.Id.ToString());
+            HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
+            HttpContext.Session.SetString("EsAdmin", usuario.EsAdmin.ToString().ToLowerInvariant());
+        }
+        catch (HttpRequestException)
+        {
+            ModelState.AddModelError(string.Empty, "No se pudo conectar con la API.");
+            return View(login);
+        }
+
         return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction(nameof(Login));
     }
 
     public IActionResult Privacy()

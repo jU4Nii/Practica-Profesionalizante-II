@@ -10,7 +10,7 @@ public interface ITurnoLogica
     Task<Turno?> ObtenerPorId(int id);
     Task<List<Turno>> ObtenerPorFecha(DateTime fecha);
     Task<List<Turno>> ObtenerPorPeluquero(int idPeluquero);
-    Task<bool> Agregar(TurnoDTO dto);
+    Task<Turno?> Agregar(TurnoDTO dto);
     Task<bool> Editar(int id, TurnoDTO dto);
     Task<bool> Eliminar(int id);
 }
@@ -20,15 +20,18 @@ public class TurnoLogica : ITurnoLogica
     private readonly ITurnoRepository _repository;
     private readonly IClienteRepository _clienteRepository;
     private readonly IPeluqueroRepository _peluqueroRepository;
+    private readonly IEstadisticaLogica _estadisticaLogica;
 
     public TurnoLogica(
         ITurnoRepository repository,
         IClienteRepository clienteRepository,
-        IPeluqueroRepository peluqueroRepository)
+        IPeluqueroRepository peluqueroRepository,
+        IEstadisticaLogica estadisticaLogica)
     {
         _repository = repository;
         _clienteRepository = clienteRepository;
         _peluqueroRepository = peluqueroRepository;
+        _estadisticaLogica = estadisticaLogica;
     }
 
     public async Task<List<Turno>> ObtenerTodos()
@@ -51,17 +54,17 @@ public class TurnoLogica : ITurnoLogica
         return await _repository.ObtenerPorPeluquero(idPeluquero);
     }
 
-    public async Task<bool> Agregar(TurnoDTO dto)
+    public async Task<Turno?> Agregar(TurnoDTO dto)
     {
         var cliente = await _clienteRepository.ObtenerPorId(dto.IdCliente);
 
         if (cliente == null)
-            return false;
+            return null;
 
         var peluquero = await _peluqueroRepository.ObtenerPorId(dto.IdPeluquero);
 
         if (peluquero == null)
-            return false;
+            return null;
 
         var turnos = await _repository.ObtenerTodos();
 
@@ -72,7 +75,7 @@ public class TurnoLogica : ITurnoLogica
             !t.Cancelado);
 
         if (ocupado)
-            return false;
+            return null;
 
         Turno turno = new Turno
         {
@@ -84,8 +87,9 @@ public class TurnoLogica : ITurnoLogica
         };
 
         await _repository.Agregar(turno);
+        await _estadisticaLogica.RegistrarServicio(dto.Fecha);
 
-        return true;
+        return turno;
     }
 
     public async Task<bool> Editar(int id, TurnoDTO dto)

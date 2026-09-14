@@ -1,9 +1,11 @@
 using System.Net.Http.Json;
 using BarberManager.Web.Models;
+using BarberManager.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarberManager.Web.Controllers;
 
+[RequiereSesion]
 public class ClientesController : Controller
 {
     private readonly IHttpClientFactory _httpClientFactory;
@@ -13,12 +15,20 @@ public class ClientesController : Controller
         _httpClientFactory = httpClientFactory;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string? buscar)
     {
         try
         {
             var cliente = _httpClientFactory.CreateClient("BarberApi");
             var clientes = await cliente.GetFromJsonAsync<List<ClienteViewModel>>("clientes") ?? [];
+            if (!string.IsNullOrWhiteSpace(buscar))
+            {
+                clientes = clientes.Where(c =>
+                    c.Nombre.Contains(buscar, StringComparison.OrdinalIgnoreCase) ||
+                    c.Telefono.Contains(buscar, StringComparison.OrdinalIgnoreCase) ||
+                    (c.Correo?.Contains(buscar, StringComparison.OrdinalIgnoreCase) ?? false)).ToList();
+            }
+            ViewData["Buscar"] = buscar;
             return View(clientes);
         }
         catch (HttpRequestException)

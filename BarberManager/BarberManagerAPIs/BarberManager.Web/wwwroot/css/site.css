@@ -38,6 +38,9 @@ body {
 .simple-page { max-width: 430px; margin: 6rem auto; }
 .scissors-link { position: fixed; top: 1.2rem; left: 1.4rem; color: #202020; font-size: 1.8rem; line-height: 1; text-decoration: none; z-index: 10; }
 .scissors-link:hover { color: #6b6b6b; }
+.list-search { display: flex; gap: .5rem; max-width: 520px; }
+.summary-card { border: 0; border-radius: .75rem; box-shadow: 0 .15rem .5rem rgba(0, 0, 0, .08); }
+.summary-card .summary-number { font-size: 1.7rem; font-weight: 700; margin: 0; }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
   color: var(--bs-secondary-color);
@@ -46,4 +49,8 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+@media (max-width: 576px) {
+  .list-search { max-width: none; }
 }

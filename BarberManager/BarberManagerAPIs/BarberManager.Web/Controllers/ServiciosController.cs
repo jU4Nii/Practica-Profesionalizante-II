@@ -1,9 +1,11 @@
 using System.Net.Http.Json;
 using BarberManager.Web.Models;
+using BarberManager.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarberManager.Web.Controllers;
 
+[RequiereSesion]
 public class ServiciosController : Controller
 {
     private readonly IHttpClientFactory _httpClientFactory;

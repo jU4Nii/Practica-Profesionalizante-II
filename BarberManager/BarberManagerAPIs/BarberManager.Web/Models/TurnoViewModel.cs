@@ -33,6 +33,12 @@ public class NuevoTurnoViewModel
     [Required(ErrorMessage = "Ingresá un horario.")]
     public string Hora { get; set; } = string.Empty;
 
+    public int? IdProducto { get; set; }
+
+    [Range(1, int.MaxValue, ErrorMessage = "La cantidad debe ser mayor a cero.")]
+    public int CantidadProducto { get; set; } = 1;
+
     public List<SelectListItem> Clientes { get; set; } = [];
     public List<SelectListItem> Peluqueros { get; set; } = [];
+    public List<SelectListItem> Productos { get; set; } = [];
 }

@@ -15,10 +15,12 @@ public interface ICajaLogica
 public class CajaLogica : ICajaLogica
 {
     private readonly ICajaRepository _repository;
+    private readonly IEstadisticaLogica _estadisticaLogica;
 
-    public CajaLogica(ICajaRepository repository)
+    public CajaLogica(ICajaRepository repository, IEstadisticaLogica estadisticaLogica)
     {
         _repository = repository;
+        _estadisticaLogica = estadisticaLogica;
     }
 
     public async Task<List<Caja>> ObtenerTodos()
@@ -43,6 +45,9 @@ public class CajaLogica : ICajaLogica
         };
 
         await _repository.Agregar(caja);
+
+        if (dto.EsIngreso && dto.Concepto == "Venta de producto")
+            await _estadisticaLogica.RegistrarVenta(dto.Fecha);
     }
 
     public async Task<bool> Editar(int id, CajaDTO dto)

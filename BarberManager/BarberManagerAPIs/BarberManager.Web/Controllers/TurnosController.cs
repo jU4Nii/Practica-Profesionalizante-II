@@ -1,10 +1,12 @@
 using System.Net.Http.Json;
 using BarberManager.Web.Models;
+using BarberManager.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BarberManager.Web.Controllers;
 
+[RequiereSesion]
 public class TurnosController : Controller
 {
     private readonly IHttpClientFactory _httpClientFactory;
@@ -76,7 +78,47 @@ public class TurnosController : Controller
                 return View(turno);
             }
 
-            TempData["Mensaje"] = "Turno creado correctamente.";
+            var turnoCreado = await respuesta.Content.ReadFromJsonAsync<TurnoCreadoResponse>();
+            if (turnoCreado?.Id is not int idTurno)
+            {
+                ModelState.AddModelError(string.Empty, "El turno se creó, pero la API no devolvió su identificador.");
+                await CargarOpciones(turno);
+                return View(turno);
+            }
+
+            if (turno.IdProducto.HasValue)
+            {
+                try
+                {
+                    var producto = await api.GetFromJsonAsync<ProductoViewModel>($"productos/{turno.IdProducto.Value}");
+                    if (producto != null)
+                    {
+                        var item = new TurnoProductoViewModel
+                        {
+                            IdTurno = idTurno,
+                            IdProducto = producto.Id,
+                            CantidadProducto = turno.CantidadProducto,
+                            PrecioUnitario = producto.Precio
+                        };
+                        var respuestaItem = await api.PostAsJsonAsync("turnos/items", item);
+                        TempData["Mensaje"] = respuestaItem.IsSuccessStatusCode
+                            ? "Turno y producto asociado creados correctamente."
+                            : "Turno creado, pero no se pudo asociar el producto.";
+                    }
+                    else
+                    {
+                        TempData["Mensaje"] = "Turno creado, pero el producto seleccionado ya no existe.";
+                    }
+                }
+                catch (HttpRequestException)
+                {
+                    TempData["Mensaje"] = "Turno creado, pero no se pudo asociar el producto.";
+                }
+            }
+            else
+            {
+                TempData["Mensaje"] = "Turno creado correctamente.";
+            }
             return RedirectToAction(nameof(Index));
         }
         catch (HttpRequestException)
@@ -112,9 +154,11 @@ public class TurnosController : Controller
             var api = _httpClientFactory.CreateClient("BarberApi");
             var clientes = await api.GetFromJsonAsync<List<ClienteViewModel>>("clientes") ?? [];
             var peluqueros = await api.GetFromJsonAsync<List<PeluqueroSimpleViewModel>>("peluqueros") ?? [];
+            var productos = await api.GetFromJsonAsync<List<ProductoViewModel>>("productos") ?? [];
 
             modelo.Clientes = clientes.Select(c => new SelectListItem(c.Nombre, c.Id.ToString())).ToList();
             modelo.Peluqueros = peluqueros.Where(p => p.EstaActivo).Select(p => new SelectListItem(p.Nombre, p.Id.ToString())).ToList();
+            modelo.Productos = productos.OrderBy(p => p.Nombre).Select(p => new SelectListItem(p.Nombre, p.Id.ToString())).ToList();
         }
         catch (HttpRequestException)
         {
@@ -127,5 +171,18 @@ public class TurnosController : Controller
         public int Id { get; set; }
         public string Nombre { get; set; } = string.Empty;
         public bool EstaActivo { get; set; }
+    }
+
+    private class TurnoCreadoResponse
+    {
+        public int Id { get; set; }
+    }
+
+    private class TurnoProductoViewModel
+    {
+        public int IdTurno { get; set; }
+        public int? IdProducto { get; set; }
+        public int CantidadProducto { get; set; }
+        public decimal PrecioUnitario { get; set; }
     }
 }

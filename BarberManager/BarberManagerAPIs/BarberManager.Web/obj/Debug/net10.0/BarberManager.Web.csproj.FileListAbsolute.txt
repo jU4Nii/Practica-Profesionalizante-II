@@ -100,7 +100,6 @@ C:\Temp\BarberManagerWebBuild\appsettings.json
 C:\Temp\BarberManagerWebBuild\BarberManager.Web.staticwebassets.runtime.json
 C:\Temp\BarberManagerWebBuild\BarberManager.Web.staticwebassets.endpoints.json
 C:\Temp\BarberManagerWebBuild\BarberManager.Web.exe
-C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\kexhh1os2o-{0}-b3ia9uiocg-b3ia9uiocg.gz
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\work\web-build-check\appsettings.Development.json
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\work\web-build-check\appsettings.json
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\work\web-build-check\BarberManager.Web.staticwebassets.runtime.json
@@ -110,3 +109,5 @@ C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberMa
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\work\web-build-check\BarberManager.Web.runtimeconfig.json
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\work\web-build-check\BarberManager.Web.dll
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\work\web-build-check\BarberManager.Web.pdb
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\kexhh1os2o-{0}-shwj986rxk-shwj986rxk.gz
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\ly4r6bw67q-{0}-xuh1q5cnqp-xuh1q5cnqp.gz

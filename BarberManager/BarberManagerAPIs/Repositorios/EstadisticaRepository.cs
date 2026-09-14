@@ -9,6 +9,7 @@ public interface IEstadisticaRepository
     Task<List<Estadistica>> ObtenerTodos();
     Task<Estadistica?> ObtenerPorId(int id);
     Task Agregar(Estadistica estadistica);
+    Task Guardar();
 }
 
 public class EstadisticaRepository : IEstadisticaRepository
@@ -34,6 +35,11 @@ public class EstadisticaRepository : IEstadisticaRepository
     public async Task Agregar(Estadistica estadistica)
     {
         _context.Estadisticas.Add(estadistica);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Guardar()
+    {
         await _context.SaveChangesAsync();
     }
 }

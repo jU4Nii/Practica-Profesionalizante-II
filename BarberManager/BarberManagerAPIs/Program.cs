@@ -80,6 +80,8 @@ namespace BarberManagerAPIs
 
             app.MapPeluqueroEndpoints();
 
+            app.MapAuthEndpoints();
+
             app.MapEstadisticaEndpoints();
 
             app.MapCajaEndpoints();

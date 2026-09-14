@@ -25,16 +25,17 @@ public static class TurnoEndpoints
 
         app.MapPost("/turnos", async (TurnoDTO dto, ITurnoLogica logica) =>
         {
-            var creado = await logica.Agregar(dto);
+            var turnoCreado = await logica.Agregar(dto);
 
-            if (!creado)
+            if (turnoCreado == null)
                 return Results.Conflict(new
                 {
                     mensaje = "El peluquero ya tiene un turno en ese horario."
                 });
 
-            return Results.Created("/turnos", new
+            return Results.Created($"/turnos/{turnoCreado.Id}", new
             {
+                id = turnoCreado.Id,
                 mensaje = "Turno creado correctamente"
             });
         });
