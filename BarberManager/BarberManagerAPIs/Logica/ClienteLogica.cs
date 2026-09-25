@@ -11,6 +11,7 @@ public interface IClienteLogica
     Task<Cliente?> ObtenerPorId(int id);
 
     Task<bool> Agregar(ClienteDTO dto);
+    Task<bool> Editar(int id, ClienteDTO dto);
 }
 
 public class ClienteLogica : IClienteLogica
@@ -48,6 +49,23 @@ public class ClienteLogica : IClienteLogica
 
         await _repository.Agregar(cliente);
 
+        return true;
+    }
+
+    public async Task<bool> Editar(int id, ClienteDTO dto)
+    {
+        if (string.IsNullOrWhiteSpace(dto.Nombre) || string.IsNullOrWhiteSpace(dto.Telefono))
+            return false;
+
+        var cliente = await _repository.ObtenerPorId(id);
+        if (cliente == null)
+            return false;
+
+        cliente.Nombre = dto.Nombre;
+        cliente.Telefono = dto.Telefono;
+        cliente.Correo = dto.Correo;
+        cliente.Notas = dto.Notas;
+        await _repository.Guardar();
         return true;
     }
 }

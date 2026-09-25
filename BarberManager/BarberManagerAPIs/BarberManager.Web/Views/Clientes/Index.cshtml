@@ -8,5 +8,5 @@
     <input id="buscar" name="buscar" class="form-control" type="search" value="@ViewData["Buscar"]" placeholder="Buscar por nombre, teléfono o correo" />
     <button class="btn btn-outline-dark" type="submit">Buscar</button>
 </form>
-<div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Nombre</th><th>Teléfono</th><th>Correo</th><th>Notas</th></tr></thead><tbody>@foreach (var cliente in Model) { <tr><td>@cliente.Nombre</td><td>@cliente.Telefono</td><td>@cliente.Correo</td><td>@cliente.Notas</td></tr>}</tbody></table></div></div>
+<div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Nombre</th><th>Teléfono</th><th>Correo</th><th>Notas</th><th></th></tr></thead><tbody>@foreach (var cliente in Model) { <tr><td>@cliente.Nombre</td><td>@cliente.Telefono</td><td>@cliente.Correo</td><td>@cliente.Notas</td><td class="text-end"><a class="btn btn-sm btn-outline-dark" asp-action="Details" asp-route-id="@cliente.Id">Historial</a><a class="btn btn-sm btn-outline-secondary" asp-action="Edit" asp-route-id="@cliente.Id">Editar</a></td></tr>}</tbody></table></div></div>
 @if (!Model.Any()) { <p class="text-muted mt-3">Todavía no hay clientes cargados.</p> }

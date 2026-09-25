@@ -19,7 +19,17 @@ html {
 
 body {
   margin-bottom: 60px;
+  min-height: 100vh;
   background: #f7f6f4;
+  overflow-x: hidden;
+}
+
+/* Los encabezados de cada módulo comienzan dentro del área limpia, sin
+   superponerse a las franjas laterales. */
+main > h1.h2,
+main > .d-flex > h1.h2,
+main > .d-flex > div > h1.h2 {
+  margin-left: clamp(3rem, 10vw, 11rem);
 }
 
 .barber-navbar { background: #171717; }
@@ -133,6 +143,9 @@ body {
 @media (max-width: 576px) {
   .auth-page { min-height: calc(100vh - 5rem); padding: 1.5rem 0; }
   .auth-card { padding-right: 1.5rem; padding-left: 1.5rem; }
+  main > h1.h2,
+  main > .d-flex > h1.h2,
+  main > .d-flex > div > h1.h2 { margin-left: 3rem; }
 }
 
 @media (max-width: 576px) {

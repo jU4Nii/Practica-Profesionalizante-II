@@ -11,6 +11,7 @@ public interface IClienteRepository
     Task<Cliente?> ObtenerPorId(int id);
 
     Task Agregar(Cliente cliente);
+    Task Guardar();
 }
 
 public class ClienteRepository : IClienteRepository
@@ -37,6 +38,11 @@ public class ClienteRepository : IClienteRepository
     {
         _context.Clientes.Add(cliente);
 
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Guardar()
+    {
         await _context.SaveChangesAsync();
     }
 }

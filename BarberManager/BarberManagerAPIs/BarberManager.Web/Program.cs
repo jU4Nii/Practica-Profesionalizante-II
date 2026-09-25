@@ -1,7 +1,11 @@
+using BarberManager.Web.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddTransient<ApiAuthorizationHandler>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
@@ -14,7 +18,7 @@ builder.Services.AddSession(options =>
 builder.Services.AddHttpClient("BarberApi", client =>
 {
     client.BaseAddress = new Uri(builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5034/");
-});
+}).AddHttpMessageHandler<ApiAuthorizationHandler>();
 
 var app = builder.Build();
 

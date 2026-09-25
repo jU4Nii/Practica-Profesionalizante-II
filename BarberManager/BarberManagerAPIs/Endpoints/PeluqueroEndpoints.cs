@@ -21,7 +21,7 @@ public static class PeluqueroEndpoints
                 return Results.NotFound();
 
             return Results.Ok(peluquero);
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapPost("/peluqueros", async (PeluqueroDTO dto, IPeluqueroLogica logica) =>
         {
@@ -31,7 +31,7 @@ public static class PeluqueroEndpoints
             {
                 mensaje = "Peluquero creado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapPut("/peluqueros/{id}", async (int id, PeluqueroDTO dto, IPeluqueroLogica logica) =>
         {
@@ -44,7 +44,7 @@ public static class PeluqueroEndpoints
             {
                 mensaje = "Peluquero actualizado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapDelete("/peluqueros/{id}", async (int id, IPeluqueroLogica logica) =>
         {
@@ -57,7 +57,7 @@ public static class PeluqueroEndpoints
             {
                 mensaje = "Peluquero eliminado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
     }
 }

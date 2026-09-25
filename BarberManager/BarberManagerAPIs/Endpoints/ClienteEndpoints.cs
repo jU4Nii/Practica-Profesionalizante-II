@@ -39,5 +39,13 @@ public static class ClienteEndpoints
                 mensaje = "Cliente creado correctamente"
             });
         });
+
+        app.MapPut("/clientes/{id}", async (int id, ClienteDTO dto, IClienteLogica logica) =>
+        {
+            var editado = await logica.Editar(id, dto);
+            return editado
+                ? Results.Ok(new { mensaje = "Cliente actualizado correctamente" })
+                : Results.BadRequest(new { mensaje = "No se pudo actualizar el cliente" });
+        });
     }
 }

@@ -42,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/maria/source/repos/Winform/Ejercicio 1-10/Parcial 5-11/Practica-Profesionalizante-II/BarberManager/BarberManagerAPIs/BarberManager.Web/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maria/source/repos/Winform/Ejercicio 1-10/Parcial 5-11/Practica-Profesionalizante-II/BarberManager/BarberManagerAPIs/BarberManager.Web/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/maria/source/repos/Winform/Ejercicio 1-10/Parcial 5-11/Practica-Profesionalizante-II/BarberManager/BarberManagerAPIs/BarberManager.Web/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -132,6 +140,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/maria/source/repos/Winform/Ejercicio 1-10/Parcial 5-11/Practica-Profesionalizante-II/BarberManager/BarberManagerAPIs/BarberManager.Web/Views/Turnos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maria/source/repos/Winform/Ejercicio 1-10/Parcial 5-11/Practica-Profesionalizante-II/BarberManager/BarberManagerAPIs/BarberManager.Web/Views/Turnos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/maria/source/repos/Winform/Ejercicio 1-10/Parcial 5-11/Practica-Profesionalizante-II/BarberManager/BarberManagerAPIs/BarberManager.Web/Views/Turnos/Index.cshtml]

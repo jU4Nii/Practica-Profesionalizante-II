@@ -16,3 +16,18 @@ public class ClienteViewModel
 
     public string? Notas { get; set; }
 }
+
+public class ClienteHistorialViewModel
+{
+    public ClienteViewModel Cliente { get; set; } = new();
+    public List<VisitaClienteViewModel> Visitas { get; set; } = [];
+}
+
+public class VisitaClienteViewModel
+{
+    public DateTime Fecha { get; set; }
+    public string Hora { get; set; } = string.Empty;
+    public string Peluquero { get; set; } = string.Empty;
+    public string Servicios { get; set; } = "Sin servicios asociados";
+    public bool Cancelado { get; set; }
+}

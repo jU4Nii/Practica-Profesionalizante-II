@@ -54,9 +54,16 @@ public class HomeController : Controller
                 return View(login);
             }
 
+            if (string.IsNullOrWhiteSpace(usuario.Token))
+            {
+                ModelState.AddModelError(string.Empty, "La API no devolvió una sesión válida.");
+                return View(login);
+            }
+
             HttpContext.Session.SetString("UsuarioId", usuario.Id.ToString());
             HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
             HttpContext.Session.SetString("EsAdmin", usuario.EsAdmin.ToString().ToLowerInvariant());
+            HttpContext.Session.SetString("ApiToken", usuario.Token);
         }
         catch (HttpRequestException)
         {

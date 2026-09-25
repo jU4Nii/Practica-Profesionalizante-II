@@ -17,6 +17,7 @@ public class TurnoListadoViewModel : TurnoViewModel
 {
     public string NombreCliente { get; set; } = string.Empty;
     public string NombrePeluquero { get; set; } = string.Empty;
+    public string Servicios { get; set; } = string.Empty;
 }
 
 public class NuevoTurnoViewModel
@@ -35,10 +36,18 @@ public class NuevoTurnoViewModel
 
     public int? IdProducto { get; set; }
 
+    public List<int> IdServicios { get; set; } = [];
+
     [Range(1, int.MaxValue, ErrorMessage = "La cantidad debe ser mayor a cero.")]
     public int CantidadProducto { get; set; } = 1;
 
     public List<SelectListItem> Clientes { get; set; } = [];
     public List<SelectListItem> Peluqueros { get; set; } = [];
     public List<SelectListItem> Productos { get; set; } = [];
+    public List<SelectListItem> Servicios { get; set; } = [];
+}
+
+public class EditarTurnoViewModel : NuevoTurnoViewModel
+{
+    public int Id { get; set; }
 }

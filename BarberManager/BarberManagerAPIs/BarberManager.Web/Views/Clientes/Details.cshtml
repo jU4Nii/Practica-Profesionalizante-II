@@ -1,0 +1,7 @@
+@model BarberManager.Web.Models.ClienteHistorialViewModel
+@{ ViewData["Title"] = "Historial del cliente"; }
+<div class="d-flex justify-content-between align-items-center mb-4"><div><h1 class="h2 mb-1">@Model.Cliente.Nombre</h1><p class="text-muted mb-0">@Model.Cliente.Telefono · @Model.Cliente.Correo</p></div><a class="btn btn-outline-secondary" asp-action="Index">Volver</a></div>
+@if (!string.IsNullOrWhiteSpace(Model.Cliente.Notas)) { <div class="alert alert-light border"><strong>Notas:</strong> @Model.Cliente.Notas</div> }
+<h2 class="h4">Historial de visitas</h2>
+<div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Fecha</th><th>Hora</th><th>Peluquero</th><th>Servicios</th><th>Estado</th></tr></thead><tbody>@foreach (var visita in Model.Visitas) { <tr><td>@visita.Fecha.ToString("dd/MM/yyyy")</td><td>@visita.Hora</td><td>@visita.Peluquero</td><td>@visita.Servicios</td><td>@(visita.Cancelado ? "Cancelado" : "Realizado / agendado")</td></tr> }</tbody></table></div></div>
+@if (!Model.Visitas.Any()) { <p class="text-muted mt-3">Este cliente todavía no tiene turnos registrados.</p> }
