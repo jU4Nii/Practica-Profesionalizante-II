@@ -69,6 +69,16 @@ public static class TurnoEndpoints
             });
         });
 
+        app.MapDelete("/turnos/{id}/permanente", async (int id, ITurnoLogica logica) =>
+        {
+            var eliminado = await logica.EliminarDefinitivamente(id);
+
+            if (!eliminado)
+                return Results.BadRequest(new { mensaje = "Solo se pueden borrar definitivamente turnos cancelados." });
+
+            return Results.Ok(new { mensaje = "Turno eliminado definitivamente." });
+        });
+
         app.MapGet("/turnos/fecha/{fecha}", async (DateTime fecha, ITurnoLogica logica) =>
         {
             var turnos = await logica.ObtenerPorFecha(fecha);

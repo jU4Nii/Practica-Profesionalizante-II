@@ -25,7 +25,10 @@ public static class TurnoServicioProductoEndpoints
 
         app.MapPost("/turnos/items", async (TurnoServicioProductoDTO dto, ITurnoServicioProductoLogica logica) =>
         {
-            await logica.Agregar(dto);
+            var agregado = await logica.Agregar(dto);
+
+            if (!agregado)
+                return Results.BadRequest(new { mensaje = "No hay stock suficiente o los datos del producto no son válidos." });
 
             return Results.Created("/turnos/items", new
             {

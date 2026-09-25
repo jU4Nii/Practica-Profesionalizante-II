@@ -9,6 +9,7 @@ public interface ITurnoServicioProductoRepository
     Task<List<TurnoServicioProducto>> ObtenerTodos();
     Task<TurnoServicioProducto?> ObtenerPorId(int id);
     Task Agregar(TurnoServicioProducto item);
+    Task EliminarPorTurno(int idTurno);
 }
 
 public class TurnoServicioProductoRepository : ITurnoServicioProductoRepository
@@ -33,6 +34,16 @@ public class TurnoServicioProductoRepository : ITurnoServicioProductoRepository
     public async Task Agregar(TurnoServicioProducto item)
     {
         _context.TurnoServicioProductos.Add(item);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task EliminarPorTurno(int idTurno)
+    {
+        var items = await _context.TurnoServicioProductos
+            .Where(x => x.IdTurno == idTurno)
+            .ToListAsync();
+
+        _context.TurnoServicioProductos.RemoveRange(items);
         await _context.SaveChangesAsync();
     }
 }

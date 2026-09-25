@@ -1,6 +1,7 @@
 ﻿using BarberManagerAPIs.Entidades;
 using BarberManagerAPIs.Logica.DTOs;
 using BarberManagerAPIs.Repositorios;
+using BarberManagerAPIs.Datos;
 
 namespace BarberManagerAPIs.Logica;
 
@@ -10,17 +11,26 @@ public interface ICajaLogica
     Task<Caja?> ObtenerPorId(int id);
     Task Agregar(CajaDTO dto);
     Task<bool> Editar(int id, CajaDTO dto);
+    Task<bool> RegistrarVentaProducto(VentaProductoDTO dto);
 }
 
 public class CajaLogica : ICajaLogica
 {
     private readonly ICajaRepository _repository;
     private readonly IEstadisticaLogica _estadisticaLogica;
+    private readonly IProductoRepository _productoRepository;
+    private readonly AppDbContext _context;
 
-    public CajaLogica(ICajaRepository repository, IEstadisticaLogica estadisticaLogica)
+    public CajaLogica(
+        ICajaRepository repository,
+        IEstadisticaLogica estadisticaLogica,
+        IProductoRepository productoRepository,
+        AppDbContext context)
     {
         _repository = repository;
         _estadisticaLogica = estadisticaLogica;
+        _productoRepository = productoRepository;
+        _context = context;
     }
 
     public async Task<List<Caja>> ObtenerTodos()
@@ -66,5 +76,38 @@ public class CajaLogica : ICajaLogica
         await _repository.Guardar();
 
         return true;
+    }
+
+    public async Task<bool> RegistrarVentaProducto(VentaProductoDTO dto)
+    {
+        if (dto.Cantidad <= 0 || string.IsNullOrWhiteSpace(dto.MetodoPago))
+            return false;
+
+        var producto = await _productoRepository.ObtenerPorId(dto.IdProducto);
+        if (producto == null || producto.UsoInterno || producto.Cantidad < dto.Cantidad)
+            return false;
+
+        await using var transaccion = await _context.Database.BeginTransactionAsync();
+        try
+        {
+            producto.Cantidad -= dto.Cantidad;
+            await _productoRepository.Guardar();
+            await _repository.Agregar(new Caja
+            {
+                Fecha = dto.Fecha.Date,
+                Monto = producto.Precio * dto.Cantidad,
+                Concepto = $"Venta de producto: {producto.Nombre}",
+                MetodoPago = dto.MetodoPago,
+                EsIngreso = true
+            });
+            await _estadisticaLogica.RegistrarVenta(dto.Fecha);
+            await transaccion.CommitAsync();
+            return true;
+        }
+        catch
+        {
+            await transaccion.RollbackAsync();
+            return false;
+        }
     }
 }

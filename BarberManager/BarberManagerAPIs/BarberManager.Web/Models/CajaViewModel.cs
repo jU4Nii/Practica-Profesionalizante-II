@@ -20,4 +20,17 @@ public class CajaViewModel
     public string MetodoPago { get; set; } = string.Empty;
 
     public bool EsIngreso { get; set; } = true;
+
+    public string TipoIngreso { get; set; } = "Venta de producto";
+    public int? IdProducto { get; set; }
+    public int CantidadProducto { get; set; } = 1;
+    public List<ProductoDisponibleVentaViewModel> ProductosDisponibles { get; set; } = [];
+}
+
+public class ProductoDisponibleVentaViewModel
+{
+    public int Id { get; set; }
+    public string Nombre { get; set; } = string.Empty;
+    public int Cantidad { get; set; }
+    public decimal Precio { get; set; }
 }

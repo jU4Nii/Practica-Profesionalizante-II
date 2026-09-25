@@ -1,5 +1,6 @@
 ﻿using BarberManagerAPIs.Entidades;
 using BarberManagerAPIs.Logica.DTOs;
+using BarberManagerAPIs.Datos;
 using BarberManagerAPIs.Repositorios;
 
 namespace BarberManagerAPIs.Logica;
@@ -20,10 +21,14 @@ public interface IProductoLogica
 public class ProductoLogica : IProductoLogica
 {
     private readonly IProductoRepository _repository;
+    private readonly ICajaLogica _cajaLogica;
+    private readonly AppDbContext _context;
 
-    public ProductoLogica(IProductoRepository repository)
+    public ProductoLogica(IProductoRepository repository, ICajaLogica cajaLogica, AppDbContext context)
     {
         _repository = repository;
+        _cajaLogica = cajaLogica;
+        _context = context;
     }
 
     public async Task<List<Producto>> ObtenerTodos()
@@ -56,7 +61,25 @@ public class ProductoLogica : IProductoLogica
             Precio = dto.Precio
         };
 
-        await _repository.Agregar(producto);
+        await using var transaccion = await _context.Database.BeginTransactionAsync();
+        try
+        {
+            await _repository.Agregar(producto);
+            await _cajaLogica.Agregar(new CajaDTO
+            {
+                Fecha = DateTime.Today,
+                Monto = producto.Cantidad * producto.Precio,
+                Concepto = $"Compra de producto: {producto.Nombre}",
+                MetodoPago = "Pendiente",
+                EsIngreso = false
+            });
+            await transaccion.CommitAsync();
+        }
+        catch
+        {
+            await transaccion.RollbackAsync();
+            return false;
+        }
 
         return true;
     }

@@ -76,6 +76,25 @@ public class TurnosController : Controller
         try
         {
             var api = _httpClientFactory.CreateClient("BarberApi");
+
+            if (turno.IdProducto.HasValue)
+            {
+                var productoSeleccionado = await api.GetFromJsonAsync<ProductoViewModel>($"productos/{turno.IdProducto.Value}");
+                if (productoSeleccionado == null)
+                {
+                    ModelState.AddModelError(nameof(turno.IdProducto), "El producto seleccionado ya no existe.");
+                    await CargarOpciones(turno);
+                    return View(turno);
+                }
+
+                if (productoSeleccionado.Cantidad < turno.CantidadProducto)
+                {
+                    ModelState.AddModelError(nameof(turno.CantidadProducto), "No hay stock suficiente para la cantidad indicada.");
+                    await CargarOpciones(turno);
+                    return View(turno);
+                }
+            }
+
             var respuesta = await api.PostAsJsonAsync("turnos", turno);
             if (!respuesta.IsSuccessStatusCode)
             {
@@ -159,6 +178,26 @@ public class TurnosController : Controller
             var api = _httpClientFactory.CreateClient("BarberApi");
             var respuesta = await api.DeleteAsync($"turnos/{id}");
             TempData["Mensaje"] = respuesta.IsSuccessStatusCode ? "Turno cancelado." : "No se pudo cancelar el turno.";
+        }
+        catch (HttpRequestException)
+        {
+            TempData["Mensaje"] = "No se pudo conectar con la API.";
+        }
+
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Borrar(int id)
+    {
+        try
+        {
+            var api = _httpClientFactory.CreateClient("BarberApi");
+            var respuesta = await api.DeleteAsync($"turnos/{id}/permanente");
+            TempData["Mensaje"] = respuesta.IsSuccessStatusCode
+                ? "Turno eliminado definitivamente."
+                : "Solo se pueden borrar turnos que ya fueron cancelados.";
         }
         catch (HttpRequestException)
         {

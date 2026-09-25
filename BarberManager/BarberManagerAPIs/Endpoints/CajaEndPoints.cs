@@ -33,6 +33,16 @@ public static class CajaEndpoints
             });
         });
 
+        app.MapPost("/caja/venta-producto", async (VentaProductoDTO dto, ICajaLogica logica) =>
+        {
+            var registrada = await logica.RegistrarVentaProducto(dto);
+
+            if (!registrada)
+                return Results.BadRequest(new { mensaje = "El producto no está disponible o no hay stock suficiente." });
+
+            return Results.Created("/caja", new { mensaje = "Venta de producto registrada correctamente." });
+        });
+
         app.MapPut("/caja/{id}", async (int id, CajaDTO dto, ICajaLogica logica) =>
         {
             var editada = await logica.Editar(id, dto);

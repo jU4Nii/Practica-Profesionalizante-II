@@ -13,6 +13,7 @@ public interface ITurnoLogica
     Task<Turno?> Agregar(TurnoDTO dto);
     Task<bool> Editar(int id, TurnoDTO dto);
     Task<bool> Eliminar(int id);
+    Task<bool> EliminarDefinitivamente(int id);
 }
 
 public class TurnoLogica : ITurnoLogica
@@ -21,17 +22,20 @@ public class TurnoLogica : ITurnoLogica
     private readonly IClienteRepository _clienteRepository;
     private readonly IPeluqueroRepository _peluqueroRepository;
     private readonly IEstadisticaLogica _estadisticaLogica;
+    private readonly ITurnoServicioProductoRepository _turnoServicioProductoRepository;
 
     public TurnoLogica(
         ITurnoRepository repository,
         IClienteRepository clienteRepository,
         IPeluqueroRepository peluqueroRepository,
-        IEstadisticaLogica estadisticaLogica)
+        IEstadisticaLogica estadisticaLogica,
+        ITurnoServicioProductoRepository turnoServicioProductoRepository)
     {
         _repository = repository;
         _clienteRepository = clienteRepository;
         _peluqueroRepository = peluqueroRepository;
         _estadisticaLogica = estadisticaLogica;
+        _turnoServicioProductoRepository = turnoServicioProductoRepository;
     }
 
     public async Task<List<Turno>> ObtenerTodos()
@@ -142,6 +146,19 @@ public class TurnoLogica : ITurnoLogica
         turno.Cancelado = true;
 
         await _repository.Guardar();
+
+        return true;
+    }
+
+    public async Task<bool> EliminarDefinitivamente(int id)
+    {
+        var turno = await _repository.ObtenerPorId(id);
+
+        if (turno == null || !turno.Cancelado)
+            return false;
+
+        await _turnoServicioProductoRepository.EliminarPorTurno(id);
+        await _repository.Eliminar(turno);
 
         return true;
     }
