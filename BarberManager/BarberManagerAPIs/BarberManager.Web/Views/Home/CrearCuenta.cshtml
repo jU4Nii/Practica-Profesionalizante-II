@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Crear cuenta";
+}
+
+<section class="auth-page" aria-labelledby="create-account-title">
+    <div class="auth-card auth-card--wide">
+        <div class="auth-avatar" aria-hidden="true">✂</div>
+        <h1 id="create-account-title">Crear cuenta</h1>
+
+        <form>
+            <div class="auth-field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre completo..." autocomplete="name" />
+            </div>
+            <div class="auth-field">
+                <label for="correo">Email</label>
+                <input id="correo" name="correo" type="email" placeholder="Email, Usuario..." autocomplete="email" />
+            </div>
+            <div class="auth-field">
+                <label for="contrasena">Contraseña</label>
+                <input id="contrasena" name="contrasena" type="password" placeholder="Contraseña..." autocomplete="new-password" />
+            </div>
+            <div class="auth-field">
+                <label for="confirmar-contrasena">Confirmar contraseña</label>
+                <input id="confirmar-contrasena" name="confirmarContrasena" type="password" placeholder="Repetí tu contraseña..." autocomplete="new-password" />
+            </div>
+            <button class="auth-button" type="button">Crear cuenta</button>
+        </form>
+
+        <p class="auth-footer">¿Ya tienes una cuenta?<br /><a asp-action="Login">Inicia sesión</a></p>
+    </div>
+</section>

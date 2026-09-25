@@ -1,4 +1,31 @@
 @model BarberManager.Web.Models.LoginViewModel
 @{ ViewData["Title"] = "Inicio de sesión"; }
-<div class="login-box card shadow-sm mx-auto"><div class="card-body p-4"><h1 class="h3 text-center fw-bold mb-4">Inicio de sesión</h1><form asp-action="Login" method="post"><div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div><div class="mb-3"><label asp-for="Correo" class="form-label">Correo</label><input asp-for="Correo" class="form-control" placeholder="correo@ejemplo.com" /><span asp-validation-for="Correo" class="text-danger"></span></div><div class="mb-4"><label asp-for="Contrasena" class="form-label">Contraseña</label><input asp-for="Contrasena" class="form-control" placeholder="••••••••" /><span asp-validation-for="Contrasena" class="text-danger"></span></div><button class="btn btn-dark w-100" type="submit">Ingresar</button></form></div></div>
+
+<section class="auth-page" aria-labelledby="login-title">
+    <div class="auth-card">
+        <div class="auth-avatar" aria-hidden="true">✂</div>
+        <h1 id="login-title">Inicio de sesión</h1>
+
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="ModelOnly" class="auth-validation"></div>
+
+            <div class="auth-field">
+                <label asp-for="Correo">Email</label>
+                <input asp-for="Correo" placeholder="Email, Usuario..." autocomplete="username" />
+                <span asp-validation-for="Correo" class="auth-validation"></span>
+            </div>
+
+            <div class="auth-field">
+                <label asp-for="Contrasena">Contraseña</label>
+                <input asp-for="Contrasena" placeholder="Contraseña..." autocomplete="current-password" />
+                <span asp-validation-for="Contrasena" class="auth-validation"></span>
+            </div>
+
+            <a class="auth-help-link" asp-action="RestablecerContrasena">¿Olvidaste tu contraseña?</a>
+            <button class="auth-button" type="submit">Iniciar sesión</button>
+        </form>
+
+        <p class="auth-footer">¿Necesitás una cuenta?<br />Solicitala al administrador de la peluquería.</p>
+    </div>
+</section>
 @section Scripts { <partial name="_ValidationScriptsPartial" /> }

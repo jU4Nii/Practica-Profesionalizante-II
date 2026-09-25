@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Restablecer contraseña";
+}
+
+<section class="auth-page" aria-labelledby="password-reset-title">
+    <div class="auth-card">
+        <div class="auth-avatar" aria-hidden="true">✂</div>
+        <h1 id="password-reset-title">Restablecer contraseña</h1>
+        <p class="auth-intro">Introduzca el correo de recuperación:</p>
+
+        <form>
+            <div class="auth-field">
+                <label class="visually-hidden" for="correo-recuperacion">Correo de recuperación</label>
+                <input id="correo-recuperacion" name="correo" type="email" placeholder="Email, Usuario..." autocomplete="email" />
+            </div>
+            <button class="auth-button" type="button">Confirmar</button>
+        </form>
+
+        <p class="auth-footer"><a asp-action="Login">Volver al inicio de sesión</a></p>
+    </div>
+</section>

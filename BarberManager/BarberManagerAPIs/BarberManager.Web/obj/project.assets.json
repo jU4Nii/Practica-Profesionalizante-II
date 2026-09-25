@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\juani\\.nuget\\packages\\": {},
+    "C:\\Users\\maria\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManager.Web\\BarberManager.Web.csproj",
+      "projectUniqueName": "C:\\Users\\maria\\source\\repos\\Winform\\Ejercicio 1-10\\Parcial 5-11\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\BarberManager.Web\\BarberManager.Web.csproj",
       "projectName": "BarberManager.Web",
-      "projectPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManager.Web\\BarberManager.Web.csproj",
-      "packagesPath": "C:\\Users\\juani\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManager.Web\\obj\\",
+      "projectPath": "C:\\Users\\maria\\source\\repos\\Winform\\Ejercicio 1-10\\Parcial 5-11\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\BarberManager.Web\\BarberManager.Web.csproj",
+      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\maria\\source\\repos\\Winform\\Ejercicio 1-10\\Parcial 5-11\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\BarberManager.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\juani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -26,6 +26,12 @@ public class HomeController : Controller
             : View(new LoginViewModel());
     }
 
+    [HttpGet]
+    public IActionResult CrearCuenta() => View();
+
+    [HttpGet]
+    public IActionResult RestablecerContrasena() => View();
+
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(LoginViewModel login)

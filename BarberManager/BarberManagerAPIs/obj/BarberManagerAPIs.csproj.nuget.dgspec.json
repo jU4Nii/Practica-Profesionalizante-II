@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj": {}
+    "C:\\Users\\maria\\source\\repos\\Winform\\Ejercicio 1-10\\Parcial 5-11\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj": {
+    "C:\\Users\\maria\\source\\repos\\Winform\\Ejercicio 1-10\\Parcial 5-11\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj",
+        "projectUniqueName": "C:\\Users\\maria\\source\\repos\\Winform\\Ejercicio 1-10\\Parcial 5-11\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj",
         "projectName": "BarberManagerAPIs",
-        "projectPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj",
-        "packagesPath": "C:\\Users\\juani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juani\\OneDrive\\Documentos\\GitHub\\Practica Profesionalizante II\\BarberManager\\BarberManagerAPIs\\obj\\",
+        "projectPath": "C:\\Users\\maria\\source\\repos\\Winform\\Ejercicio 1-10\\Parcial 5-11\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\BarberManagerAPIs.csproj",
+        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maria\\source\\repos\\Winform\\Ejercicio 1-10\\Parcial 5-11\\Practica-Profesionalizante-II\\BarberManager\\BarberManagerAPIs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\juani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

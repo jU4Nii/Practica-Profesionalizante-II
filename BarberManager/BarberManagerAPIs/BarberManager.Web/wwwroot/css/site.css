@@ -51,6 +51,85 @@ body {
   text-align: start;
 }
 
+/* Pantallas de acceso basadas en los mockups de Barber Manager. */
+.auth-page {
+  display: grid;
+  min-height: calc(100vh - 8rem);
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  position: relative;
+  width: min(100%, 360px);
+  padding: 2.9rem 2.25rem 2rem;
+  background: #fff;
+  border-radius: .25rem;
+  box-shadow: 0 .15rem .55rem rgba(0, 0, 0, .14);
+}
+
+.auth-card h1 {
+  margin: 0 0 1.7rem;
+  color: #171717;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.auth-avatar {
+  position: absolute;
+  top: -1.3rem;
+  left: 50%;
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  place-items: center;
+  color: #171717;
+  background: #fff;
+  border: 2px solid #252525;
+  border-radius: 50%;
+  font-size: 1.45rem;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+.auth-field { margin-bottom: .95rem; }
+.auth-field label, .auth-intro { display: block; margin-bottom: .35rem; color: #252525; font-size: .82rem; }
+.auth-field input {
+  display: block;
+  width: 100%;
+  padding: .48rem .65rem;
+  color: #252525;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: .25rem;
+  font-size: .85rem;
+  outline: 0;
+}
+.auth-field input:focus { border-color: #555; box-shadow: 0 0 0 .15rem rgba(34, 34, 34, .12); }
+.auth-field input::placeholder { color: #b8b8b8; }
+.auth-button {
+  width: 100%;
+  margin-top: .65rem;
+  padding: .55rem .8rem;
+  color: #fff;
+  background: #282828;
+  border: 0;
+  border-radius: .25rem;
+  font-size: .9rem;
+}
+.auth-button:hover { background: #464646; }
+.auth-help-link { display: block; color: #aa3d3d; font-size: .68rem; text-align: right; }
+.auth-footer { margin: 1.35rem 0 0; color: #777; font-size: .8rem; text-align: center; }
+.auth-footer a { color: #252525; font-weight: 600; }
+.auth-validation { color: #b02a37; font-size: .78rem; }
+.auth-card--wide { width: min(100%, 410px); }
+
+@media (max-width: 576px) {
+  .auth-page { min-height: calc(100vh - 5rem); padding: 1.5rem 0; }
+  .auth-card { padding-right: 1.5rem; padding-left: 1.5rem; }
+}
+
 @media (max-width: 576px) {
   .list-search { max-width: none; }
 }
