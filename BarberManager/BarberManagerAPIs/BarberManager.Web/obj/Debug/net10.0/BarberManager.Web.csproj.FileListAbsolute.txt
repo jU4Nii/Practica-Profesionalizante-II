@@ -135,7 +135,6 @@ C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesi
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\scopedcss\bundle\BarberManager.Web.styles.css
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\scopedcss\projectbundle\BarberManager.Web.bundle.scp.css
-C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\kexhh1os2o-{0}-okiv50n0li-okiv50n0li.gz
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\3tatf72j4j-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\ly4r6bw67q-{0}-zv14y0h98e-zv14y0h98e.gz
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\31d55an7er-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
@@ -219,3 +218,4 @@ C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesi
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\bin\Debug\net10.0\BarberManager.Web.runtimeconfig.json
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\bin\Debug\net10.0\BarberManager.Web.dll
 C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\bin\Debug\net10.0\BarberManager.Web.pdb
+C:\Users\maria\source\repos\Winform\Ejercicio 1-10\Parcial 5-11\Practica-Profesionalizante-II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\kexhh1os2o-{0}-kd008tjdfb-kd008tjdfb.gz

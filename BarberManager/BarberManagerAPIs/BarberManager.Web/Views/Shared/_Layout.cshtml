@@ -11,7 +11,9 @@
 <body>
     @if (!(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index"))
     {
-        <a class="scissors-link" asp-controller="Home" asp-action="Index" aria-label="Volver al menú principal" title="Volver al menú principal">✂</a>
+        <a class="scissors-link" asp-controller="Home" asp-action="Index" aria-label="Volver al menú principal" title="Volver al menú principal">
+            <img src="~/images/logo-tijera.png" asp-append-version="true" alt="" />
+        </a>
     }
     <main class="container py-4">@RenderBody()</main>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
