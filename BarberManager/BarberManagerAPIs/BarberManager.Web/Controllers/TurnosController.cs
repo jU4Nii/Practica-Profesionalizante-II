@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
 using BarberManager.Web.Models;
 using BarberManager.Web.Filters;
+using BarberManager.Web.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -61,6 +62,38 @@ public class TurnosController : Controller
         var modelo = new NuevoTurnoViewModel();
         await CargarOpciones(modelo);
         return View(modelo);
+    }
+
+    public async Task<IActionResult> ExportarCsv()
+    {
+        try
+        {
+            var api = _httpClientFactory.CreateClient("BarberApi");
+            var turnos = await api.GetFromJsonAsync<List<TurnoViewModel>>("turnos") ?? [];
+            var clientes = await api.GetFromJsonAsync<List<ClienteViewModel>>("clientes") ?? [];
+            var peluqueros = await api.GetFromJsonAsync<List<PeluqueroSimpleViewModel>>("peluqueros") ?? [];
+            var items = await api.GetFromJsonAsync<List<TurnoItemViewModel>>("turnos/items") ?? [];
+            var servicios = await api.GetFromJsonAsync<List<ServicioViewModel>>("servicios") ?? [];
+
+            var csv = CsvExportador.Crear(
+                ["Id", "Fecha", "Hora", "Cliente", "Peluquero", "Servicios", "Estado"],
+                turnos.OrderBy(t => t.Fecha).ThenBy(t => t.Hora).Select(t => new[]
+                {
+                    t.Id.ToString(), t.Fecha.ToString("yyyy-MM-dd"), t.Hora,
+                    clientes.FirstOrDefault(c => c.Id == t.IdCliente)?.Nombre ?? "Cliente no encontrado",
+                    peluqueros.FirstOrDefault(p => p.Id == t.IdPeluquero)?.Nombre ?? "Peluquero no encontrado",
+                    string.Join(", ", items.Where(i => i.IdTurno == t.Id && i.IdServicio.HasValue)
+                        .Select(i => servicios.FirstOrDefault(s => s.Id == i.IdServicio)?.Nombre)
+                        .Where(nombre => !string.IsNullOrWhiteSpace(nombre))),
+                    t.Cancelado ? "Cancelado" : "Activo"
+                }));
+            return File(csv, "text/csv", "turnos.csv");
+        }
+        catch (HttpRequestException)
+        {
+            TempData["Mensaje"] = "No se pudo generar el respaldo de turnos.";
+            return RedirectToAction(nameof(Index));
+        }
     }
 
     [HttpPost]

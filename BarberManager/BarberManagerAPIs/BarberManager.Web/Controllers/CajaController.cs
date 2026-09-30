@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
 using BarberManager.Web.Models;
 using BarberManager.Web.Filters;
+using BarberManager.Web.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarberManager.Web.Controllers;
@@ -32,6 +33,28 @@ public class CajaController : Controller
         var movimiento = new CajaViewModel();
         await CargarProductosDisponibles(movimiento);
         return View(movimiento);
+    }
+
+    public async Task<IActionResult> ExportarCsv()
+    {
+        try
+        {
+            var movimientos = await _httpClientFactory.CreateClient("BarberApi")
+                .GetFromJsonAsync<List<CajaViewModel>>("caja") ?? [];
+            var csv = CsvExportador.Crear(
+                ["Id", "Fecha", "Concepto", "Metodo de pago", "Tipo", "Monto"],
+                movimientos.OrderBy(m => m.Fecha).Select(m => new[]
+                {
+                    m.Id.ToString(), m.Fecha.ToString("yyyy-MM-dd"), m.Concepto, m.MetodoPago,
+                    m.EsIngreso ? "Ingreso" : "Egreso", m.Monto.ToString(System.Globalization.CultureInfo.InvariantCulture)
+                }));
+            return File(csv, "text/csv", "caja.csv");
+        }
+        catch (HttpRequestException)
+        {
+            TempData["Mensaje"] = "No se pudo generar el respaldo de caja.";
+            return RedirectToAction(nameof(Index));
+        }
     }
 
     [HttpPost]

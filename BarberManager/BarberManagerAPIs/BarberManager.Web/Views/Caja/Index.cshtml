@@ -6,7 +6,7 @@
 }
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h1 class="h2 mb-0">Ingresos / egresos</h1>
-    <a class="btn btn-dark" asp-action="Create">Nuevo movimiento</a>
+    <div class="d-flex gap-2"><a class="btn btn-outline-secondary" asp-action="ExportarCsv">Descargar CSV</a><a class="btn btn-dark" asp-action="Create">Nuevo movimiento</a></div>
 </div>
 @if (TempData["Mensaje"] is string mensaje) { <div class="alert alert-info">@mensaje</div> }
 @if (ViewBag.ErrorApi is string errorApi) { <div class="alert alert-warning">@errorApi</div> }

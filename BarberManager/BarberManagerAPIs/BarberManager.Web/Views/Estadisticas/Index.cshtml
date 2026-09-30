@@ -1,6 +1,6 @@
 @model BarberManager.Web.Models.EstadisticasPaginaViewModel
 @{ ViewData["Title"] = "Estadísticas"; }
-<h1 class="h2 mb-4">Estadísticas</h1>
+<div class="d-flex justify-content-between align-items-center mb-4"><h1 class="h2 mb-0">Estadísticas</h1><a class="btn btn-outline-secondary" asp-action="ExportarCsv">Descargar CSV</a></div>
 @if (ViewBag.ErrorApi is string errorApi) { <div class="alert alert-warning">@errorApi</div> }
 <div class="row g-3 mb-4"><div class="col-sm-6"><div class="card summary-card"><div class="card-body"><span class="text-muted">Turnos registrados</span><p class="summary-number">@Model.TotalServicios</p></div></div></div><div class="col-sm-6"><div class="card summary-card"><div class="card-body"><span class="text-muted">Ventas de productos</span><p class="summary-number">@Model.TotalVentas</p></div></div></div></div>
 <h2 class="h4">Promedio por día</h2><p class="text-muted">Sirve para identificar los días con más movimiento y planificar promociones.</p>

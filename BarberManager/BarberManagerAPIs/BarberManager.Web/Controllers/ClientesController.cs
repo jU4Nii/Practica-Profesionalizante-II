@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
 using BarberManager.Web.Models;
 using BarberManager.Web.Filters;
+using BarberManager.Web.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarberManager.Web.Controllers;
@@ -39,6 +40,24 @@ public class ClientesController : Controller
     }
 
     public IActionResult Create() => View();
+
+    public async Task<IActionResult> ExportarCsv()
+    {
+        try
+        {
+            var clientes = await _httpClientFactory.CreateClient("BarberApi")
+                .GetFromJsonAsync<List<ClienteViewModel>>("clientes") ?? [];
+            var csv = CsvExportador.Crear(
+                ["Id", "Nombre", "Telefono", "Correo", "Notas"],
+                clientes.Select(c => new[] { c.Id.ToString(), c.Nombre, c.Telefono, c.Correo, c.Notas }));
+            return File(csv, "text/csv", "clientes.csv");
+        }
+        catch (HttpRequestException)
+        {
+            TempData["Mensaje"] = "No se pudo generar el respaldo de clientes.";
+            return RedirectToAction(nameof(Index));
+        }
+    }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
