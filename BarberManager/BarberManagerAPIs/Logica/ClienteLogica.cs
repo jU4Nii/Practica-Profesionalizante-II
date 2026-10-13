@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Entidades;
+using BarberManagerAPIs.Entidades;
 using BarberManagerAPIs.Logica.DTOs;
 using BarberManagerAPIs.Repositorios;
 
@@ -10,7 +10,7 @@ public interface IClienteLogica
 
     Task<Cliente?> ObtenerPorId(int id);
 
-    Task<bool> Agregar(ClienteDTO dto);
+    Task<Cliente?> Agregar(ClienteDTO dto);
     Task<bool> Editar(int id, ClienteDTO dto);
 }
 
@@ -33,11 +33,11 @@ public class ClienteLogica : IClienteLogica
         return await _repository.ObtenerPorId(id);
     }
 
-    public async Task<bool> Agregar(ClienteDTO dto)
+    public async Task<Cliente?> Agregar(ClienteDTO dto)
     {
         if (string.IsNullOrWhiteSpace(dto.Nombre) ||
-    string.IsNullOrWhiteSpace(dto.Telefono))
-            return false;
+            string.IsNullOrWhiteSpace(dto.Telefono))
+            return null;
 
         Cliente cliente = new Cliente
         {
@@ -49,7 +49,7 @@ public class ClienteLogica : IClienteLogica
 
         await _repository.Agregar(cliente);
 
-        return true;
+        return cliente;
     }
 
     public async Task<bool> Editar(int id, ClienteDTO dto)

@@ -83,10 +83,6 @@ namespace BarberManagerAPIs
 
             builder.Services.AddScoped<ITurnoServicioProductoLogica, TurnoServicioProductoLogica>();
 
-            builder.Services.AddScoped<ICajaLogica, CajaLogica>();
-
-            builder.Services.AddScoped<ICajaRepository, CajaRepository>();
-
             var app = builder.Build();
 
             

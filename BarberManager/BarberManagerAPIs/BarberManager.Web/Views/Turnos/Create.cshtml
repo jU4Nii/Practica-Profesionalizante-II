@@ -1,5 +1,177 @@
 @model BarberManager.Web.Models.NuevoTurnoViewModel
 @{ ViewData["Title"] = "Nuevo turno"; }
+
 <h1 class="h2 mb-4">Nuevo turno</h1>
-<div class="card form-card"><div class="card-body"><form method="post"><div asp-validation-summary="ModelOnly" class="text-danger"></div><div class="mb-3"><label asp-for="IdCliente" class="form-label">Cliente</label><select asp-for="IdCliente" asp-items="Model.Clientes" class="form-select"><option value="0">Seleccioná un cliente</option></select><span asp-validation-for="IdCliente" class="text-danger"></span></div><div class="mb-3"><label asp-for="IdPeluquero" class="form-label">Peluquero</label><select asp-for="IdPeluquero" asp-items="Model.Peluqueros" class="form-select"><option value="0">Seleccioná un peluquero</option></select><span asp-validation-for="IdPeluquero" class="text-danger"></span></div><div class="mb-3"><label asp-for="Fecha" class="form-label"></label><input asp-for="Fecha" class="form-control" /></div><div class="mb-3"><label asp-for="Hora" class="form-label"></label><input asp-for="Hora" class="form-control" type="time" /><span asp-validation-for="Hora" class="text-danger"></span></div><div class="mb-3"><label asp-for="IdServicios" class="form-label">Servicios</label><select asp-for="IdServicios" asp-items="Model.Servicios" class="form-select" multiple size="4"></select><div class="form-text">Podés seleccionar varios servicios.</div></div><div class="row g-3 mb-4"><div class="col-md-8"><label asp-for="IdProducto" class="form-label">Producto (opcional)</label><select asp-for="IdProducto" asp-items="Model.Productos" class="form-select"><option value="">Sin producto</option></select></div><div class="col-md-4"><label asp-for="CantidadProducto" class="form-label">Cantidad</label><input asp-for="CantidadProducto" class="form-control" min="1" /><span asp-validation-for="CantidadProducto" class="text-danger"></span></div></div><button class="btn btn-dark" type="submit">Guardar turno</button><a class="btn btn-outline-secondary ms-2" asp-action="Index">Volver</a></form></div></div>
-@section Scripts { <partial name="_ValidationScriptsPartial" /> }
+
+<div class="card form-card">
+    <div class="card-body">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <label asp-for="IdCliente" class="form-label mb-0">Cliente</label>
+                    <button type="button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalNuevoCliente">
+                        + Nuevo cliente
+                    </button>
+                </div>
+                <select asp-for="IdCliente" asp-items="Model.Clientes" class="form-select" id="selectCliente">
+                    <option value="0">Seleccioná un cliente</option>
+                </select>
+                <div id="alertaClienteCreado" class="alert alert-success py-1 px-2 mt-2 d-none small"></div>
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="IdPeluquero" class="form-label">Peluquero</label>
+                <select asp-for="IdPeluquero" asp-items="Model.Peluqueros" class="form-select">
+                    <option value="0">Seleccioná un peluquero</option>
+                </select>
+                <span asp-validation-for="IdPeluquero" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Fecha" class="form-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Hora" class="form-label"></label>
+                <input asp-for="Hora" class="form-control" type="time" />
+                <span asp-validation-for="Hora" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="IdServicios" class="form-label">Servicios</label>
+                <select asp-for="IdServicios" asp-items="Model.Servicios" class="form-select" multiple size="4"></select>
+                <div class="form-text">Podés seleccionar varios servicios.</div>
+            </div>
+
+            <div class="row g-3 mb-4">
+                <div class="col-md-8">
+                    <label asp-for="IdProducto" class="form-label">Producto (opcional)</label>
+                    <select asp-for="IdProducto" asp-items="Model.Productos" class="form-select">
+                        <option value="">Sin producto</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="CantidadProducto" class="form-label">Cantidad</label>
+                    <input asp-for="CantidadProducto" class="form-control" min="1" />
+                    <span asp-validation-for="CantidadProducto" class="text-danger"></span>
+                </div>
+            </div>
+
+            <button class="btn btn-dark" type="submit">Guardar turno</button>
+            <a class="btn btn-outline-secondary ms-2" asp-action="Index">Volver</a>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Nuevo Cliente Rápido -->
+<div class="modal fade" id="modalNuevoCliente" tabindex="-1" aria-labelledby="modalNuevoClienteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalNuevoClienteLabel">Nuevo cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="modalClienteError" class="alert alert-danger d-none py-2 small"></div>
+                <div class="mb-3">
+                    <label for="clienteRapidoNombre" class="form-label">Nombre *</label>
+                    <input type="text" class="form-control" id="clienteRapidoNombre" placeholder="Ej: Lucas Gómez" required />
+                </div>
+                <div class="mb-3">
+                    <label for="clienteRapidoTelefono" class="form-label">Teléfono *</label>
+                    <input type="text" class="form-control" id="clienteRapidoTelefono" placeholder="Ej: 3493-123456" required />
+                </div>
+                <div class="mb-3">
+                    <label for="clienteRapidoCorreo" class="form-label">Correo (opcional)</label>
+                    <input type="email" class="form-control" id="clienteRapidoCorreo" placeholder="cliente@correo.com" />
+                </div>
+                <div class="mb-3">
+                    <label for="clienteRapidoNotas" class="form-label">Notas internas (opcional)</label>
+                    <input type="text" class="form-control" id="clienteRapidoNotas" placeholder="Preferencias de corte, estilo, etc." />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-dark" id="btnGuardarClienteRapido">Guardar cliente</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.getElementById('btnGuardarClienteRapido')?.addEventListener('click', async function () {
+            const nombreInput = document.getElementById('clienteRapidoNombre');
+            const telefonoInput = document.getElementById('clienteRapidoTelefono');
+            const correoInput = document.getElementById('clienteRapidoCorreo');
+            const notasInput = document.getElementById('clienteRapidoNotas');
+            const errorDiv = document.getElementById('modalClienteError');
+            const btn = this;
+
+            const nombre = nombreInput.value.trim();
+            const telefono = telefonoInput.value.trim();
+            const correo = correoInput.value.trim();
+            const notas = notasInput.value.trim();
+
+            if (!nombre || !telefono) {
+                errorDiv.textContent = 'El nombre y el teléfono son obligatorios.';
+                errorDiv.classList.remove('d-none');
+                return;
+            }
+
+            errorDiv.classList.add('d-none');
+            btn.disabled = true;
+            btn.textContent = 'Guardando...';
+
+            try {
+                const response = await fetch('@Url.Action("CrearRapido", "Clientes")', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ nombre, telefono, correo, notas })
+                });
+
+                if (!response.ok) {
+                    const errData = await response.json().catch(() => ({}));
+                    errorDiv.textContent = errData.mensaje || 'No se pudo guardar el cliente.';
+                    errorDiv.classList.remove('d-none');
+                    btn.disabled = false;
+                    btn.textContent = 'Guardar cliente';
+                    return;
+                }
+
+                const data = await response.json();
+                const select = document.getElementById('selectCliente');
+
+                const option = new Option(data.nombre, data.id, true, true);
+                select.add(option);
+                select.value = data.id;
+
+                nombreInput.value = '';
+                telefonoInput.value = '';
+                correoInput.value = '';
+                notasInput.value = '';
+
+                const modalEl = document.getElementById('modalNuevoCliente');
+                const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                modal.hide();
+
+                const feedback = document.getElementById('alertaClienteCreado');
+                feedback.textContent = `Cliente "${data.nombre}" creado y seleccionado correctamente.`;
+                feedback.classList.remove('d-none');
+                setTimeout(() => feedback.classList.add('d-none'), 5000);
+
+            } catch (err) {
+                errorDiv.textContent = 'Error de conexión al guardar el cliente.';
+                errorDiv.classList.remove('d-none');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Guardar cliente';
+            }
+        });
+    </script>
+}

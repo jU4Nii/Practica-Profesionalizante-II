@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Logica;
+using BarberManagerAPIs.Logica;
 using BarberManagerAPIs.Logica.DTOs;
 
 namespace BarberManagerAPIs.Endpoints;
@@ -26,16 +26,18 @@ public static class ClienteEndpoints
 
         app.MapPost("/clientes", async (ClienteDTO dto, IClienteLogica logica) =>
         {
-            var creado = await logica.Agregar(dto);
+            var cliente = await logica.Agregar(dto);
 
-            if (!creado)
+            if (cliente == null)
                 return Results.BadRequest(new
                 {
                     mensaje = "Datos inválidos"
                 });
 
-            return Results.Created("/clientes", new
+            return Results.Created($"/clientes/{cliente.Id}", new
             {
+                id = cliente.Id,
+                nombre = cliente.Nombre,
                 mensaje = "Cliente creado correctamente"
             });
         });

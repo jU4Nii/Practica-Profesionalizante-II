@@ -174,6 +174,34 @@ public class ClientesController : Controller
         public bool Cancelado { get; set; }
     }
 
+    [HttpPost]
+    public async Task<IActionResult> CrearRapido([FromBody] ClienteViewModel clienteNuevo)
+    {
+        if (string.IsNullOrWhiteSpace(clienteNuevo.Nombre) || string.IsNullOrWhiteSpace(clienteNuevo.Telefono))
+            return BadRequest(new { mensaje = "El nombre y el teléfono son obligatorios." });
+
+        try
+        {
+            var api = _httpClientFactory.CreateClient("BarberApi");
+            var respuesta = await api.PostAsJsonAsync("clientes", clienteNuevo);
+            if (!respuesta.IsSuccessStatusCode)
+                return BadRequest(new { mensaje = "No se pudo crear el cliente." });
+
+            var creado = await respuesta.Content.ReadFromJsonAsync<ClienteCreadoResponse>();
+            return Ok(new { id = creado?.Id, nombre = creado?.Nombre ?? clienteNuevo.Nombre });
+        }
+        catch (HttpRequestException)
+        {
+            return StatusCode(500, new { mensaje = "No se pudo conectar con la API." });
+        }
+    }
+
+    private class ClienteCreadoResponse
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+    }
+
     private class PeluqueroHistorialApiViewModel { public int Id { get; set; } public string Nombre { get; set; } = string.Empty; }
     private class TurnoItemHistorialApiViewModel { public int IdTurno { get; set; } public int? IdServicio { get; set; } }
     private class ServicioHistorialApiViewModel { public int Id { get; set; } public string Nombre { get; set; } = string.Empty; }
