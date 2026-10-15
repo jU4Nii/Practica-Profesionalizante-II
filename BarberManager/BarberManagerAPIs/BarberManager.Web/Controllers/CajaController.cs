@@ -19,7 +19,7 @@ public class CajaController : Controller
         {
             var api = _httpClientFactory.CreateClient("BarberApi");
             var movimientos = await api.GetFromJsonAsync<List<CajaViewModel>>("caja") ?? [];
-            return View(movimientos.OrderByDescending(m => m.Fecha).ToList());
+            return View(movimientos.OrderByDescending(m => m.Fecha).ThenByDescending(m => m.Id).ToList());
         }
         catch (HttpRequestException)
         {
@@ -94,6 +94,15 @@ public class CajaController : Controller
             }
             else
             {
+                ModelState.Remove(nameof(movimiento.IdProducto));
+                ModelState.Remove(nameof(movimiento.CantidadProducto));
+
+                if (string.IsNullOrWhiteSpace(movimiento.Concepto))
+                {
+                    movimiento.Concepto = movimiento.EsIngreso ? "Ingreso general" : "Egreso general";
+                    ModelState.Remove(nameof(movimiento.Concepto));
+                }
+
                 if (!ModelState.IsValid)
                 {
                     await CargarProductosDisponibles(movimiento);

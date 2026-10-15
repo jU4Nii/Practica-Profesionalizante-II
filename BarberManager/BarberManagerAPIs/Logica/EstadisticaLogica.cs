@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Entidades;
+using BarberManagerAPIs.Entidades;
 using BarberManagerAPIs.Logica.DTOs;
 using BarberManagerAPIs.Repositorios;
 
@@ -10,6 +10,7 @@ public interface IEstadisticaLogica
     Task<Estadistica?> ObtenerPorId(int id);
     Task<bool> Agregar(EstadisticaDTO dto);
     Task RegistrarServicio(DateTime fecha);
+    Task DescontarServicio(DateTime fecha);
     Task RegistrarVenta(DateTime fecha);
 }
 
@@ -52,6 +53,17 @@ public class EstadisticaLogica : IEstadisticaLogica
         var estadistica = await ObtenerOCrearPorFecha(fecha);
         estadistica.CantServicios++;
         await _repository.Guardar();
+    }
+
+    public async Task DescontarServicio(DateTime fecha)
+    {
+        var estadistica = (await _repository.ObtenerTodos())
+            .FirstOrDefault(e => e.Fecha.Date == fecha.Date);
+        if (estadistica != null && estadistica.CantServicios > 0)
+        {
+            estadistica.CantServicios--;
+            await _repository.Guardar();
+        }
     }
 
     public async Task RegistrarVenta(DateTime fecha)

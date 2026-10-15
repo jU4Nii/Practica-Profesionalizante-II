@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Entidades;
+using BarberManagerAPIs.Entidades;
 using BarberManagerAPIs.Logica.DTOs;
 using BarberManagerAPIs.Repositorios;
 using BarberManagerAPIs.Datos;
@@ -35,7 +35,8 @@ public class CajaLogica : ICajaLogica
 
     public async Task<List<Caja>> ObtenerTodos()
     {
-        return await _repository.ObtenerTodos();
+        var cajas = await _repository.ObtenerTodos();
+        return cajas.OrderByDescending(c => c.Fecha).ThenByDescending(c => c.Id).ToList();
     }
 
     public async Task<Caja?> ObtenerPorId(int id)

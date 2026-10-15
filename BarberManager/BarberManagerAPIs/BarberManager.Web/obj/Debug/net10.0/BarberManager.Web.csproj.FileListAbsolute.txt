@@ -125,7 +125,6 @@ C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberMa
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\kexhh1os2o-{0}-7463ypwanl-7463ypwanl.gz
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\3tatf72j4j-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\ly4r6bw67q-{0}-xuh1q5cnqp-xuh1q5cnqp.gz
-C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\vejyw0h411-{0}-ftmdzubyij-ftmdzubyij.gz
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\31d55an7er-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\dyntm9bmke-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\5utnjbq9gx-{0}-c2jlpeoesf-c2jlpeoesf.gz
@@ -198,3 +197,4 @@ C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberMa
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\BarberManager.Web.pdb
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\BarberManager.Web.genruntimeconfig.cache
 C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\ref\BarberManager.Web.dll
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\BarberManager.Web\obj\Debug\net10.0\compressed\vejyw0h411-{0}-9224kwk606-9224kwk606.gz

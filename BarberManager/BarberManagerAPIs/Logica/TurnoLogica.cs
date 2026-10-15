@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Entidades;
+using BarberManagerAPIs.Entidades;
 using BarberManagerAPIs.Logica.DTOs;
 using BarberManagerAPIs.Repositorios;
 
@@ -23,19 +23,28 @@ public class TurnoLogica : ITurnoLogica
     private readonly IPeluqueroRepository _peluqueroRepository;
     private readonly IEstadisticaLogica _estadisticaLogica;
     private readonly ITurnoServicioProductoRepository _turnoServicioProductoRepository;
+    private readonly ICajaRepository _cajaRepository;
+    private readonly IProductoRepository _productoRepository;
+    private readonly IServicioRepository _servicioRepository;
 
     public TurnoLogica(
         ITurnoRepository repository,
         IClienteRepository clienteRepository,
         IPeluqueroRepository peluqueroRepository,
         IEstadisticaLogica estadisticaLogica,
-        ITurnoServicioProductoRepository turnoServicioProductoRepository)
+        ITurnoServicioProductoRepository turnoServicioProductoRepository,
+        ICajaRepository cajaRepository,
+        IProductoRepository productoRepository,
+        IServicioRepository servicioRepository)
     {
         _repository = repository;
         _clienteRepository = clienteRepository;
         _peluqueroRepository = peluqueroRepository;
         _estadisticaLogica = estadisticaLogica;
         _turnoServicioProductoRepository = turnoServicioProductoRepository;
+        _cajaRepository = cajaRepository;
+        _productoRepository = productoRepository;
+        _servicioRepository = servicioRepository;
     }
 
     public async Task<List<Turno>> ObtenerTodos()
@@ -144,8 +153,64 @@ public class TurnoLogica : ITurnoLogica
             return false;
 
         turno.Cancelado = true;
-
         await _repository.Guardar();
+
+        try
+        {
+            // 1. Descontar el servicio de las estadísticas
+            await _estadisticaLogica.DescontarServicio(turno.Fecha);
+
+            // 2. Obtener los items asociados a este turno
+            var items = await _turnoServicioProductoRepository.ObtenerTodos();
+            var itemsTurno = items.Where(i => i.IdTurno == id).ToList();
+
+            // 3. Restaurar stock de los productos asociados al turno
+            foreach (var item in itemsTurno.Where(i => i.IdProducto.HasValue && i.CantidadProducto > 0))
+            {
+                var prod = await _productoRepository.ObtenerPorId(item.IdProducto!.Value);
+                if (prod != null)
+                {
+                    prod.Cantidad += item.CantidadProducto;
+                    await _productoRepository.Guardar();
+                }
+            }
+
+            // 4. Restar / eliminar de Caja los ingresos generados por este turno
+            var tag = $"(Turno #{id})";
+            var movimientosCaja = await _cajaRepository.ObtenerTodos();
+            var cajasTurno = movimientosCaja
+                .Where(c => c.EsIngreso && c.Concepto != null && c.Concepto.Contains(tag))
+                .ToList();
+
+            if (!cajasTurno.Any())
+            {
+                foreach (var item in itemsTurno.Where(i => i.IdServicio.HasValue))
+                {
+                    var serv = await _servicioRepository.ObtenerPorId(item.IdServicio!.Value);
+                    if (serv != null)
+                    {
+                        var match = movimientosCaja.FirstOrDefault(c =>
+                            c.EsIngreso &&
+                            c.Concepto == $"Servicio: {serv.Nombre}" &&
+                            c.Monto == serv.Precio &&
+                            c.Fecha.Date == turno.Fecha.Date);
+                        if (match != null && !cajasTurno.Contains(match))
+                        {
+                            cajasTurno.Add(match);
+                        }
+                    }
+                }
+            }
+
+            foreach (var c in cajasTurno)
+            {
+                await _cajaRepository.Eliminar(c);
+            }
+        }
+        catch
+        {
+            // La cancelación del turno ya quedó registrada
+        }
 
         return true;
     }

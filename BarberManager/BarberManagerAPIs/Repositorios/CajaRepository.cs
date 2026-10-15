@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Datos;
+using BarberManagerAPIs.Datos;
 using BarberManagerAPIs.Entidades;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +9,7 @@ public interface ICajaRepository
     Task<List<Caja>> ObtenerTodos();
     Task<Caja?> ObtenerPorId(int id);
     Task Agregar(Caja caja);
+    Task Eliminar(Caja caja);
     Task Guardar();
 }
 
@@ -34,6 +35,12 @@ public class CajaRepository : ICajaRepository
     public async Task Agregar(Caja caja)
     {
         _context.Cajas.Add(caja);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Eliminar(Caja caja)
+    {
+        _context.Cajas.Remove(caja);
         await _context.SaveChangesAsync();
     }
 

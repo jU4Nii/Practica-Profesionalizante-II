@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Entidades;
+using BarberManagerAPIs.Entidades;
 using BarberManagerAPIs.Logica.DTOs;
 using BarberManagerAPIs.Datos;
 using BarberManagerAPIs.Repositorios;
@@ -68,6 +68,14 @@ public class TurnoServicioProductoLogica : ITurnoServicioProductoLogica
                     PrecioUnitario = dto.PrecioUnitario
                 });
                 await _productoRepository.Guardar();
+                await _cajaLogica.Agregar(new CajaDTO
+                {
+                    Fecha = DateTime.Today,
+                    Monto = dto.PrecioUnitario * dto.CantidadProducto,
+                    Concepto = $"Producto en turno: {producto.Nombre} (Turno #{dto.IdTurno})",
+                    MetodoPago = "Pendiente",
+                    EsIngreso = true
+                });
                 await transaccion.CommitAsync();
                 return true;
             }
@@ -100,7 +108,7 @@ public class TurnoServicioProductoLogica : ITurnoServicioProductoLogica
             {
                 Fecha = DateTime.Today,
                 Monto = servicio.Precio,
-                Concepto = $"Servicio: {servicio.Nombre}",
+                Concepto = $"Servicio: {servicio.Nombre} (Turno #{dto.IdTurno})",
                 MetodoPago = "Pendiente",
                 EsIngreso = true
             });
