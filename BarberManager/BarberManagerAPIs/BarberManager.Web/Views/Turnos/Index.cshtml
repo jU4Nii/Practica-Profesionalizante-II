@@ -1,7 +1,192 @@
 @model List<BarberManager.Web.Models.TurnoListadoViewModel>
 @{ ViewData["Title"] = "Turnos"; }
-<div class="d-flex justify-content-between align-items-center mb-4"><h1 class="h2 mb-0">Turnos</h1><div class="d-flex gap-2"><a class="btn btn-outline-secondary" asp-action="ExportarCsv">Descargar CSV</a><a class="btn btn-dark" asp-action="Create">Nuevo turno</a></div></div>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h2 mb-0">Turnos</h1>
+    <div class="d-flex gap-2">
+        <a class="btn btn-outline-secondary" asp-action="ExportarCsv">Descargar CSV</a>
+        <a class="btn btn-dark" asp-action="Create">Nuevo turno</a>
+    </div>
+</div>
+
 @if (TempData["Mensaje"] is string mensaje) { <div class="alert alert-info">@mensaje</div> }
 @if (ViewBag.ErrorApi is string errorApi) { <div class="alert alert-warning">@errorApi</div> }
-<div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Fecha</th><th>Hora</th><th>Cliente</th><th>Peluquero</th><th>Servicio</th><th>Estado</th><th></th></tr></thead><tbody>@foreach (var turno in Model) { <tr><td>@turno.Fecha.ToString("dd/MM/yyyy")</td><td>@turno.Hora</td><td>@turno.NombreCliente</td><td>@turno.NombrePeluquero</td><td>@(string.IsNullOrWhiteSpace(turno.Servicios) ? "Sin servicio" : turno.Servicios)</td><td>@(turno.Cancelado ? "Cancelado" : "Activo")</td><td class="text-end">@if (!turno.Cancelado) { <a class="btn btn-sm btn-outline-dark" asp-action="Edit" asp-route-id="@turno.Id">Reprogramar</a><form class="d-inline" asp-action="Cancelar" asp-route-id="@turno.Id" method="post"><button class="btn btn-sm btn-outline-danger" type="submit">Cancelar</button></form> } else { <form class="d-inline" asp-action="Borrar" asp-route-id="@turno.Id" method="post"><button class="btn btn-sm btn-outline-danger" type="submit">Borrar</button></form> }</td></tr> }</tbody></table></div></div>
-@if (!Model.Any()) { <p class="text-muted mt-3">Todavía no hay turnos registrados.</p> }
+
+@if (Model.Any())
+{
+    <div class="d-flex flex-wrap gap-2 align-items-center mb-3">
+        <div class="input-group" style="max-width: 270px;">
+            <span class="input-group-text bg-white small">Fecha:</span>
+            <input type="date" id="filtroFechaTurnos" class="form-control form-control-sm" />
+            <button class="btn btn-sm btn-outline-secondary" type="button" id="btnLimpiarFecha" title="Ver todos">✕</button>
+        </div>
+        <button class="btn btn-sm btn-outline-dark" type="button" id="btnFiltrarHoy">Turnos de hoy</button>
+        <span id="contadorTurnos" class="text-muted small ms-auto"></span>
+    </div>
+}
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0" id="tablaTurnos">
+            <thead>
+                <tr>
+                    <th id="thFecha" role="button" class="user-select-none" style="cursor: pointer;" title="Hacé clic sobre 'Fecha' para ordenar de más nuevo a más viejo o viceversa">
+                        Fecha <span id="iconoOrdenFecha" class="small text-muted">▼</span>
+                    </th>
+                    <th>Hora</th>
+                    <th>Cliente</th>
+                    <th>Peluquero</th>
+                    <th>Servicio</th>
+                    <th>Estado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tbodyTurnos">
+                @foreach (var turno in Model)
+                {
+                    <tr class="fila-turno" data-fecha="@turno.Fecha.ToString("yyyy-MM-dd")" data-hora="@turno.Hora">
+                        <td>
+                            <span role="button" class="click-fecha fw-semibold" title="Hacé clic para filtrar esta fecha">
+                                @turno.Fecha.ToString("dd/MM/yyyy")
+                            </span>
+                        </td>
+                        <td>@turno.Hora</td>
+                        <td>@turno.NombreCliente</td>
+                        <td>@turno.NombrePeluquero</td>
+                        <td>@(string.IsNullOrWhiteSpace(turno.Servicios) ? "Sin servicio" : turno.Servicios)</td>
+                        <td>@(turno.Cancelado ? "Cancelado" : "Activo")</td>
+                        <td class="text-end">
+                            @if (!turno.Cancelado)
+                            {
+                                <a class="btn btn-sm btn-outline-dark" asp-action="Edit" asp-route-id="@turno.Id">Reprogramar</a>
+                                <form class="d-inline" asp-action="Cancelar" asp-route-id="@turno.Id" method="post">
+                                    <button class="btn btn-sm btn-outline-danger" type="submit">Cancelar</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form class="d-inline" asp-action="Borrar" asp-route-id="@turno.Id" method="post">
+                                    <button class="btn btn-sm btn-outline-danger" type="submit">Borrar</button>
+                                </form>
+                            }
+                        </td>
+                    </tr>
+                }
+                <tr id="filaSinResultados" class="d-none">
+                    <td colspan="7" class="text-center text-muted py-4">No se encontraron turnos para la fecha seleccionada.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (!Model.Any())
+{
+    <p class="text-muted mt-3">Todavía no hay turnos registrados.</p>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const thFecha = document.getElementById('thFecha');
+            const iconoOrden = document.getElementById('iconoOrdenFecha');
+            const inputFecha = document.getElementById('filtroFechaTurnos');
+            const btnLimpiar = document.getElementById('btnLimpiarFecha');
+            const btnHoy = document.getElementById('btnFiltrarHoy');
+            const tbody = document.getElementById('tbodyTurnos');
+            const filaSinResultados = document.getElementById('filaSinResultados');
+            const contador = document.getElementById('contadorTurnos');
+
+            if (!tbody) return;
+
+            let ordenDescendente = true; // Por defecto viene ordenado del más nuevo al más viejo
+
+            function obtenerFilas() {
+                return Array.from(tbody.querySelectorAll('tr.fila-turno'));
+            }
+
+            function actualizarContador(visibles, total) {
+                if (!contador) return;
+                if (inputFecha && inputFecha.value) {
+                    contador.textContent = `Mostrando ${visibles} de ${total} turnos`;
+                } else {
+                    contador.textContent = `Total: ${total} turnos`;
+                }
+            }
+
+            function filtrar() {
+                const fechaSeleccionada = inputFecha ? inputFecha.value : '';
+                const filas = obtenerFilas();
+                let visibles = 0;
+
+                filas.forEach(fila => {
+                    const fechaFila = fila.dataset.fecha;
+                    const coincide = !fechaSeleccionada || fechaFila === fechaSeleccionada;
+                    fila.classList.toggle('d-none', !coincide);
+                    if (coincide) visibles++;
+                });
+
+                if (filaSinResultados) {
+                    filaSinResultados.classList.toggle('d-none', visibles > 0 || filas.length === 0);
+                }
+
+                actualizarContador(visibles, filas.length);
+            }
+
+            function ordenarPorFecha() {
+                ordenDescendente = !ordenDescendente;
+                const filas = obtenerFilas();
+
+                filas.sort((a, b) => {
+                    const fechaHoraA = (a.dataset.fecha || '') + ' ' + (a.dataset.hora || '');
+                    const fechaHoraB = (b.dataset.fecha || '') + ' ' + (b.dataset.hora || '');
+                    return ordenDescendente
+                        ? fechaHoraB.localeCompare(fechaHoraA)
+                        : fechaHoraA.localeCompare(fechaHoraB);
+                });
+
+                filas.forEach(fila => tbody.appendChild(fila));
+                if (filaSinResultados) tbody.appendChild(filaSinResultados);
+
+                if (iconoOrden) {
+                    iconoOrden.textContent = ordenDescendente ? '▼' : '▲';
+                }
+            }
+
+            thFecha?.addEventListener('click', ordenarPorFecha);
+
+            inputFecha?.addEventListener('input', filtrar);
+            inputFecha?.addEventListener('change', filtrar);
+
+            btnLimpiar?.addEventListener('click', function () {
+                if (inputFecha) inputFecha.value = '';
+                filtrar();
+            });
+
+            btnHoy?.addEventListener('click', function () {
+                const hoy = new Date();
+                const anio = hoy.getFullYear();
+                const mes = String(hoy.getMonth() + 1).padStart(2, '0');
+                const dia = String(hoy.getDate()).padStart(2, '0');
+                if (inputFecha) {
+                    inputFecha.value = `${anio}-${mes}-${dia}`;
+                    filtrar();
+                }
+            });
+
+            // Permitir hacer clic en la fecha de cualquier fila para filtrar por esa fecha
+            tbody.addEventListener('click', function (e) {
+                const clickFecha = e.target.closest('.click-fecha');
+                if (clickFecha) {
+                    const fila = clickFecha.closest('tr');
+                    if (fila && fila.dataset.fecha && inputFecha) {
+                        inputFecha.value = fila.dataset.fecha;
+                        filtrar();
+                    }
+                }
+            });
+
+            filtrar();
+        });
+    </script>
+}

@@ -81,7 +81,16 @@ public class CajaController : Controller
                     return View(movimiento);
                 }
 
-                respuesta = await api.PostAsJsonAsync("caja/venta-producto", movimiento);
+                var ventaDto = new
+                {
+                    IdProducto = movimiento.IdProducto.GetValueOrDefault(),
+                    Cantidad = movimiento.CantidadProducto,
+                    CantidadProducto = movimiento.CantidadProducto,
+                    Fecha = movimiento.Fecha,
+                    MetodoPago = movimiento.MetodoPago
+                };
+
+                respuesta = await api.PostAsJsonAsync("caja/venta-producto", ventaDto);
             }
             else
             {

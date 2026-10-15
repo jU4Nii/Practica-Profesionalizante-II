@@ -1,7 +1,137 @@
 @model BarberManager.Web.Models.ClienteHistorialViewModel
 @{ ViewData["Title"] = "Historial del cliente"; }
-<div class="d-flex justify-content-between align-items-center mb-4"><div><h1 class="h2 mb-1">@Model.Cliente.Nombre</h1><p class="text-muted mb-0">@Model.Cliente.Telefono · @Model.Cliente.Correo</p></div><a class="btn btn-outline-secondary" asp-action="Index">Volver</a></div>
-@if (!string.IsNullOrWhiteSpace(Model.Cliente.Notas)) { <div class="alert alert-light border"><strong>Notas:</strong> @Model.Cliente.Notas</div> }
-<h2 class="h4">Historial de visitas</h2>
-<div class="card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Fecha</th><th>Hora</th><th>Peluquero</th><th>Servicios</th><th>Estado</th></tr></thead><tbody>@foreach (var visita in Model.Visitas) { <tr><td>@visita.Fecha.ToString("dd/MM/yyyy")</td><td>@visita.Hora</td><td>@visita.Peluquero</td><td>@visita.Servicios</td><td>@(visita.Cancelado ? "Cancelado" : "Realizado / agendado")</td></tr> }</tbody></table></div></div>
-@if (!Model.Visitas.Any()) { <p class="text-muted mt-3">Este cliente todavía no tiene turnos registrados.</p> }
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h2 mb-1">@Model.Cliente.Nombre</h1>
+        <p class="text-muted mb-0">@Model.Cliente.Telefono · @Model.Cliente.Correo</p>
+    </div>
+    <a class="btn btn-outline-secondary" asp-action="Index">Volver</a>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(Model.Cliente.Notas))
+{
+    <div class="alert alert-light border"><strong>Notas:</strong> @Model.Cliente.Notas</div>
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="h4 mb-0">Historial de visitas</h2>
+    @if (Model.Visitas.Any())
+    {
+        <div class="input-group input-group-sm" style="max-width: 220px;">
+            <input type="date" id="filtroFechaVisitas" class="form-control" title="Filtrar visitas por fecha" />
+            <button class="btn btn-outline-secondary" type="button" id="btnLimpiarFechaVisitas" title="Ver todas">✕</button>
+        </div>
+    }
+</div>
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th id="thFechaVisitas" role="button" class="user-select-none" style="cursor: pointer;" title="Hacé clic sobre 'Fecha' para ordenar">
+                        Fecha <span id="iconoOrdenVisitas" class="small text-muted">▼</span>
+                    </th>
+                    <th>Hora</th>
+                    <th>Peluquero</th>
+                    <th>Servicios</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyVisitas">
+                @foreach (var visita in Model.Visitas)
+                {
+                    <tr class="fila-visita" data-fecha="@visita.Fecha.ToString("yyyy-MM-dd")" data-hora="@visita.Hora">
+                        <td><span role="button" class="click-fecha-visita fw-semibold" title="Hacé clic para filtrar esta fecha">@visita.Fecha.ToString("dd/MM/yyyy")</span></td>
+                        <td>@visita.Hora</td>
+                        <td>@visita.Peluquero</td>
+                        <td>@visita.Servicios</td>
+                        <td>@(visita.Cancelado ? "Cancelado" : "Realizado / agendado")</td>
+                    </tr>
+                }
+                <tr id="filaSinVisitas" class="d-none">
+                    <td colspan="5" class="text-center text-muted py-4">No se encontraron visitas para la fecha seleccionada.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (!Model.Visitas.Any())
+{
+    <p class="text-muted mt-3">Este cliente todavía no tiene turnos registrados.</p>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const thFecha = document.getElementById('thFechaVisitas');
+            const iconoOrden = document.getElementById('iconoOrdenVisitas');
+            const inputFecha = document.getElementById('filtroFechaVisitas');
+            const btnLimpiar = document.getElementById('btnLimpiarFechaVisitas');
+            const tbody = document.getElementById('tbodyVisitas');
+            const filaSinVisitas = document.getElementById('filaSinVisitas');
+
+            if (!tbody) return;
+            let ordenDescendente = true;
+
+            function obtenerFilas() {
+                return Array.from(tbody.querySelectorAll('tr.fila-visita'));
+            }
+
+            function filtrar() {
+                const fecha = inputFecha ? inputFecha.value : '';
+                const filas = obtenerFilas();
+                let visibles = 0;
+
+                filas.forEach(fila => {
+                    const coincide = !fecha || fila.dataset.fecha === fecha;
+                    fila.classList.toggle('d-none', !coincide);
+                    if (coincide) visibles++;
+                });
+
+                if (filaSinVisitas) {
+                    filaSinVisitas.classList.toggle('d-none', visibles > 0 || filas.length === 0);
+                }
+            }
+
+            function ordenar() {
+                ordenDescendente = !ordenDescendente;
+                const filas = obtenerFilas();
+
+                filas.sort((a, b) => {
+                    const dtA = (a.dataset.fecha || '') + ' ' + (a.dataset.hora || '');
+                    const dtB = (b.dataset.fecha || '') + ' ' + (b.dataset.hora || '');
+                    return ordenDescendente ? dtB.localeCompare(dtA) : dtA.localeCompare(dtB);
+                });
+
+                filas.forEach(fila => tbody.appendChild(fila));
+                if (filaSinVisitas) tbody.appendChild(filaSinVisitas);
+
+                if (iconoOrden) {
+                    iconoOrden.textContent = ordenDescendente ? '▼' : '▲';
+                }
+            }
+
+            thFecha?.addEventListener('click', ordenar);
+            inputFecha?.addEventListener('input', filtrar);
+            inputFecha?.addEventListener('change', filtrar);
+            btnLimpiar?.addEventListener('click', function () {
+                if (inputFecha) inputFecha.value = '';
+                filtrar();
+            });
+
+            tbody.addEventListener('click', function (e) {
+                const clickFecha = e.target.closest('.click-fecha-visita');
+                if (clickFecha) {
+                    const fila = clickFecha.closest('tr');
+                    if (fila && fila.dataset.fecha && inputFecha) {
+                        inputFecha.value = fila.dataset.fecha;
+                        filtrar();
+                    }
+                }
+            });
+        });
+    </script>
+}
