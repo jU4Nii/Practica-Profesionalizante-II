@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Logica;
+using BarberManagerAPIs.Logica;
 using BarberManagerAPIs.Logica.DTOs;
 
 namespace BarberManagerAPIs.Endpoints;
@@ -30,7 +30,7 @@ public static class PromocionEndpoints
             {
                 mensaje = "Promoción creada correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapPost("/promociones/{id}/servicios", async (int id, int idServicio, IPromocionLogica logica) =>
         {
@@ -43,7 +43,7 @@ public static class PromocionEndpoints
             {
                 mensaje = "Servicio asignado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapPost("/promociones/{id}/productos", async (int id, int idProducto, IPromocionLogica logica) =>
         {
@@ -56,7 +56,7 @@ public static class PromocionEndpoints
             {
                 mensaje = "Producto asignado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapDelete("/promociones/{id}/servicios/{idServicio}", async (int id, int idServicio, IPromocionLogica logica) =>
         {
@@ -69,7 +69,7 @@ public static class PromocionEndpoints
             {
                 mensaje = "Servicio eliminado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapDelete("/promociones/{id}/productos/{idProducto}", async (int id, int idProducto, IPromocionLogica logica) =>
         {
@@ -82,6 +82,6 @@ public static class PromocionEndpoints
             {
                 mensaje = "Producto eliminado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
     }
 }

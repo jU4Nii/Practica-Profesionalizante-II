@@ -65,9 +65,12 @@
                             }
                             else
                             {
-                                <form class="d-inline" asp-action="Borrar" asp-route-id="@turno.Id" method="post">
-                                    <button class="btn btn-sm btn-outline-danger" type="submit">Borrar</button>
-                                </form>
+                                @if (Context.Session.GetString("EsAdmin") == "true")
+                                {
+                                    <form class="d-inline" asp-action="Borrar" asp-route-id="@turno.Id" method="post">
+                                        <button class="btn btn-sm btn-outline-danger" type="submit">Borrar</button>
+                                    </form>
+                                }
                             }
                         </td>
                     </tr>

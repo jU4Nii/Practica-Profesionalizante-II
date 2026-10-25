@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Entidades;
+using BarberManagerAPIs.Entidades;
 using BarberManagerAPIs.Logica.DTOs;
 using BarberManagerAPIs.Repositorios;
 
@@ -43,7 +43,8 @@ public class PeluqueroLogica : IPeluqueroLogica
             Telefono = dto.Telefono,
             Contrasena = dto.Contrasena,
             EsAdmin = dto.EsAdmin,
-            EstaActivo = dto.EstaActivo
+            EstaActivo = dto.EstaActivo,
+            AtiendeClientes = dto.AtiendeClientes
         };
 
         await _repository.Agregar(peluquero);
@@ -64,6 +65,7 @@ public class PeluqueroLogica : IPeluqueroLogica
         peluquero.Contrasena = dto.Contrasena;
         peluquero.EsAdmin = dto.EsAdmin;
         peluquero.EstaActivo = dto.EstaActivo;
+        peluquero.AtiendeClientes = dto.AtiendeClientes;
 
         await _repository.Guardar();
 

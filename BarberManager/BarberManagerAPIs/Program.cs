@@ -116,7 +116,26 @@ namespace BarberManagerAPIs
 
             app.MapTurnoServicioProductoEndpoints();
 
-         
+            using (var scope = app.Services.CreateScope())
+            {
+                try
+                {
+                    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                    context.Database.ExecuteSqlRaw(@"
+                        IF NOT EXISTS (
+                            SELECT 1 FROM sys.columns 
+                            WHERE object_id = OBJECT_ID('Peluqueros') 
+                            AND name = 'AtiendeClientes'
+                        )
+                        BEGIN
+                            ALTER TABLE Peluqueros ADD AtiendeClientes BIT NOT NULL CONSTRAINT DF_Peluqueros_AtiendeClientes DEFAULT 1;
+                        END");
+                }
+                catch
+                {
+                    // Continuar si ya existe o no se requiere alteración
+                }
+            }
 
             app.Run();
         }

@@ -31,6 +31,7 @@ public class ServiciosController : Controller
         }
     }
 
+    [SoloAdmin]
     public IActionResult Create() => View();
 
     public async Task<IActionResult> ExportarCsv()
@@ -52,6 +53,7 @@ public class ServiciosController : Controller
     }
 
     [HttpPost]
+    [SoloAdmin]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(ServicioViewModel servicio)
     {
@@ -79,6 +81,7 @@ public class ServiciosController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [SoloAdmin]
     public async Task<IActionResult> Edit(int id)
     {
         try
@@ -95,6 +98,7 @@ public class ServiciosController : Controller
     }
 
     [HttpPost]
+    [SoloAdmin]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, ServicioViewModel servicio)
     {
@@ -123,6 +127,7 @@ public class ServiciosController : Controller
     }
 
     [HttpPost]
+    [SoloAdmin]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Delete(int id)
     {

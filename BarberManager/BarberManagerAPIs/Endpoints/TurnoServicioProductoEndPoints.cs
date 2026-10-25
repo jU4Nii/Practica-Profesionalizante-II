@@ -1,5 +1,6 @@
-﻿using BarberManagerAPIs.Logica;
+using BarberManagerAPIs.Logica;
 using BarberManagerAPIs.Logica.DTOs;
+using System.Security.Claims;
 
 namespace BarberManagerAPIs.Endpoints;
 
@@ -23,8 +24,19 @@ public static class TurnoServicioProductoEndpoints
             return Results.Ok(item);
         });
 
-        app.MapPost("/turnos/items", async (TurnoServicioProductoDTO dto, ITurnoServicioProductoLogica logica) =>
+        app.MapPost("/turnos/items", async (TurnoServicioProductoDTO dto, ClaimsPrincipal user, ITurnoLogica turnoLogica, ITurnoServicioProductoLogica logica) =>
         {
+            var esAdmin = user.IsInRole("Administrador");
+            if (!esAdmin)
+            {
+                var turno = await turnoLogica.ObtenerPorId(dto.IdTurno);
+                if (turno == null)
+                    return Results.NotFound();
+
+                if (!int.TryParse(user.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value, out var userId) || turno.IdPeluquero != userId)
+                    return Results.Forbid();
+            }
+
             var agregado = await logica.Agregar(dto);
 
             if (!agregado)

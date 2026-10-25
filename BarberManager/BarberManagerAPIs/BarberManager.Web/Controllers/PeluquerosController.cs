@@ -37,11 +37,12 @@ public class PeluquerosController : Controller
             var peluqueros = await _httpClientFactory.CreateClient("BarberApi")
                 .GetFromJsonAsync<List<PeluqueroViewModel>>("peluqueros") ?? [];
             var csv = CsvExportador.Crear(
-                ["Id", "Nombre", "Correo", "Telefono", "Rol", "Estado"],
+                ["Id", "Nombre", "Correo", "Telefono", "Rol", "Estado", "Atiende"],
                 peluqueros.Select(p => new[]
                 {
                     p.Id.ToString(), p.Nombre, p.Correo, p.Telefono,
-                    p.EsAdmin ? "Administrador" : "Peluquero", p.EstaActivo ? "Activo" : "Inactivo"
+                    p.EsAdmin ? "Administrador" : "Peluquero", p.EstaActivo ? "Activo" : "Inactivo",
+                    p.AtiendeClientes ? "Sí" : "No"
                 }));
             return File(csv, "text/csv", "peluqueros.csv");
         }

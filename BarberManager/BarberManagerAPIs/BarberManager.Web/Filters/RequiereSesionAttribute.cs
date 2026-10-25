@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BarberManager.Web.Filters;
 
@@ -23,6 +25,14 @@ public class SoloAdminAttribute : RequiereSesionAttribute
             return;
 
         if (context.HttpContext.Session.GetString("EsAdmin") != "true")
+        {
+            var factory = context.HttpContext.RequestServices.GetService<ITempDataDictionaryFactory>();
+            var tempData = factory?.GetTempData(context.HttpContext);
+            if (tempData != null)
+            {
+                tempData["Mensaje"] = "No tenés permisos para acceder a esta sección.";
+            }
             context.Result = new RedirectToActionResult("Index", "Home", null);
+        }
     }
 }

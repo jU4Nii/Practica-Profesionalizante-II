@@ -21,4 +21,5 @@ public class PeluqueroViewModel
 
     public bool EsAdmin { get; set; }
     public bool EstaActivo { get; set; } = true;
+    public bool AtiendeClientes { get; set; } = true;
 }

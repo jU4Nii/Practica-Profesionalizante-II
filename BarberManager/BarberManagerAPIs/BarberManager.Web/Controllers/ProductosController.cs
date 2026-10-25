@@ -38,6 +38,7 @@ public class ProductosController : Controller
         }
     }
 
+    [SoloAdmin]
     public IActionResult Create() => View(new ProductoViewModel());
 
     public async Task<IActionResult> ExportarCsv()
@@ -63,6 +64,7 @@ public class ProductosController : Controller
     }
 
     [HttpPost]
+    [SoloAdmin]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(ProductoViewModel producto)
     {
@@ -88,6 +90,7 @@ public class ProductosController : Controller
         }
     }
 
+    [SoloAdmin]
     public async Task<IActionResult> Edit(int id)
     {
         try
@@ -104,6 +107,7 @@ public class ProductosController : Controller
     }
 
     [HttpPost]
+    [SoloAdmin]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, ProductoViewModel producto)
     {
@@ -130,6 +134,7 @@ public class ProductosController : Controller
     }
 
     [HttpPost]
+    [SoloAdmin]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Delete(int id)
     {

@@ -87,6 +87,7 @@ public class ClientesController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [SoloAdmin]
     public async Task<IActionResult> Edit(int id)
     {
         try
@@ -102,6 +103,7 @@ public class ClientesController : Controller
     }
 
     [HttpPost]
+    [SoloAdmin]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, ClienteViewModel cliente)
     {

@@ -1,5 +1,6 @@
-﻿using BarberManagerAPIs.Logica;
+using BarberManagerAPIs.Logica;
 using BarberManagerAPIs.Logica.DTOs;
+using System.Security.Claims;
 
 namespace BarberManagerAPIs.Endpoints;
 
@@ -7,24 +8,56 @@ public static class TurnoEndpoints
 {
     public static void MapTurnoEndpoints(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/turnos", async (ITurnoLogica logica) =>
+        app.MapGet("/turnos", async (ClaimsPrincipal user, ITurnoLogica logica) =>
         {
-            var turnos = await logica.ObtenerTodos();
-            return Results.Ok(turnos);
+            var esAdmin = user.IsInRole("Administrador");
+            if (esAdmin)
+            {
+                var turnos = await logica.ObtenerTodos();
+                return Results.Ok(turnos);
+            }
+
+            if (int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out var userId))
+            {
+                var turnos = await logica.ObtenerPorPeluquero(userId);
+                return Results.Ok(turnos);
+            }
+
+            return Results.Forbid();
         });
 
-        app.MapGet("/turnos/{id}", async (int id, ITurnoLogica logica) =>
+        app.MapGet("/turnos/{id}", async (int id, ClaimsPrincipal user, ITurnoLogica logica) =>
         {
             var turno = await logica.ObtenerPorId(id);
 
             if (turno == null)
                 return Results.NotFound();
 
+            var esAdmin = user.IsInRole("Administrador");
+            if (!esAdmin)
+            {
+                if (!int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out var userId) || turno.IdPeluquero != userId)
+                    return Results.Forbid();
+            }
+
             return Results.Ok(turno);
         });
 
-        app.MapPost("/turnos", async (TurnoDTO dto, ITurnoLogica logica) =>
+        app.MapPost("/turnos", async (TurnoDTO dto, ClaimsPrincipal user, ITurnoLogica logica) =>
         {
+            var esAdmin = user.IsInRole("Administrador");
+            if (!esAdmin)
+            {
+                if (int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out var userId))
+                {
+                    dto.IdPeluquero = userId; // Garantiza que el turno se cree para el peluquero autenticado
+                }
+                else
+                {
+                    return Results.Forbid();
+                }
+            }
+
             var turnoCreado = await logica.Agregar(dto);
 
             if (turnoCreado == null)
@@ -40,8 +73,21 @@ public static class TurnoEndpoints
             });
         });
 
-        app.MapPut("/turnos/{id}", async (int id, TurnoDTO dto, ITurnoLogica logica) =>
+        app.MapPut("/turnos/{id}", async (int id, TurnoDTO dto, ClaimsPrincipal user, ITurnoLogica logica) =>
         {
+            var turno = await logica.ObtenerPorId(id);
+            if (turno == null)
+                return Results.NotFound();
+
+            var esAdmin = user.IsInRole("Administrador");
+            if (!esAdmin)
+            {
+                if (!int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out var userId) || turno.IdPeluquero != userId)
+                    return Results.Forbid();
+
+                dto.IdPeluquero = userId; // No puede transferirlo a otro peluquero
+            }
+
             var editado = await logica.Editar(id, dto);
 
             if (!editado)
@@ -56,8 +102,19 @@ public static class TurnoEndpoints
             });
         });
 
-        app.MapDelete("/turnos/{id}", async (int id, ITurnoLogica logica) =>
+        app.MapDelete("/turnos/{id}", async (int id, ClaimsPrincipal user, ITurnoLogica logica) =>
         {
+            var turno = await logica.ObtenerPorId(id);
+            if (turno == null)
+                return Results.NotFound();
+
+            var esAdmin = user.IsInRole("Administrador");
+            if (!esAdmin)
+            {
+                if (!int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out var userId) || turno.IdPeluquero != userId)
+                    return Results.Forbid();
+            }
+
             var eliminado = await logica.Eliminar(id);
 
             if (!eliminado)
@@ -77,16 +134,35 @@ public static class TurnoEndpoints
                 return Results.BadRequest(new { mensaje = "Solo se pueden borrar definitivamente turnos cancelados." });
 
             return Results.Ok(new { mensaje = "Turno eliminado definitivamente." });
-        });
+        }).RequireAuthorization("Admin");
 
-        app.MapGet("/turnos/fecha/{fecha}", async (DateTime fecha, ITurnoLogica logica) =>
+        app.MapGet("/turnos/fecha/{fecha}", async (DateTime fecha, ClaimsPrincipal user, ITurnoLogica logica) =>
         {
             var turnos = await logica.ObtenerPorFecha(fecha);
+            var esAdmin = user.IsInRole("Administrador");
+            if (!esAdmin)
+            {
+                if (int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out var userId))
+                {
+                    turnos = turnos.Where(t => t.IdPeluquero == userId).ToList();
+                }
+                else
+                {
+                    return Results.Forbid();
+                }
+            }
             return Results.Ok(turnos);
         });
 
-        app.MapGet("/turnos/peluquero/{idPeluquero}", async (int idPeluquero, ITurnoLogica logica) =>
+        app.MapGet("/turnos/peluquero/{idPeluquero}", async (int idPeluquero, ClaimsPrincipal user, ITurnoLogica logica) =>
         {
+            var esAdmin = user.IsInRole("Administrador");
+            if (!esAdmin)
+            {
+                if (!int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out var userId) || idPeluquero != userId)
+                    return Results.Forbid();
+            }
+
             var turnos = await logica.ObtenerPorPeluquero(idPeluquero);
             return Results.Ok(turnos);
         });

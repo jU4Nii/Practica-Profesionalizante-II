@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BarberManager.Web.Controllers;
 
-[RequiereSesion]
+[SoloAdmin]
 public class EstadisticasController : Controller
 {
     private readonly IHttpClientFactory _httpClientFactory;

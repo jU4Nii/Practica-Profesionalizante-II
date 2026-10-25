@@ -48,6 +48,6 @@ public static class ClienteEndpoints
             return editado
                 ? Results.Ok(new { mensaje = "Cliente actualizado correctamente" })
                 : Results.BadRequest(new { mensaje = "No se pudo actualizar el cliente" });
-        });
+        }).RequireAuthorization("Admin");
     }
 }

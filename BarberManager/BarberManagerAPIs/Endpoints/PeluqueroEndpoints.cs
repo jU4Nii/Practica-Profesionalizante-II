@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Logica;
+using BarberManagerAPIs.Logica;
 using BarberManagerAPIs.Logica.DTOs;
 
 namespace BarberManagerAPIs.Endpoints;
@@ -11,6 +11,22 @@ public static class PeluqueroEndpoints
         {
             var peluqueros = await logica.ObtenerTodos();
             return Results.Ok(peluqueros);
+        }).RequireAuthorization("Admin");
+
+        app.MapGet("/peluqueros/activos", async (IPeluqueroLogica logica) =>
+        {
+            var peluqueros = await logica.ObtenerTodos();
+            var activos = peluqueros
+                .Where(p => p.EstaActivo && p.AtiendeClientes)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Nombre,
+                    p.EstaActivo,
+                    p.EsAdmin,
+                    p.AtiendeClientes
+                });
+            return Results.Ok(activos);
         });
 
         app.MapGet("/peluqueros/{id}", async (int id, IPeluqueroLogica logica) =>

@@ -24,7 +24,7 @@ public class TurnosController : Controller
             var api = _httpClientFactory.CreateClient("BarberApi");
             var turnos = await api.GetFromJsonAsync<List<TurnoViewModel>>("turnos") ?? [];
             var clientes = await api.GetFromJsonAsync<List<ClienteViewModel>>("clientes") ?? [];
-            var peluqueros = await api.GetFromJsonAsync<List<PeluqueroSimpleViewModel>>("peluqueros") ?? [];
+            var peluqueros = await api.GetFromJsonAsync<List<PeluqueroSimpleViewModel>>("peluqueros/activos") ?? [];
             var items = await api.GetFromJsonAsync<List<TurnoItemViewModel>>("turnos/items") ?? [];
             var servicios = await api.GetFromJsonAsync<List<ServicioViewModel>>("servicios") ?? [];
 
@@ -71,7 +71,7 @@ public class TurnosController : Controller
             var api = _httpClientFactory.CreateClient("BarberApi");
             var turnos = await api.GetFromJsonAsync<List<TurnoViewModel>>("turnos") ?? [];
             var clientes = await api.GetFromJsonAsync<List<ClienteViewModel>>("clientes") ?? [];
-            var peluqueros = await api.GetFromJsonAsync<List<PeluqueroSimpleViewModel>>("peluqueros") ?? [];
+            var peluqueros = await api.GetFromJsonAsync<List<PeluqueroSimpleViewModel>>("peluqueros/activos") ?? [];
             var items = await api.GetFromJsonAsync<List<TurnoItemViewModel>>("turnos/items") ?? [];
             var servicios = await api.GetFromJsonAsync<List<ServicioViewModel>>("servicios") ?? [];
 
@@ -221,6 +221,7 @@ public class TurnosController : Controller
     }
 
     [HttpPost]
+    [SoloAdmin]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Borrar(int id)
     {
@@ -304,12 +305,25 @@ public class TurnosController : Controller
         {
             var api = _httpClientFactory.CreateClient("BarberApi");
             var clientes = await api.GetFromJsonAsync<List<ClienteViewModel>>("clientes") ?? [];
-            var peluqueros = await api.GetFromJsonAsync<List<PeluqueroSimpleViewModel>>("peluqueros") ?? [];
+            var peluqueros = await api.GetFromJsonAsync<List<PeluqueroSimpleViewModel>>("peluqueros/activos") ?? [];
             var productos = await api.GetFromJsonAsync<List<ProductoViewModel>>("productos") ?? [];
             var servicios = await api.GetFromJsonAsync<List<ServicioViewModel>>("servicios") ?? [];
 
+            var esAdmin = HttpContext?.Session.GetString("EsAdmin") == "true";
+            var miId = HttpContext?.Session.GetString("UsuarioId");
+
             modelo.Clientes = clientes.Select(c => new SelectListItem(c.Nombre, c.Id.ToString())).ToList();
-            modelo.Peluqueros = peluqueros.Where(p => p.EstaActivo).Select(p => new SelectListItem(p.Nombre, p.Id.ToString())).ToList();
+            if (esAdmin)
+            {
+                modelo.Peluqueros = peluqueros.Where(p => p.EstaActivo).Select(p => new SelectListItem(p.Nombre, p.Id.ToString())).ToList();
+            }
+            else
+            {
+                var miNombre = HttpContext?.Session.GetString("UsuarioNombre") ?? "Yo";
+                modelo.Peluqueros = [new SelectListItem(miNombre, miId ?? "", true)];
+                if (int.TryParse(miId, out var idParsed))
+                    modelo.IdPeluquero = idParsed;
+            }
             modelo.Productos = productos.OrderBy(p => p.Nombre).Select(p => new SelectListItem(p.Nombre, p.Id.ToString())).ToList();
             modelo.Servicios = servicios.OrderBy(s => s.Nombre).Select(s => new SelectListItem(s.Nombre, s.Id.ToString())).ToList();
         }

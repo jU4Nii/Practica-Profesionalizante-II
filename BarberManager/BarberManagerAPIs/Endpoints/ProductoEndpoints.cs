@@ -1,4 +1,4 @@
-﻿using BarberManagerAPIs.Logica;
+using BarberManagerAPIs.Logica;
 using BarberManagerAPIs.Logica.DTOs;
 
 namespace BarberManagerAPIs.Endpoints;
@@ -38,7 +38,7 @@ public static class ProductoEndpoints
             {
                 mensaje = "Producto creado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapPut("/productos/{id}", async (int id, ProductoDTO dto, IProductoLogica logica) =>
         {
@@ -51,7 +51,7 @@ public static class ProductoEndpoints
             {
                 mensaje = "Producto actualizado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
         app.MapDelete("/productos/{id}", async (int id, IProductoLogica logica) =>
         {
@@ -64,7 +64,7 @@ public static class ProductoEndpoints
             {
                 mensaje = "Producto eliminado correctamente"
             });
-        });
+        }).RequireAuthorization("Admin");
 
     }
 }

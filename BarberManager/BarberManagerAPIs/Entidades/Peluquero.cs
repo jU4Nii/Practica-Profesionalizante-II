@@ -1,4 +1,4 @@
-﻿namespace BarberManagerAPIs.Entidades
+namespace BarberManagerAPIs.Entidades
 {
     public class Peluquero
     {
@@ -9,5 +9,6 @@
         public string Contrasena { get; set; }
         public bool EsAdmin { get; set; }
         public bool EstaActivo { get; set; }
+        public bool AtiendeClientes { get; set; } = true;
     }
 }
