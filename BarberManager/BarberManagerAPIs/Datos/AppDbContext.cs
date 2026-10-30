@@ -24,6 +24,8 @@ namespace BarberManagerAPIs.Datos
 
         public DbSet<TurnoServicioProducto> TurnoServicioProductos { get; set; }
 
+        public DbSet<Proveedor> Proveedores { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
 

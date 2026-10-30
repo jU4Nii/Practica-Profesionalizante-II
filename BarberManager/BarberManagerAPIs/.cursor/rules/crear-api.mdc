@@ -1,0 +1,74 @@
+---
+description: Pasos para crear una API nueva (Entidad, DTO, Repositorio, Lógica, Endpoint y DI) con la misma estructura del proyecto.
+alwaysApply: true
+---
+
+# Crear una API nueva
+
+Seguir esta capa y este orden. No usar Controllers: el proyecto es Minimal APIs.
+
+Capas (de adentro hacia afuera): `Entidades` → `Logica/DTOs` → `Datos` (`DbSet`) → `Repositorios` → `Logica` → `Endpoints` → `Program.cs`.
+
+## 1. Entidad (`Entidades/{Nombre}.cs`)
+
+- Namespace `BarberManagerAPIs.Entidades`.
+- Clase con `Id` y propiedades de persistencia. Sin lógica ni EF.
+
+## 2. DTO (`Logica/DTOs/{Nombre}DTO.cs`)
+
+- Namespace `BarberManagerAPIs.Logica.DTOs`.
+- Contrato de entrada (POST/PUT). En general **sin `Id`**.
+- No devolver el DTO si el resto de APIs ya devuelven la entidad.
+
+## 3. DbSet (`Datos/AppDbContext.cs`)
+
+- Agregar `public DbSet<{Nombre}> {Nombres} { get; set; }`.
+- Crear migración EF si cambia el esquema.
+
+## 4. Repositorio (`Repositorios/{Nombre}Repository.cs`)
+
+En el **mismo archivo**: interfaz `I{Nombre}Repository` + clase `{Nombre}Repository`.
+
+- Namespace `BarberManagerAPIs.Repositorios`.
+- Inyectar solo `AppDbContext`.
+- Solo acceso a datos (EF). Sin validar DTOs ni armar HTTP.
+- Métodos habituales: `ObtenerTodos`, `ObtenerPorId`, `Agregar` (Add + `SaveChangesAsync`), `Guardar` (`SaveChangesAsync`), `Eliminar` si aplica.
+- Consultas con `ToListAsync` / `FirstOrDefaultAsync`.
+
+## 5. Lógica (`Logica/{Nombre}Logica.cs`)
+
+En el **mismo archivo**: `I{Nombre}Logica` + `{Nombre}Logica`.
+
+- Namespace `BarberManagerAPIs.Logica`.
+- Inyectar `I{Nombre}Repository` (y otras lógicas/repos si hace falta).
+- Validar el DTO, mapear a entidad, devolver `null`/`false` si falla.
+- No usar `Results.*` ni `IEndpointRouteBuilder`.
+
+## 6. Endpoints (`Endpoints/{Nombre}Endpoints.cs`)
+
+- Clase `static` `{Nombre}Endpoints`, namespace `BarberManagerAPIs.Endpoints`.
+- Extensión `Map{Nombre}Endpoints(this IEndpointRouteBuilder app)`.
+- Inyectar **solo** `I{Nombre}Logica` (más DTO / `ClaimsPrincipal` si hace falta). Nunca el repositorio.
+- Rutas en español, minúsculas, plural (`/clientes`, `/productos`).
+- CRUD típico:
+  - `GET /recurso` → `Results.Ok`
+  - `GET /recurso/{id}` → `Ok` o `NotFound`
+  - `POST /recurso` → `Created` o `BadRequest` con `{ mensaje = "..." }`
+  - `PUT /recurso/{id}` → `Ok` con mensaje, o `NotFound`/`BadRequest`
+  - `DELETE` solo si el dominio ya lo usa (ej. productos, turnos)
+- Auth: hay `FallbackPolicy`; todo endpoint pide JWT salvo `.AllowAnonymous()`. Operaciones de administración: `.RequireAuthorization("Admin")`. Se puede agrupar con `MapGroup("/recurso").RequireAuthorization("Admin")` (como Caja).
+
+## 7. Registrar en `Program.cs`
+
+```csharp
+builder.Services.AddScoped<I{Nombre}Repository, {Nombre}Repository>();
+builder.Services.AddScoped<I{Nombre}Logica, {Nombre}Logica>();
+// ...
+app.Map{Nombre}Endpoints();
+```
+
+## Qué no hacer
+
+- No poner SQL/EF en Endpoints ni en Lógica (salvo casos ya existentes que coordinan transacciones).
+- No crear interfaz en archivo aparte.
+- No devolver entidades desde el repositorio con otra forma: la lógica habla con el repo; el endpoint habla con la lógica.

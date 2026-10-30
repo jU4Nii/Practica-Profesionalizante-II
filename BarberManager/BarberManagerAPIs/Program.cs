@@ -83,6 +83,10 @@ namespace BarberManagerAPIs
 
             builder.Services.AddScoped<ITurnoServicioProductoLogica, TurnoServicioProductoLogica>();
 
+            builder.Services.AddScoped<IProveedorRepository, ProveedorRepository>();
+
+            builder.Services.AddScoped<IProveedorLogica, ProveedorLogica>();
+
             var app = builder.Build();
 
             
@@ -115,6 +119,8 @@ namespace BarberManagerAPIs
             app.MapPromocionEndpoints();
 
             app.MapTurnoServicioProductoEndpoints();
+
+            app.MapProveedorEndpoints();
 
             using (var scope = app.Services.CreateScope())
             {
