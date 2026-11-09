@@ -1,0 +1,7 @@
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\publish\BarberManager.Web.exe
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\publish\appsettings.Development.json
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\publish\appsettings.json
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\publish\BarberManager.Web.dll
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\publish\BarberManager.Web.deps.json
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\publish\BarberManager.Web.runtimeconfig.json
+C:\Users\juani\OneDrive\Documentos\GitHub\Practica Profesionalizante II\BarberManager\BarberManagerAPIs\publish\BarberManager.Web.pdb

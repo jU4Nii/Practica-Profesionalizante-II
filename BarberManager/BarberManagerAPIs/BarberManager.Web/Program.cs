@@ -17,7 +17,9 @@ builder.Services.AddSession(options =>
 
 builder.Services.AddHttpClient("BarberApi", client =>
 {
-    client.BaseAddress = new Uri(builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5034/");
+    var apiBaseUrl = builder.Configuration["ApiSettings:BaseUrl"]
+        ?? throw new InvalidOperationException("Falta configurar ApiSettings:BaseUrl.");
+    client.BaseAddress = new Uri(apiBaseUrl.EndsWith('/') ? apiBaseUrl : apiBaseUrl + "/");
 }).AddHttpMessageHandler<ApiAuthorizationHandler>();
 
 var app = builder.Build();
@@ -36,12 +38,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
+app.UseStaticFiles();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
 app.Run();

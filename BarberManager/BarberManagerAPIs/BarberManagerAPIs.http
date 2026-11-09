@@ -1,4 +1,4 @@
-@BarberManagerAPIs_HostAddress = http://localhost:5034
+@BarberManagerAPIs_HostAddress = http://localhost:5000
 
 GET {{BarberManagerAPIs_HostAddress}}/weatherforecast/
 Accept: application/json

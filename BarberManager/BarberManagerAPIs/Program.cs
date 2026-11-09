@@ -22,6 +22,8 @@ namespace BarberManagerAPIs
 
             var jwtKey = builder.Configuration["Jwt:Key"]
                 ?? throw new InvalidOperationException("Falta configurar Jwt:Key.");
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                ?? throw new InvalidOperationException("Falta configurar ConnectionStrings:DefaultConnection.");
             var jwtIssuer = builder.Configuration["Jwt:Issuer"];
             var jwtAudience = builder.Configuration["Jwt:Audience"];
 
@@ -46,7 +48,7 @@ namespace BarberManagerAPIs
             });
 
             builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(connectionString));
 
             builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 

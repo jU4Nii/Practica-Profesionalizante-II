@@ -26,7 +26,7 @@ public class ServiciosController : Controller
         }
         catch (HttpRequestException)
         {
-            ViewBag.ErrorApi = "No se pudo conectar con la API. Verificá que esté ejecutándose en http://localhost:5034.";
+            ViewBag.ErrorApi = "No se pudo conectar con la API. Verificá que esté ejecutándose en http://localhost:5000.";
             return View(new List<ServicioViewModel>());
         }
     }

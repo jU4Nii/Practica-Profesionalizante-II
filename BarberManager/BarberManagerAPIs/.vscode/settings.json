@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net8.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/38bb856c-eb3a-450d-9ca4-2391ba974401/resourceGroups/BarberManager/providers/Microsoft.Web/sites/BarberManagerApp"
+}
